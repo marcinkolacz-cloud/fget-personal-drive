@@ -1,0 +1,108 @@
+// Version: 1.0.0
+type ApiKey__892471706 =
+  {
+    createdAt : Time__688418391;
+    description : Text;
+    id : Text;
+    ownerId : Principal;
+    token : Text
+  };
+type ApprovalStatus__944573617 = {#approved; #pending; #rejected};
+type Data__80296667<K, V> =
+  {var count : Nat__1040412405; kvs : [var ?(K, V)]};
+type ExternalBlob__365673026 = Blob;
+type FileMetadata__287815137 =
+  {
+    blob : ExternalBlob__365673026;
+    createdAt : Time__688418391;
+    id : Text;
+    name : Text;
+    parentId : ?Text;
+    size : Nat;
+    updatedAt : Time__688418391
+  };
+type FolderMetadata__822938309 =
+  {
+    createdAt : Time__688418391;
+    id : Text;
+    name : Text;
+    parentId : ?Text;
+    updatedAt : Time__688418391
+  };
+type Int__616954475 = Int;
+type Int__837511138 = Int__616954475;
+type Internal__41346355<K, V> =
+  {children : [var ?Node__1000929467<K, V>]; data : Data__80296667<K, V>};
+type InviteCode__359061946 =
+  {
+    code : Text;
+    createdAt : Time__688418391;
+    createdBy : Principal;
+    expiresAt : ?Time__688418391;
+    isActive : Bool;
+    maxUses : ?Nat;
+    usedBy : [Principal];
+    usedCount : Nat
+  };
+type Leaf__712614010<K, V> = {data : Data__80296667<K, V>};
+type Map__222667396<K, V> = Map__912772452<K, V>;
+type Map__709709801<K, V> =
+  {var root : Node__1000929467<K, V>; var size : Nat__1040412405};
+type Map__912772452<K, V> = Map__709709801<K, V>;
+type Nat__1040412405 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__1000929467<K, V> =
+  {#internal : Internal__41346355<K, V>; #leaf : Leaf__712614010<K, V>};
+type Time__298180599 = Int__837511138;
+type Time__688418391 = Time__298180599;
+type UserProfile__491224006 = {name : Text};
+type UserRole__686137147 = {#admin; #guest; #user};
+actor {
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__222667396<Principal, UserRole__686137147>
+    };
+  stable adminPrincipal : {var value : ?Principal};
+  stable apiKeys :
+    {
+      var root : Node__1000929467<Text, ApiKey__892471706>;
+      var size : Nat__1040412405
+    };
+  stable var appVersion : Text;
+  stable approvalState :
+    {
+      var approvalStatus :
+        Map__222667396<Principal, ApprovalStatus__944573617>
+    };
+  stable var backendCanisterId : Text;
+  stable cliFileBytes :
+    {var root : Node__1000929467<Text, Blob>; var size : Nat__1040412405};
+  stable encryptedFiles :
+    {var root : Node__1000929467<Text, Bool>; var size : Nat__1040412405};
+  stable files :
+    {
+      var root : Node__1000929467<Text, FileMetadata__287815137>;
+      var size : Nat__1040412405
+    };
+  stable var firstAdmin : ?Principal;
+  stable folders :
+    {
+      var root : Node__1000929467<Text, FolderMetadata__822938309>;
+      var size : Nat__1040412405
+    };
+  stable var frontendCanisterId : Text;
+  stable inviteCodes :
+    {
+      var root : Node__1000929467<Text, InviteCode__359061946>;
+      var size : Nat__1040412405
+    };
+  stable var nextApiKeyId : Nat;
+  stable var nextFolderId : Nat;
+  stable var tokenCounter : Nat;
+  stable userProfiles :
+    {
+      var root : Node__1000929467<Principal, UserProfile__491224006>;
+      var size : Nat__1040412405
+    }
+};

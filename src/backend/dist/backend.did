@@ -1,0 +1,282 @@
+type _ImmutableObjectStorageRefillResult = 
+ record {
+   success: opt bool;
+   topped_up_amount: opt nat;
+ };
+type _ImmutableObjectStorageRefillInformation = record {
+                                                  proposed_top_up_amount:
+                                                   opt nat;};
+type _ImmutableObjectStorageCreateCertificateResult = 
+ record {
+   blob_hash: text;
+   method: text;
+ };
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type UserProfile = record {name: text;};
+type UserApprovalInfo = 
+ record {
+   "principal": principal;
+   status: ApprovalStatus;
+ };
+type Time = int;
+type StorageStats = 
+ record {
+   appVersion: text;
+   backendCanisterId: text;
+   frontendCanisterId: text;
+   totalEncryptedFiles: nat;
+   totalFiles: nat;
+   totalFolders: nat;
+   totalStorageBytes: nat;
+ };
+type Result = 
+ variant {
+   err: Error;
+   ok;
+ };
+type InviteResult = 
+ variant {
+   err: text;
+   ok;
+ };
+type InviteCode = 
+ record {
+   code: text;
+   createdAt: Time;
+   createdBy: principal;
+   expiresAt: opt Time;
+   isActive: bool;
+   maxUses: opt nat;
+   usedBy: vec principal;
+   usedCount: nat;
+ };
+type FolderSearchResults = 
+ record {
+   files: vec FileMetadata;
+   folders: vec FolderMetadata;
+ };
+type FolderMetadata = 
+ record {
+   createdAt: Time;
+   id: text;
+   name: text;
+   parentId: opt text;
+   updatedAt: Time;
+ };
+type FileSystemItem = 
+ variant {
+   file: FileMetadata;
+   folder: FolderMetadata;
+ };
+type FileMove = 
+ record {
+   id: text;
+   isFolder: bool;
+   newParentId: opt text;
+ };
+type FileMetadata = 
+ record {
+   "blob": ExternalBlob;
+   createdAt: Time;
+   id: text;
+   name: text;
+   parentId: opt text;
+   size: nat;
+   updatedAt: Time;
+ };
+type ExternalBlob = blob;
+type Error = 
+ variant {
+   AmbiguousAttribute: record {
+                         field: text;
+                         sources: vec text;
+                       };
+   FrontendOriginMismatch: record {
+                             expected: vec text;
+                             got: text;
+                           };
+   FrontendOriginsNotConfigured;
+   MalformedCandid;
+   MissingField: text;
+   MixedSsoSources: record {
+                      otherKeys: vec text;
+                      ssoKeys: vec text;
+                    };
+   NoAttributes;
+   Stale: record {ageNs: nat;};
+   UnknownNonce;
+   UntrustedSsoSource: record {domain: text;};
+ };
+type ApprovalStatus = 
+ variant {
+   approved;
+   pending;
+   rejected;
+ };
+type ApiKey = 
+ record {
+   createdAt: Time;
+   description: text;
+   id: text;
+   ownerId: principal;
+   token: text;
+ };
+type AdminInfo = 
+ record {
+   "principal": principal;
+   role: UserRole;
+   username: text;
+ };
+type AccessCheckResult = 
+ variant {
+   Admin;
+   Approved;
+   NeedsInvite;
+   PendingApproval;
+ };
+service : {
+  __accessControlState: () -> (reserved) query;
+  __adminPrincipal: () -> (reserved) query;
+  __apiKeys: (ko: opt text, count: opt nat) ->
+   (vec record {
+          text;
+          ApiKey;
+        }) query;
+  __appVersion: () -> (text) query;
+  __approvalState: () -> (reserved) query;
+  __backendCanisterId: () -> (text) query;
+  __cliFileBytes: (ko: opt text, count: opt nat) ->
+   (vec record {
+          text;
+          blob;
+        }) query;
+  __encryptedFiles: (ko: opt text, count: opt nat) ->
+   (vec record {
+          text;
+          bool;
+        }) query;
+  __files: (ko: opt text, count: opt nat) ->
+   (vec record {
+          text;
+          FileMetadata;
+        }) query;
+  __firstAdmin: () -> (opt principal) query;
+  __folders: (ko: opt text, count: opt nat) ->
+   (vec record {
+          text;
+          FolderMetadata;
+        }) query;
+  __frontendCanisterId: () -> (text) query;
+  __inviteCodes: (ko: opt text, count: opt nat) ->
+   (vec record {
+          text;
+          InviteCode;
+        }) query;
+  __nextApiKeyId: () -> (nat) query;
+  __nextFolderId: () -> (nat) query;
+  __tokenCounter: () -> (nat) query;
+  __userProfiles: (ko: opt principal, count: opt nat) ->
+   (vec record {
+          principal;
+          UserProfile;
+        }) query;
+  _immutableObjectStorageBlobsAreLive: (hashes: vec blob) -> (vec bool) query;
+  _immutableObjectStorageBlobsToDelete: () -> (vec blob) query;
+  _immutableObjectStorageConfirmBlobDeletion: (blobs: vec blob) -> ();
+  _immutableObjectStorageCreateCertificate: (blobHash: text) ->
+   (_ImmutableObjectStorageCreateCertificateResult);
+  _immutableObjectStorageRefillCashier: (refillInformation:
+   opt _ImmutableObjectStorageRefillInformation) ->
+   (_ImmutableObjectStorageRefillResult);
+  _immutableObjectStorageUpdateGatewayPrincipals: () -> ();
+  _initialize_access_control: () -> ();
+  _internet_identity_sign_in_finish: () -> (Result);
+  _internet_identity_sign_in_start: () -> (blob);
+  addFile: (id: text, name: text, size: nat, parentId: opt text, "blob":
+   ExternalBlob, isEncrypted: bool) -> ();
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  checkAccess: () -> (AccessCheckResult) query;
+  createFolder: (name: text, parentId: opt text) -> (text);
+  deleteApiKey: (id: text) -> (bool);
+  deleteFile: (id: text) -> (bool);
+  deleteFolder: (id: text) -> (bool);
+  generateApiKey: (description: text) -> (text);
+  generateInviteCode: (expiresAt: opt int, maxUses: opt nat) -> (text);
+  getAdmin: () -> (opt principal) query;
+  getAllFolders: () -> (vec FolderMetadata) query;
+  getCallerUserProfile: () -> (opt UserProfile) query;
+  getCallerUserRole: () -> (UserRole) query;
+  getFile: (id: text) -> (opt FileMetadata) query;
+  getFiles: () -> (vec FileMetadata) query;
+  getFolder: (id: text) -> (opt FolderMetadata) query;
+  getFolderContents: (folderId: opt text) -> (vec FileSystemItem) query;
+  getMembers: () -> (vec AdminInfo) query;
+  getStorageStats: () -> (StorageStats) query;
+  getUserProfile: (user: principal) -> (opt UserProfile) query;
+  getUserRole: () -> (UserRole) query;
+  http_request: (req:
+   record {
+     body: blob;
+     headers: vec record {
+                    text;
+                    text;
+                  };
+     method: text;
+     url: text;
+   }) ->
+   (record {
+      body: blob;
+      headers: vec record {
+                     text;
+                     text;
+                   };
+      status_code: nat16;
+      upgrade: opt bool;
+    }) query;
+  http_request_update: (req:
+   record {
+     body: blob;
+     headers: vec record {
+                    text;
+                    text;
+                  };
+     method: text;
+     url: text;
+   }) ->
+   (record {
+      body: blob;
+      headers: vec record {
+                     text;
+                     text;
+                   };
+      status_code: nat16;
+    });
+  isCallerAdmin: () -> (bool) query;
+  isCallerApproved: () -> (bool) query;
+  isUsernameUnique: (username: text) -> (bool) query;
+  listApiKeys: () -> (vec ApiKey) query;
+  listApprovals: () -> (vec UserApprovalInfo) query;
+  listInviteCodes: () -> (vec InviteCode) query;
+  moveItem: (itemId: text, newParentId: opt text, isFolder: bool) -> ();
+  moveItems: (moves: vec FileMove) -> ();
+  redeemInviteCode: (code: text) -> (InviteResult);
+  removeMember: ("principal": principal) -> ();
+  requestApproval: () -> ();
+  revokeInviteCode: (code: text) -> (InviteResult);
+  saveCallerUserProfile: (profile: UserProfile) -> ();
+  searchFiles: (searchTerm: text) -> (vec FileMetadata) query;
+  searchFoldersInSubtree: (searchTerm: text, startFolderId: opt text) ->
+   (FolderSearchResults) query;
+  searchSubtree: (searchTerm: text, startFolderId: opt text) ->
+   (vec FileSystemItem) query;
+  setAdmin: ("principal": principal) -> (InviteResult);
+  setApproval: (user: principal, status: ApprovalStatus) -> ();
+  setBackendCanisterId: (canisterId: text) -> ();
+  setFrontendCanisterId: (canisterId: text) -> ();
+  validateInviteCode: (code: text) -> (bool) query;
+}
