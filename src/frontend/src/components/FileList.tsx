@@ -167,6 +167,7 @@ export function FileList({ currentFolderId, onFolderNavigate }: FileListProps) {
   const [showCreateFolder, setShowCreateFolder] = useState(false);
   const [newFolderName, setNewFolderName] = useState("");
   const [isDragging, setIsDragging] = useState(false);
+  const dragCounterRef = useRef<number>(0);
   const [fileUploadProgress, setFileUploadProgress] = useState<
     Map<string, FileUploadProgress>
   >(new Map());
@@ -884,16 +885,28 @@ export function FileList({ currentFolderId, onFolderNavigate }: FileListProps) {
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
-    setIsDragging(true);
+  };
+
+  const handleDragEnter = (e: React.DragEvent) => {
+    e.preventDefault();
+    dragCounterRef.current += 1;
+    if (dragCounterRef.current === 1) {
+      setIsDragging(true);
+    }
   };
 
   const handleDragLeave = (e: React.DragEvent) => {
     e.preventDefault();
-    setIsDragging(false);
+    dragCounterRef.current -= 1;
+    if (dragCounterRef.current <= 0) {
+      dragCounterRef.current = 0;
+      setIsDragging(false);
+    }
   };
 
   const handleDrop = async (e: React.DragEvent) => {
     e.preventDefault();
+    dragCounterRef.current = 0;
     setIsDragging(false);
 
     const dataTransfer = e.dataTransfer;
@@ -996,6 +1009,9 @@ export function FileList({ currentFolderId, onFolderNavigate }: FileListProps) {
         }
         return updated;
       });
+    } finally {
+      dragCounterRef.current = 0;
+      setIsDragging(false);
     }
   };
 
@@ -1108,6 +1124,7 @@ export function FileList({ currentFolderId, onFolderNavigate }: FileListProps) {
     <TooltipProvider>
       <div
         className="space-y-4"
+        onDragEnter={handleDragEnter}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}

@@ -33301,21 +33301,12 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "validateInviteCode": IDL2.Func([IDL2.Text], [IDL2.Bool], ["query"])
   });
 };
-function candid_some(value) {
-  return [
-    value
-  ];
-}
-function candid_none() {
-  return [];
-}
-function record_opt_to_undefined(arg) {
-  return arg == null ? void 0 : arg;
-}
 class ExternalBlob2 {
   constructor(directURL, blob) {
     __publicField(this, "_blob");
     __publicField(this, "directURL");
+    __publicField(this, "contentType");
+    __publicField(this, "filename");
     __publicField(this, "onProgress");
     if (blob) {
       this._blob = blob;
@@ -33325,13 +33316,18 @@ class ExternalBlob2 {
   static fromURL(url) {
     return new ExternalBlob2(url, null);
   }
-  static fromBytes(blob) {
-    const url = URL.createObjectURL(new Blob([
-      new Uint8Array(blob)
-    ], {
-      type: "application/octet-stream"
+  static fromBytes(blob, contentType, filename) {
+    const url = URL.createObjectURL(new Blob([new Uint8Array(blob)], {
+      type: (contentType == null ? void 0 : contentType.trim()) || "application/octet-stream"
     }));
-    return new ExternalBlob2(url, blob);
+    const externalBlob = new ExternalBlob2(url, blob);
+    if (contentType == null ? void 0 : contentType.trim()) {
+      externalBlob.contentType = contentType.trim();
+    }
+    if (filename == null ? void 0 : filename.trim()) {
+      externalBlob.filename = filename.trim();
+    }
+    return externalBlob;
   }
   async getBytes() {
     if (this._blob) {
@@ -33349,6 +33345,20 @@ class ExternalBlob2 {
     this.onProgress = onProgress;
     return this;
   }
+}
+new TextEncoder().encode("icfs-chunk/");
+new TextEncoder().encode("icfs-metadata/");
+new TextEncoder().encode("ynode/");
+function candid_some(value) {
+  return [
+    value
+  ];
+}
+function candid_none() {
+  return [];
+}
+function record_opt_to_undefined(arg) {
+  return arg == null ? void 0 : arg;
 }
 var AccessCheckResult = /* @__PURE__ */ ((AccessCheckResult2) => {
   AccessCheckResult2["NeedsInvite"] = "NeedsInvite";
@@ -45839,6 +45849,7 @@ function FileList({ currentFolderId, onFolderNavigate }) {
   const [showCreateFolder, setShowCreateFolder] = reactExports.useState(false);
   const [newFolderName, setNewFolderName] = reactExports.useState("");
   const [isDragging, setIsDragging] = reactExports.useState(false);
+  const dragCounterRef = reactExports.useRef(0);
   const [fileUploadProgress, setFileUploadProgress] = reactExports.useState(/* @__PURE__ */ new Map());
   const [previewFile, setPreviewFile] = reactExports.useState(null);
   const [showPreview, setShowPreview] = reactExports.useState(false);
@@ -46402,14 +46413,25 @@ function FileList({ currentFolderId, onFolderNavigate }) {
   };
   const handleDragOver = (e) => {
     e.preventDefault();
-    setIsDragging(true);
+  };
+  const handleDragEnter = (e) => {
+    e.preventDefault();
+    dragCounterRef.current += 1;
+    if (dragCounterRef.current === 1) {
+      setIsDragging(true);
+    }
   };
   const handleDragLeave = (e) => {
     e.preventDefault();
-    setIsDragging(false);
+    dragCounterRef.current -= 1;
+    if (dragCounterRef.current <= 0) {
+      dragCounterRef.current = 0;
+      setIsDragging(false);
+    }
   };
   const handleDrop = async (e) => {
     e.preventDefault();
+    dragCounterRef.current = 0;
     setIsDragging(false);
     const dataTransfer = e.dataTransfer;
     if (!dataTransfer || !dataTransfer.items || dataTransfer.items.length === 0)
@@ -46493,6 +46515,9 @@ function FileList({ currentFolderId, onFolderNavigate }) {
         }
         return updated;
       });
+    } finally {
+      dragCounterRef.current = 0;
+      setIsDragging(false);
     }
   };
   const handleSort = (field) => {
@@ -46589,6 +46614,7 @@ function FileList({ currentFolderId, onFolderNavigate }) {
     "div",
     {
       className: "space-y-4",
+      onDragEnter: handleDragEnter,
       onDragOver: handleDragOver,
       onDragLeave: handleDragLeave,
       onDrop: handleDrop,

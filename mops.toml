@@ -13,7 +13,7 @@ main = "src/backend/main.mo"
 path = ".old/src/backend/dist/backend.most"
 
 [toolchain]
-moc = "1.8.2"
+moc = "1.10.1"
 lintoko = "0.10.0"
 
 [lint]
@@ -23,7 +23,7 @@ extends = true
 args = [ "--default-persistent-actors", "--actor-idl=src/backend/system-idl", "--implicit-package=core", "-no-check-ir", "-E=M0236,M0223,M0237,M0254", "-W=M0235", "-A=M0241", "--generate-view-queries" ]
 
 [dependencies]
-core = "2.5.0"
+core = "2.6.0"
 caffeineai-data-viewer = "0.1.0"
 caffeineai-object-storage = "1.0.0"
 caffeineai-authorization = "1.0.0"

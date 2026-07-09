@@ -7,13 +7,8 @@ export interface None {
     __kind__: "None";
 }
 export type Option<T> = Some<T> | None;
-export class ExternalBlob {
-    getBytes(): Promise<Uint8Array<ArrayBuffer>>;
-    getDirectURL(): string;
-    static fromURL(url: string): ExternalBlob;
-    static fromBytes(blob: Uint8Array<ArrayBuffer>): ExternalBlob;
-    withUploadProgress(onProgress: (percentage: number) => void): ExternalBlob;
-}
+import type { ExternalBlob } from "@caffeineai/object-storage";
+export type { ExternalBlob } from "@caffeineai/object-storage";
 export type Time = bigint;
 export interface FileMetadata {
     id: string;
