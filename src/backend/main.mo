@@ -1062,6 +1062,19 @@ actor self {
           if (folder.ownerId != caller and not callerIsAdmin(caller)) {
             Runtime.trap("Unauthorized");
           };
+          switch (newParentId) {
+            case (null) {};
+            case (?destId) {
+              switch (folders.get(destId)) {
+                case (null) { Runtime.trap("Unauthorized: Destination folder not found or not owned by caller") };
+                case (?destFolder) {
+                  if (destFolder.ownerId != caller and not callerIsAdmin(caller)) {
+                    Runtime.trap("Unauthorized: Destination folder not found or not owned by caller");
+                  };
+                };
+              };
+            };
+          };
           let updatedFolder : FolderMetadata = {
             folder with parentId = newParentId;
             updatedAt = now;
@@ -1076,6 +1089,19 @@ actor self {
         case (?file) {
           if (file.ownerId != caller and not callerIsAdmin(caller)) {
             Runtime.trap("Unauthorized");
+          };
+          switch (newParentId) {
+            case (null) {};
+            case (?destId) {
+              switch (folders.get(destId)) {
+                case (null) { Runtime.trap("Unauthorized: Destination folder not found or not owned by caller") };
+                case (?destFolder) {
+                  if (destFolder.ownerId != caller and not callerIsAdmin(caller)) {
+                    Runtime.trap("Unauthorized: Destination folder not found or not owned by caller");
+                  };
+                };
+              };
+            };
           };
           let updatedFile : FileMetadata = {
             file with parentId = newParentId;
@@ -1102,6 +1128,19 @@ actor self {
             if (folder.ownerId != caller and not callerIsAdmin(caller)) {
               Runtime.trap("Unauthorized");
             };
+            switch (move.newParentId) {
+              case (null) {};
+              case (?destId) {
+                switch (folders.get(destId)) {
+                  case (null) { Runtime.trap("Unauthorized: Destination folder not found or not owned by caller") };
+                  case (?destFolder) {
+                    if (destFolder.ownerId != caller and not callerIsAdmin(caller)) {
+                      Runtime.trap("Unauthorized: Destination folder not found or not owned by caller");
+                    };
+                  };
+                };
+              };
+            };
             let updatedFolder : FolderMetadata = {
               folder with parentId = move.newParentId;
               updatedAt = now;
@@ -1116,6 +1155,19 @@ actor self {
           case (?file) {
             if (file.ownerId != caller and not callerIsAdmin(caller)) {
               Runtime.trap("Unauthorized");
+            };
+            switch (move.newParentId) {
+              case (null) {};
+              case (?destId) {
+                switch (folders.get(destId)) {
+                  case (null) { Runtime.trap("Unauthorized: Destination folder not found or not owned by caller") };
+                  case (?destFolder) {
+                    if (destFolder.ownerId != caller and not callerIsAdmin(caller)) {
+                      Runtime.trap("Unauthorized: Destination folder not found or not owned by caller");
+                    };
+                  };
+                };
+              };
             };
             updateParentTimestamps(move.newParentId, now, false);
             let updatedFile : FileMetadata = {
