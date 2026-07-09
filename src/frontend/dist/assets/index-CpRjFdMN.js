@@ -17,7 +17,7 @@ var __privateWrapper = (obj, member, setter, getter) => ({
     return __privateGet(obj, member, getter);
   }
 });
-var _disableTimeVerification, _agent, _dbName, _storeName, _dbPromise, _IndexedDBExpirableStore_instances, getDb_fn, openDb_fn, openRequest_fn, prune_fn, _entries, _InMemoryExpirableStore_instances, prune_fn2, _rawKey, _derKey, _a, _currentInterval, _randomizationFactor, _multiplier, _maxInterval, _startTime, _maxElapsedTime, _maxIterations, _date, _count, _rootKeyPromise, _shouldFetchRootKey, _timeDiffMsecs, _hasSyncedTime, _syncTimePromise, _shouldSyncTime, _identity, _fetch, _fetchOptions, _callOptions, _credentials, _retryTimes, _backoffStrategy, _maxIngressExpiryInMinutes, _subnetNodeKeyExpirableStore, _HttpAgent_instances, maxIngressExpiryInMs_get, _queryPipeline, _updatePipeline, _subnetKeysFetching, _verifyQuerySignatures, handleV4SyncResponse_fn, handleV2Rejection_fn, requestAndRetryQuery_fn, requestAndRetry_fn, _verifyQueryResponse, readStateInner_fn, setTimeDiffMsecs_fn, asyncGuard_fn, rootKeyGuard_fn, syncTimeGuard_fn, doFetchSubnetKeys_fn, _focused, _cleanup, _setup, _b, _provider, _providerCalled, _c, _online, _cleanup2, _setup2, _d, _gcTimeout, _e, _initialState, _revertState, _cache, _client, _retryer, _defaultOptions, _abortSignalConsumed, _Query_instances, isInitialPausedFetch_fn, dispatch_fn, _f, _client2, _currentQuery, _currentQueryInitialState, _currentResult, _currentResultState, _currentResultOptions, _currentThenable, _selectError, _selectFn, _selectResult, _lastQueryWithDefinedData, _staleTimeoutId, _refetchIntervalId, _currentRefetchInterval, _trackedProps, _QueryObserver_instances, executeFetch_fn, updateStaleTimeout_fn, computeRefetchInterval_fn, updateRefetchInterval_fn, updateTimers_fn, clearStaleTimeout_fn, clearRefetchInterval_fn, updateQuery_fn, notify_fn, _g, _client3, _observers, _mutationCache, _retryer2, _Mutation_instances, dispatch_fn2, _h, _mutations, _scopes, _mutationId, _i, _client4, _currentResult2, _currentMutation, _mutateOptions, _MutationObserver_instances, updateResult_fn, notify_fn2, _j, _queries, _k, _queryCache, _mutationCache2, _defaultOptions2, _queryDefaults, _mutationDefaults, _mountCount, _unsubscribeFocus, _unsubscribeOnline, _l, _rawKey2, _derKey2, _publicKey, _privateKey, _inner, _delegation, _inner2, _attributes, _signer, _options, _channel, _establishingChannel, _scheduledChannelClosure, _pendingRequestCount, _Signer_instances, rpc_fn, applyTransforms_fn, _options2, _status, _HeartbeatClient_instances, establish_fn, maintain_fn, receiveStatusResponse_fn, sendStatusRequest_fn, _options3, _closeListeners, _options4, _closed, _pendingQueue, _instance, _callbacks, _idleTimeout, _timeoutID, _resetTimer, _options5, _identity2, _chain, _storage, _signer2, _options6, _initPromise, _AuthClient_instances, resolveNonce_fn, init_fn, hydrate_fn, registerDefaultIdleCallback_fn;
+var _disableTimeVerification, _agent, _dbName, _storeName, _dbPromise, _IndexedDBExpirableStore_instances, getDb_fn, openDb_fn, openRequest_fn, prune_fn, _entries, _InMemoryExpirableStore_instances, prune_fn2, _rawKey, _derKey, _a, _currentInterval, _randomizationFactor, _multiplier, _maxInterval, _startTime, _maxElapsedTime, _maxIterations, _date, _count, _rootKeyPromise, _shouldFetchRootKey, _timeDiffMsecs, _hasSyncedTime, _syncTimePromise, _shouldSyncTime, _identity, _fetch, _fetchOptions, _callOptions, _credentials, _retryTimes, _backoffStrategy, _maxIngressExpiryInMinutes, _subnetNodeKeyExpirableStore, _HttpAgent_instances, maxIngressExpiryInMs_get, _queryPipeline, _updatePipeline, _subnetKeysFetching, _verifyQuerySignatures, handleV4SyncResponse_fn, handleV2Rejection_fn, requestAndRetryQuery_fn, requestAndRetry_fn, _verifyQueryResponse, readStateInner_fn, setTimeDiffMsecs_fn, asyncGuard_fn, rootKeyGuard_fn, syncTimeGuard_fn, doFetchSubnetKeys_fn, _focused, _cleanup, _setup, _b, _provider, _providerCalled, _c, _online, _cleanup2, _setup2, _d, _gcTimeout, _e, _queryType, _initialState, _revertState, _cache, _client, _retryer, _defaultOptions, _abortSignalConsumed, _Query_instances, isInitialPausedFetch_fn, dispatch_fn, _f, _client2, _currentQuery, _currentQueryInitialState, _currentResult, _currentResultState, _currentResultOptions, _currentThenable, _selectError, _selectFn, _selectResult, _lastQueryWithDefinedData, _staleTimeoutId, _refetchIntervalId, _currentRefetchInterval, _trackedProps, _QueryObserver_instances, executeFetch_fn, updateStaleTimeout_fn, computeRefetchInterval_fn, updateRefetchInterval_fn, updateTimers_fn, clearStaleTimeout_fn, clearRefetchInterval_fn, updateQuery_fn, notify_fn, _g, _client3, _observers, _mutationCache, _retryer2, _Mutation_instances, dispatch_fn2, _h, _mutations, _scopes, _mutationId, _i, _client4, _currentResult2, _currentMutation, _mutateOptions, _MutationObserver_instances, updateResult_fn, notify_fn2, _j, _queries, _k, _queryCache, _mutationCache2, _defaultOptions2, _queryDefaults, _mutationDefaults, _mountCount, _unsubscribeFocus, _unsubscribeOnline, _l, _rawKey2, _derKey2, _publicKey, _privateKey, _inner, _delegation, _inner2, _attributes, _signer, _options, _channel, _establishingChannel, _scheduledChannelClosure, _pendingRequestCount, _Signer_instances, rpc_fn, applyTransforms_fn, _options2, _status, _HeartbeatClient_instances, establish_fn, maintain_fn, receiveStatusResponse_fn, sendStatusRequest_fn, _options3, _closeListeners, _options4, _closed, _pendingQueue, _instance, _callbacks, _idleTimeout, _timeoutID, _resetTimer, _options5, _identity2, _chain, _storage, _signer2, _options6, _initPromise, _AuthClient_instances, resolveNonce_fn, init_fn, hydrate_fn, registerDefaultIdleCallback_fn;
 function _mergeNamespaces(n, m2) {
   for (var i = 0; i < m2.length; i++) {
     const e = m2[i];
@@ -114,10 +114,12 @@ reactJsxRuntime_production.jsxs = jsxProd;
   jsxRuntime.exports = reactJsxRuntime_production;
 }
 var jsxRuntimeExports = jsxRuntime.exports;
-let ExternalBlob$2 = class ExternalBlob {
+let ExternalBlob$1 = class ExternalBlob {
   constructor(directURL, blob) {
     __publicField(this, "_blob");
     __publicField(this, "directURL");
+    __publicField(this, "contentType");
+    __publicField(this, "filename");
     __publicField(this, "onProgress");
     if (blob) {
       this._blob = blob;
@@ -127,11 +129,18 @@ let ExternalBlob$2 = class ExternalBlob {
   static fromURL(url) {
     return new ExternalBlob(url, null);
   }
-  static fromBytes(blob) {
+  static fromBytes(blob, contentType, filename) {
     const url = URL.createObjectURL(new Blob([new Uint8Array(blob)], {
-      type: "application/octet-stream"
+      type: (contentType == null ? void 0 : contentType.trim()) || "application/octet-stream"
     }));
-    return new ExternalBlob(url, blob);
+    const externalBlob = new ExternalBlob(url, blob);
+    if (contentType == null ? void 0 : contentType.trim()) {
+      externalBlob.contentType = contentType.trim();
+    }
+    if (filename == null ? void 0 : filename.trim()) {
+      externalBlob.filename = filename.trim();
+    }
+    return externalBlob;
   }
   async getBytes() {
     if (this._blob) {
@@ -6685,7 +6694,7 @@ function bls(CURVE) {
     calcPairingPrecomputes
   };
   const { ShortSignature } = CURVE.G1;
-  const { Signature } = CURVE.G2;
+  const { Signature: Signature2 } = CURVE.G2;
   function normP1Hash(point, htfOpts) {
     return point instanceof G1.Point ? point : shortSignatures.hash(ensureBytes("point", point), htfOpts == null ? void 0 : htfOpts.DST);
   }
@@ -6701,7 +6710,7 @@ function bls(CURVE) {
   function sign(message, privateKey, htfOpts) {
     const Hm = normP2Hash(message, htfOpts);
     const S2 = longSignatures.sign(Hm, privateKey);
-    return message instanceof G2.Point ? S2 : Signature.toBytes(S2);
+    return message instanceof G2.Point ? S2 : Signature2.toBytes(S2);
   }
   function signShortSignature(message, privateKey, htfOpts) {
     const Hm = normP1Hash(message, htfOpts);
@@ -6722,7 +6731,7 @@ function bls(CURVE) {
   }
   function aggregateSignatures(signatures) {
     const agg = longSignatures.aggregateSignatures(signatures);
-    return signatures[0] instanceof G2.Point ? agg : Signature.toBytes(agg);
+    return signatures[0] instanceof G2.Point ? agg : Signature2.toBytes(agg);
   }
   function aggregateShortSignatures(signatures) {
     const agg = shortSignatures.aggregateSignatures(signatures);
@@ -6768,7 +6777,7 @@ function bls(CURVE) {
     aggregateShortSignatures,
     G1,
     G2,
-    Signature,
+    Signature: Signature2,
     ShortSignature
   };
 }
@@ -11297,6 +11306,4247 @@ function _createActorMethod(actor, methodName, func, blsVerify2) {
   handler.withOptions = (options) => (...args) => caller(options, ...args);
   return handler;
 }
+function formatBlobContentDisposition(filename) {
+  const trimmed = filename == null ? void 0 : filename.trim();
+  if (!trimmed) {
+    return void 0;
+  }
+  if (/^[A-Za-z0-9._-]+$/.test(trimmed)) {
+    return `attachment; filename=${trimmed}`;
+  }
+  if (/[^\x20-\x7E]/.test(trimmed)) {
+    return `attachment; filename*=UTF-8''${encodeURIComponent(trimmed)}`;
+  }
+  const escaped = trimmed.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  return `attachment; filename="${escaped}"`;
+}
+const WINDOWS_1252_EXTRA = {
+  128: "€",
+  130: "‚",
+  131: "ƒ",
+  132: "„",
+  133: "…",
+  134: "†",
+  135: "‡",
+  136: "ˆ",
+  137: "‰",
+  138: "Š",
+  139: "‹",
+  140: "Œ",
+  142: "Ž",
+  145: "‘",
+  146: "’",
+  147: "“",
+  148: "”",
+  149: "•",
+  150: "–",
+  151: "—",
+  152: "˜",
+  153: "™",
+  154: "š",
+  155: "›",
+  156: "œ",
+  158: "ž",
+  159: "Ÿ"
+};
+for (const [code, char] of Object.entries(WINDOWS_1252_EXTRA)) {
+}
+let _utf8Decoder;
+function utf8Decoder() {
+  if (typeof globalThis.TextDecoder === "undefined")
+    return void 0;
+  return _utf8Decoder !== null && _utf8Decoder !== void 0 ? _utf8Decoder : _utf8Decoder = new globalThis.TextDecoder("utf-8");
+}
+const CHUNK = 32 * 1024;
+const REPLACEMENT = 65533;
+function textDecode(bytes, encoding = "utf-8") {
+  switch (encoding.toLowerCase()) {
+    case "utf-8":
+    case "utf8": {
+      const dec = utf8Decoder();
+      return dec ? dec.decode(bytes) : decodeUTF8(bytes);
+    }
+    case "utf-16le":
+      return decodeUTF16LE(bytes);
+    case "us-ascii":
+    case "ascii":
+      return decodeASCII(bytes);
+    case "latin1":
+    case "iso-8859-1":
+      return decodeLatin1(bytes);
+    case "windows-1252":
+      return decodeWindows1252(bytes);
+    default:
+      throw new RangeError(`Encoding '${encoding}' not supported`);
+  }
+}
+function flushChunk(parts, chunk) {
+  if (chunk.length === 0)
+    return;
+  parts.push(String.fromCharCode.apply(null, chunk));
+  chunk.length = 0;
+}
+function pushCodeUnit(parts, chunk, codeUnit) {
+  chunk.push(codeUnit);
+  if (chunk.length >= CHUNK)
+    flushChunk(parts, chunk);
+}
+function pushCodePoint(parts, chunk, cp) {
+  if (cp <= 65535) {
+    pushCodeUnit(parts, chunk, cp);
+    return;
+  }
+  cp -= 65536;
+  pushCodeUnit(parts, chunk, 55296 + (cp >> 10));
+  pushCodeUnit(parts, chunk, 56320 + (cp & 1023));
+}
+function decodeUTF8(bytes) {
+  const parts = [];
+  const chunk = [];
+  let i = 0;
+  if (bytes.length >= 3 && bytes[0] === 239 && bytes[1] === 187 && bytes[2] === 191) {
+    i = 3;
+  }
+  while (i < bytes.length) {
+    const b1 = bytes[i];
+    if (b1 <= 127) {
+      pushCodeUnit(parts, chunk, b1);
+      i++;
+      continue;
+    }
+    if (b1 < 194 || b1 > 244) {
+      pushCodeUnit(parts, chunk, REPLACEMENT);
+      i++;
+      continue;
+    }
+    if (b1 <= 223) {
+      if (i + 1 >= bytes.length) {
+        pushCodeUnit(parts, chunk, REPLACEMENT);
+        i++;
+        continue;
+      }
+      const b22 = bytes[i + 1];
+      if ((b22 & 192) !== 128) {
+        pushCodeUnit(parts, chunk, REPLACEMENT);
+        i++;
+        continue;
+      }
+      const cp2 = (b1 & 31) << 6 | b22 & 63;
+      pushCodeUnit(parts, chunk, cp2);
+      i += 2;
+      continue;
+    }
+    if (b1 <= 239) {
+      if (i + 2 >= bytes.length) {
+        pushCodeUnit(parts, chunk, REPLACEMENT);
+        i++;
+        continue;
+      }
+      const b22 = bytes[i + 1];
+      const b32 = bytes[i + 2];
+      const valid2 = (b22 & 192) === 128 && (b32 & 192) === 128 && !(b1 === 224 && b22 < 160) && // overlong
+      !(b1 === 237 && b22 >= 160);
+      if (!valid2) {
+        pushCodeUnit(parts, chunk, REPLACEMENT);
+        i++;
+        continue;
+      }
+      const cp2 = (b1 & 15) << 12 | (b22 & 63) << 6 | b32 & 63;
+      pushCodeUnit(parts, chunk, cp2);
+      i += 3;
+      continue;
+    }
+    if (i + 3 >= bytes.length) {
+      pushCodeUnit(parts, chunk, REPLACEMENT);
+      i++;
+      continue;
+    }
+    const b2 = bytes[i + 1];
+    const b3 = bytes[i + 2];
+    const b4 = bytes[i + 3];
+    const valid = (b2 & 192) === 128 && (b3 & 192) === 128 && (b4 & 192) === 128 && !(b1 === 240 && b2 < 144) && // overlong
+    !(b1 === 244 && b2 > 143);
+    if (!valid) {
+      pushCodeUnit(parts, chunk, REPLACEMENT);
+      i++;
+      continue;
+    }
+    const cp = (b1 & 7) << 18 | (b2 & 63) << 12 | (b3 & 63) << 6 | b4 & 63;
+    pushCodePoint(parts, chunk, cp);
+    i += 4;
+  }
+  flushChunk(parts, chunk);
+  return parts.join("");
+}
+function decodeUTF16LE(bytes) {
+  const parts = [];
+  const chunk = [];
+  const len = bytes.length;
+  let i = 0;
+  while (i + 1 < len) {
+    const u1 = bytes[i] | bytes[i + 1] << 8;
+    i += 2;
+    if (u1 >= 55296 && u1 <= 56319) {
+      if (i + 1 < len) {
+        const u2 = bytes[i] | bytes[i + 1] << 8;
+        if (u2 >= 56320 && u2 <= 57343) {
+          pushCodeUnit(parts, chunk, u1);
+          pushCodeUnit(parts, chunk, u2);
+          i += 2;
+        } else {
+          pushCodeUnit(parts, chunk, REPLACEMENT);
+        }
+      } else {
+        pushCodeUnit(parts, chunk, REPLACEMENT);
+      }
+      continue;
+    }
+    if (u1 >= 56320 && u1 <= 57343) {
+      pushCodeUnit(parts, chunk, REPLACEMENT);
+      continue;
+    }
+    pushCodeUnit(parts, chunk, u1);
+  }
+  if (i < len) {
+    pushCodeUnit(parts, chunk, REPLACEMENT);
+  }
+  flushChunk(parts, chunk);
+  return parts.join("");
+}
+function decodeASCII(bytes) {
+  const parts = [];
+  for (let i = 0; i < bytes.length; i += CHUNK) {
+    const end = Math.min(bytes.length, i + CHUNK);
+    const codes = new Array(end - i);
+    for (let j2 = i, k2 = 0; j2 < end; j2++, k2++) {
+      codes[k2] = bytes[j2] & 127;
+    }
+    parts.push(String.fromCharCode.apply(null, codes));
+  }
+  return parts.join("");
+}
+function decodeLatin1(bytes) {
+  const parts = [];
+  for (let i = 0; i < bytes.length; i += CHUNK) {
+    const end = Math.min(bytes.length, i + CHUNK);
+    const codes = new Array(end - i);
+    for (let j2 = i, k2 = 0; j2 < end; j2++, k2++) {
+      codes[k2] = bytes[j2];
+    }
+    parts.push(String.fromCharCode.apply(null, codes));
+  }
+  return parts.join("");
+}
+function decodeWindows1252(bytes) {
+  const parts = [];
+  let out = "";
+  for (let i = 0; i < bytes.length; i++) {
+    const b2 = bytes[i];
+    const extra = b2 >= 128 && b2 <= 159 ? WINDOWS_1252_EXTRA[b2] : void 0;
+    out += extra !== null && extra !== void 0 ? extra : String.fromCharCode(b2);
+    if (out.length >= CHUNK) {
+      parts.push(out);
+      out = "";
+    }
+  }
+  if (out)
+    parts.push(out);
+  return parts.join("");
+}
+function dv(array) {
+  return new DataView(array.buffer, array.byteOffset);
+}
+const UINT8 = {
+  len: 1,
+  get(array, offset2) {
+    return dv(array).getUint8(offset2);
+  },
+  put(array, offset2, value) {
+    dv(array).setUint8(offset2, value);
+    return offset2 + 1;
+  }
+};
+const UINT16_LE = {
+  len: 2,
+  get(array, offset2) {
+    return dv(array).getUint16(offset2, true);
+  },
+  put(array, offset2, value) {
+    dv(array).setUint16(offset2, value, true);
+    return offset2 + 2;
+  }
+};
+const UINT16_BE = {
+  len: 2,
+  get(array, offset2) {
+    return dv(array).getUint16(offset2);
+  },
+  put(array, offset2, value) {
+    dv(array).setUint16(offset2, value);
+    return offset2 + 2;
+  }
+};
+const UINT32_LE = {
+  len: 4,
+  get(array, offset2) {
+    return dv(array).getUint32(offset2, true);
+  },
+  put(array, offset2, value) {
+    dv(array).setUint32(offset2, value, true);
+    return offset2 + 4;
+  }
+};
+const UINT32_BE = {
+  len: 4,
+  get(array, offset2) {
+    return dv(array).getUint32(offset2);
+  },
+  put(array, offset2, value) {
+    dv(array).setUint32(offset2, value);
+    return offset2 + 4;
+  }
+};
+const INT32_BE = {
+  len: 4,
+  get(array, offset2) {
+    return dv(array).getInt32(offset2);
+  },
+  put(array, offset2, value) {
+    dv(array).setInt32(offset2, value);
+    return offset2 + 4;
+  }
+};
+const UINT64_LE = {
+  len: 8,
+  get(array, offset2) {
+    return dv(array).getBigUint64(offset2, true);
+  },
+  put(array, offset2, value) {
+    dv(array).setBigUint64(offset2, value, true);
+    return offset2 + 8;
+  }
+};
+class StringType {
+  constructor(len, encoding) {
+    this.len = len;
+    this.encoding = encoding;
+  }
+  get(data, offset2 = 0) {
+    const bytes = data.subarray(offset2, offset2 + this.len);
+    return textDecode(bytes, this.encoding);
+  }
+}
+const defaultMessages = "End-Of-Stream";
+class EndOfStreamError extends Error {
+  constructor() {
+    super(defaultMessages);
+    this.name = "EndOfStreamError";
+  }
+}
+class AbortError extends Error {
+  constructor(message = "The operation was aborted") {
+    super(message);
+    this.name = "AbortError";
+  }
+}
+class AbstractStreamReader {
+  constructor() {
+    this.endOfStream = false;
+    this.interrupted = false;
+    this.peekQueue = [];
+  }
+  async peek(uint8Array, mayBeLess = false) {
+    const bytesRead = await this.read(uint8Array, mayBeLess);
+    this.peekQueue.push(uint8Array.subarray(0, bytesRead));
+    return bytesRead;
+  }
+  async read(buffer, mayBeLess = false) {
+    if (buffer.length === 0) {
+      return 0;
+    }
+    let bytesRead = this.readFromPeekBuffer(buffer);
+    if (!this.endOfStream) {
+      bytesRead += await this.readRemainderFromStream(buffer.subarray(bytesRead), mayBeLess);
+    }
+    if (bytesRead === 0 && !mayBeLess) {
+      throw new EndOfStreamError();
+    }
+    return bytesRead;
+  }
+  /**
+   * Read chunk from stream
+   * @param buffer - Target Uint8Array (or Buffer) to store data read from stream in
+   * @returns Number of bytes read
+   */
+  readFromPeekBuffer(buffer) {
+    let remaining = buffer.length;
+    let bytesRead = 0;
+    while (this.peekQueue.length > 0 && remaining > 0) {
+      const peekData = this.peekQueue.pop();
+      if (!peekData)
+        throw new Error("peekData should be defined");
+      const lenCopy = Math.min(peekData.length, remaining);
+      buffer.set(peekData.subarray(0, lenCopy), bytesRead);
+      bytesRead += lenCopy;
+      remaining -= lenCopy;
+      if (lenCopy < peekData.length) {
+        this.peekQueue.push(peekData.subarray(lenCopy));
+      }
+    }
+    return bytesRead;
+  }
+  async readRemainderFromStream(buffer, mayBeLess) {
+    let bytesRead = 0;
+    while (bytesRead < buffer.length && !this.endOfStream) {
+      if (this.interrupted) {
+        throw new AbortError();
+      }
+      const chunkLen = await this.readFromStream(buffer.subarray(bytesRead), mayBeLess);
+      if (chunkLen === 0)
+        break;
+      bytesRead += chunkLen;
+    }
+    if (!mayBeLess && bytesRead < buffer.length) {
+      throw new EndOfStreamError();
+    }
+    return bytesRead;
+  }
+}
+class WebStreamReader extends AbstractStreamReader {
+  constructor(reader) {
+    super();
+    this.reader = reader;
+  }
+  async abort() {
+    return this.close();
+  }
+  async close() {
+    this.reader.releaseLock();
+  }
+}
+class WebStreamByobReader extends WebStreamReader {
+  /**
+   * Read from stream
+   * @param buffer - Target Uint8Array (or Buffer) to store data read from stream in
+   * @param mayBeLess - If true, may fill the buffer partially
+   * @protected Bytes read
+   */
+  async readFromStream(buffer, mayBeLess) {
+    if (buffer.length === 0)
+      return 0;
+    const result = await this.reader.read(new Uint8Array(buffer.length), { min: mayBeLess ? void 0 : buffer.length });
+    if (result.done) {
+      this.endOfStream = result.done;
+    }
+    if (result.value) {
+      buffer.set(result.value);
+      return result.value.length;
+    }
+    return 0;
+  }
+}
+class WebStreamDefaultReader extends AbstractStreamReader {
+  constructor(reader) {
+    super();
+    this.reader = reader;
+    this.buffer = null;
+  }
+  /**
+   * Copy chunk to target, and store the remainder in this.buffer
+   */
+  writeChunk(target, chunk) {
+    const written = Math.min(chunk.length, target.length);
+    target.set(chunk.subarray(0, written));
+    if (written < chunk.length) {
+      this.buffer = chunk.subarray(written);
+    } else {
+      this.buffer = null;
+    }
+    return written;
+  }
+  /**
+   * Read from stream
+   * @param buffer - Target Uint8Array (or Buffer) to store data read from stream in
+   * @param mayBeLess - If true, may fill the buffer partially
+   * @protected Bytes read
+   */
+  async readFromStream(buffer, mayBeLess) {
+    if (buffer.length === 0)
+      return 0;
+    let totalBytesRead = 0;
+    if (this.buffer) {
+      totalBytesRead += this.writeChunk(buffer, this.buffer);
+    }
+    while (totalBytesRead < buffer.length && !this.endOfStream) {
+      const result = await this.reader.read();
+      if (result.done) {
+        this.endOfStream = true;
+        break;
+      }
+      if (result.value) {
+        totalBytesRead += this.writeChunk(buffer.subarray(totalBytesRead), result.value);
+      }
+    }
+    if (!mayBeLess && totalBytesRead === 0 && this.endOfStream) {
+      throw new EndOfStreamError();
+    }
+    return totalBytesRead;
+  }
+  abort() {
+    this.interrupted = true;
+    return this.reader.cancel();
+  }
+  async close() {
+    await this.abort();
+    this.reader.releaseLock();
+  }
+}
+function makeWebStreamReader(stream) {
+  try {
+    const reader = stream.getReader({ mode: "byob" });
+    if (reader instanceof ReadableStreamDefaultReader) {
+      return new WebStreamDefaultReader(reader);
+    }
+    return new WebStreamByobReader(reader);
+  } catch (error) {
+    if (error instanceof TypeError) {
+      return new WebStreamDefaultReader(stream.getReader());
+    }
+    throw error;
+  }
+}
+class AbstractTokenizer {
+  /**
+   * Constructor
+   * @param options Tokenizer options
+   * @protected
+   */
+  constructor(options) {
+    this.numBuffer = new Uint8Array(8);
+    this.position = 0;
+    this.onClose = options == null ? void 0 : options.onClose;
+    if (options == null ? void 0 : options.abortSignal) {
+      options.abortSignal.addEventListener("abort", () => {
+        this.abort();
+      });
+    }
+  }
+  /**
+   * Read a token from the tokenizer-stream
+   * @param token - The token to read
+   * @param position - If provided, the desired position in the tokenizer-stream
+   * @returns Promise with token data
+   */
+  async readToken(token, position = this.position) {
+    const uint8Array = new Uint8Array(token.len);
+    const len = await this.readBuffer(uint8Array, { position });
+    if (len < token.len)
+      throw new EndOfStreamError();
+    return token.get(uint8Array, 0);
+  }
+  /**
+   * Peek a token from the tokenizer-stream.
+   * @param token - Token to peek from the tokenizer-stream.
+   * @param position - Offset where to begin reading within the file. If position is null, data will be read from the current file position.
+   * @returns Promise with token data
+   */
+  async peekToken(token, position = this.position) {
+    const uint8Array = new Uint8Array(token.len);
+    const len = await this.peekBuffer(uint8Array, { position });
+    if (len < token.len)
+      throw new EndOfStreamError();
+    return token.get(uint8Array, 0);
+  }
+  /**
+   * Read a numeric token from the stream
+   * @param token - Numeric token
+   * @returns Promise with number
+   */
+  async readNumber(token) {
+    const len = await this.readBuffer(this.numBuffer, { length: token.len });
+    if (len < token.len)
+      throw new EndOfStreamError();
+    return token.get(this.numBuffer, 0);
+  }
+  /**
+   * Read a numeric token from the stream
+   * @param token - Numeric token
+   * @returns Promise with number
+   */
+  async peekNumber(token) {
+    const len = await this.peekBuffer(this.numBuffer, { length: token.len });
+    if (len < token.len)
+      throw new EndOfStreamError();
+    return token.get(this.numBuffer, 0);
+  }
+  /**
+   * Ignore number of bytes, advances the pointer in under tokenizer-stream.
+   * @param length - Number of bytes to ignore.  Must be ≥ 0.
+   * @return resolves the number of bytes ignored, equals length if this available, otherwise the number of bytes available
+   */
+  async ignore(length) {
+    if (length < 0) {
+      throw new RangeError("ignore length must be ≥ 0 bytes");
+    }
+    if (this.fileInfo.size !== void 0) {
+      const bytesLeft = this.fileInfo.size - this.position;
+      if (length > bytesLeft) {
+        this.position += bytesLeft;
+        return bytesLeft;
+      }
+    }
+    this.position += length;
+    return length;
+  }
+  async close() {
+    var _a2;
+    await this.abort();
+    await ((_a2 = this.onClose) == null ? void 0 : _a2.call(this));
+  }
+  normalizeOptions(uint8Array, options) {
+    if (!this.supportsRandomAccess() && options && options.position !== void 0 && options.position < this.position) {
+      throw new Error("`options.position` must be equal or greater than `tokenizer.position`");
+    }
+    return {
+      ...{
+        mayBeLess: false,
+        offset: 0,
+        length: uint8Array.length,
+        position: this.position
+      },
+      ...options
+    };
+  }
+  abort() {
+    return Promise.resolve();
+  }
+}
+const maxBufferSize = 256e3;
+class ReadStreamTokenizer extends AbstractTokenizer {
+  /**
+   * Constructor
+   * @param streamReader stream-reader to read from
+   * @param options Tokenizer options
+   */
+  constructor(streamReader, options) {
+    super(options);
+    this.streamReader = streamReader;
+    this.fileInfo = (options == null ? void 0 : options.fileInfo) ?? {};
+  }
+  /**
+   * Read buffer from tokenizer
+   * @param uint8Array - Target Uint8Array to fill with data read from the tokenizer-stream
+   * @param options - Read behaviour options
+   * @returns Promise with number of bytes read
+   */
+  async readBuffer(uint8Array, options) {
+    const normOptions = this.normalizeOptions(uint8Array, options);
+    const skipBytes = normOptions.position - this.position;
+    if (skipBytes > 0) {
+      await this.ignore(skipBytes);
+      return this.readBuffer(uint8Array, options);
+    }
+    if (skipBytes < 0) {
+      throw new Error("`options.position` must be equal or greater than `tokenizer.position`");
+    }
+    if (normOptions.length === 0) {
+      return 0;
+    }
+    const bytesRead = await this.streamReader.read(uint8Array.subarray(0, normOptions.length), normOptions.mayBeLess);
+    this.position += bytesRead;
+    if ((!options || !options.mayBeLess) && bytesRead < normOptions.length) {
+      throw new EndOfStreamError();
+    }
+    return bytesRead;
+  }
+  /**
+   * Peek (read ahead) buffer from tokenizer
+   * @param uint8Array - Uint8Array (or Buffer) to write data to
+   * @param options - Read behaviour options
+   * @returns Promise with number of bytes peeked
+   */
+  async peekBuffer(uint8Array, options) {
+    const normOptions = this.normalizeOptions(uint8Array, options);
+    let bytesRead = 0;
+    if (normOptions.position) {
+      const skipBytes = normOptions.position - this.position;
+      if (skipBytes > 0) {
+        const skipBuffer = new Uint8Array(normOptions.length + skipBytes);
+        bytesRead = await this.peekBuffer(skipBuffer, { mayBeLess: normOptions.mayBeLess });
+        uint8Array.set(skipBuffer.subarray(skipBytes));
+        return bytesRead - skipBytes;
+      }
+      if (skipBytes < 0) {
+        throw new Error("Cannot peek from a negative offset in a stream");
+      }
+    }
+    if (normOptions.length > 0) {
+      try {
+        bytesRead = await this.streamReader.peek(uint8Array.subarray(0, normOptions.length), normOptions.mayBeLess);
+      } catch (err) {
+        if ((options == null ? void 0 : options.mayBeLess) && err instanceof EndOfStreamError) {
+          return 0;
+        }
+        throw err;
+      }
+      if (!normOptions.mayBeLess && bytesRead < normOptions.length) {
+        throw new EndOfStreamError();
+      }
+    }
+    return bytesRead;
+  }
+  /**
+   * @param length Number of bytes to ignore. Must be ≥ 0.
+   */
+  async ignore(length) {
+    if (length < 0) {
+      throw new RangeError("ignore length must be ≥ 0 bytes");
+    }
+    const bufSize = Math.min(maxBufferSize, length);
+    const buf = new Uint8Array(bufSize);
+    let totBytesRead = 0;
+    while (totBytesRead < length) {
+      const remaining = length - totBytesRead;
+      const bytesRead = await this.readBuffer(buf, { length: Math.min(bufSize, remaining) });
+      if (bytesRead < 0) {
+        return bytesRead;
+      }
+      totBytesRead += bytesRead;
+    }
+    return totBytesRead;
+  }
+  abort() {
+    return this.streamReader.abort();
+  }
+  async close() {
+    return this.streamReader.close();
+  }
+  supportsRandomAccess() {
+    return false;
+  }
+}
+class BufferTokenizer extends AbstractTokenizer {
+  /**
+   * Construct BufferTokenizer
+   * @param uint8Array - Uint8Array to tokenize
+   * @param options Tokenizer options
+   */
+  constructor(uint8Array, options) {
+    super(options);
+    this.uint8Array = uint8Array;
+    this.fileInfo = { ...(options == null ? void 0 : options.fileInfo) ?? {}, ...{ size: uint8Array.length } };
+  }
+  /**
+   * Read buffer from tokenizer
+   * @param uint8Array - Uint8Array to tokenize
+   * @param options - Read behaviour options
+   * @returns {Promise<number>}
+   */
+  async readBuffer(uint8Array, options) {
+    if (options == null ? void 0 : options.position) {
+      this.position = options.position;
+    }
+    const bytesRead = await this.peekBuffer(uint8Array, options);
+    this.position += bytesRead;
+    return bytesRead;
+  }
+  /**
+   * Peek (read ahead) buffer from tokenizer
+   * @param uint8Array
+   * @param options - Read behaviour options
+   * @returns {Promise<number>}
+   */
+  async peekBuffer(uint8Array, options) {
+    const normOptions = this.normalizeOptions(uint8Array, options);
+    const bytes2read = Math.min(this.uint8Array.length - normOptions.position, normOptions.length);
+    if (!normOptions.mayBeLess && bytes2read < normOptions.length) {
+      throw new EndOfStreamError();
+    }
+    uint8Array.set(this.uint8Array.subarray(normOptions.position, normOptions.position + bytes2read));
+    return bytes2read;
+  }
+  close() {
+    return super.close();
+  }
+  supportsRandomAccess() {
+    return true;
+  }
+  setPosition(position) {
+    this.position = position;
+  }
+}
+class BlobTokenizer extends AbstractTokenizer {
+  /**
+   * Construct BufferTokenizer
+   * @param blob - Uint8Array to tokenize
+   * @param options Tokenizer options
+   */
+  constructor(blob, options) {
+    super(options);
+    this.blob = blob;
+    this.fileInfo = { ...(options == null ? void 0 : options.fileInfo) ?? {}, ...{ size: blob.size, mimeType: blob.type } };
+  }
+  /**
+   * Read buffer from tokenizer
+   * @param uint8Array - Uint8Array to tokenize
+   * @param options - Read behaviour options
+   * @returns {Promise<number>}
+   */
+  async readBuffer(uint8Array, options) {
+    if (options == null ? void 0 : options.position) {
+      this.position = options.position;
+    }
+    const bytesRead = await this.peekBuffer(uint8Array, options);
+    this.position += bytesRead;
+    return bytesRead;
+  }
+  /**
+   * Peek (read ahead) buffer from tokenizer
+   * @param buffer
+   * @param options - Read behaviour options
+   * @returns {Promise<number>}
+   */
+  async peekBuffer(buffer, options) {
+    const normOptions = this.normalizeOptions(buffer, options);
+    const bytes2read = Math.min(this.blob.size - normOptions.position, normOptions.length);
+    if (!normOptions.mayBeLess && bytes2read < normOptions.length) {
+      throw new EndOfStreamError();
+    }
+    const arrayBuffer = await this.blob.slice(normOptions.position, normOptions.position + bytes2read).arrayBuffer();
+    buffer.set(new Uint8Array(arrayBuffer));
+    return bytes2read;
+  }
+  close() {
+    return super.close();
+  }
+  supportsRandomAccess() {
+    return true;
+  }
+  setPosition(position) {
+    this.position = position;
+  }
+}
+function fromWebStream(webStream, options) {
+  const webStreamReader = makeWebStreamReader(webStream);
+  const _options7 = options ?? {};
+  const chainedClose = _options7.onClose;
+  _options7.onClose = async () => {
+    await webStreamReader.close();
+    if (chainedClose) {
+      return chainedClose();
+    }
+  };
+  return new ReadStreamTokenizer(webStreamReader, _options7);
+}
+function fromBuffer(uint8Array, options) {
+  return new BufferTokenizer(uint8Array, options);
+}
+function fromBlob(blob, options) {
+  return new BlobTokenizer(blob, options);
+}
+var browser = { exports: {} };
+var ms;
+var hasRequiredMs;
+function requireMs() {
+  if (hasRequiredMs) return ms;
+  hasRequiredMs = 1;
+  var s = 1e3;
+  var m2 = s * 60;
+  var h2 = m2 * 60;
+  var d2 = h2 * 24;
+  var w2 = d2 * 7;
+  var y2 = d2 * 365.25;
+  ms = function(val, options) {
+    options = options || {};
+    var type = typeof val;
+    if (type === "string" && val.length > 0) {
+      return parse2(val);
+    } else if (type === "number" && isFinite(val)) {
+      return options.long ? fmtLong(val) : fmtShort(val);
+    }
+    throw new Error(
+      "val is not a non-empty string or a valid number. val=" + JSON.stringify(val)
+    );
+  };
+  function parse2(str) {
+    str = String(str);
+    if (str.length > 100) {
+      return;
+    }
+    var match = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
+      str
+    );
+    if (!match) {
+      return;
+    }
+    var n = parseFloat(match[1]);
+    var type = (match[2] || "ms").toLowerCase();
+    switch (type) {
+      case "years":
+      case "year":
+      case "yrs":
+      case "yr":
+      case "y":
+        return n * y2;
+      case "weeks":
+      case "week":
+      case "w":
+        return n * w2;
+      case "days":
+      case "day":
+      case "d":
+        return n * d2;
+      case "hours":
+      case "hour":
+      case "hrs":
+      case "hr":
+      case "h":
+        return n * h2;
+      case "minutes":
+      case "minute":
+      case "mins":
+      case "min":
+      case "m":
+        return n * m2;
+      case "seconds":
+      case "second":
+      case "secs":
+      case "sec":
+      case "s":
+        return n * s;
+      case "milliseconds":
+      case "millisecond":
+      case "msecs":
+      case "msec":
+      case "ms":
+        return n;
+      default:
+        return void 0;
+    }
+  }
+  function fmtShort(ms2) {
+    var msAbs = Math.abs(ms2);
+    if (msAbs >= d2) {
+      return Math.round(ms2 / d2) + "d";
+    }
+    if (msAbs >= h2) {
+      return Math.round(ms2 / h2) + "h";
+    }
+    if (msAbs >= m2) {
+      return Math.round(ms2 / m2) + "m";
+    }
+    if (msAbs >= s) {
+      return Math.round(ms2 / s) + "s";
+    }
+    return ms2 + "ms";
+  }
+  function fmtLong(ms2) {
+    var msAbs = Math.abs(ms2);
+    if (msAbs >= d2) {
+      return plural(ms2, msAbs, d2, "day");
+    }
+    if (msAbs >= h2) {
+      return plural(ms2, msAbs, h2, "hour");
+    }
+    if (msAbs >= m2) {
+      return plural(ms2, msAbs, m2, "minute");
+    }
+    if (msAbs >= s) {
+      return plural(ms2, msAbs, s, "second");
+    }
+    return ms2 + " ms";
+  }
+  function plural(ms2, msAbs, n, name) {
+    var isPlural = msAbs >= n * 1.5;
+    return Math.round(ms2 / n) + " " + name + (isPlural ? "s" : "");
+  }
+  return ms;
+}
+function setup(env) {
+  createDebug.debug = createDebug;
+  createDebug.default = createDebug;
+  createDebug.coerce = coerce;
+  createDebug.disable = disable;
+  createDebug.enable = enable;
+  createDebug.enabled = enabled;
+  createDebug.humanize = requireMs();
+  createDebug.destroy = destroy;
+  Object.keys(env).forEach((key) => {
+    createDebug[key] = env[key];
+  });
+  createDebug.names = [];
+  createDebug.skips = [];
+  createDebug.formatters = {};
+  function selectColor(namespace) {
+    let hash = 0;
+    for (let i = 0; i < namespace.length; i++) {
+      hash = (hash << 5) - hash + namespace.charCodeAt(i);
+      hash |= 0;
+    }
+    return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
+  }
+  createDebug.selectColor = selectColor;
+  function createDebug(namespace) {
+    let prevTime;
+    let enableOverride = null;
+    let namespacesCache;
+    let enabledCache;
+    function debug2(...args) {
+      if (!debug2.enabled) {
+        return;
+      }
+      const self = debug2;
+      const curr = Number(/* @__PURE__ */ new Date());
+      const ms2 = curr - (prevTime || curr);
+      self.diff = ms2;
+      self.prev = prevTime;
+      self.curr = curr;
+      prevTime = curr;
+      args[0] = createDebug.coerce(args[0]);
+      if (typeof args[0] !== "string") {
+        args.unshift("%O");
+      }
+      let index2 = 0;
+      args[0] = args[0].replace(/%([a-zA-Z%])/g, (match, format) => {
+        if (match === "%%") {
+          return "%";
+        }
+        index2++;
+        const formatter = createDebug.formatters[format];
+        if (typeof formatter === "function") {
+          const val = args[index2];
+          match = formatter.call(self, val);
+          args.splice(index2, 1);
+          index2--;
+        }
+        return match;
+      });
+      createDebug.formatArgs.call(self, args);
+      const logFn = self.log || createDebug.log;
+      logFn.apply(self, args);
+    }
+    debug2.namespace = namespace;
+    debug2.useColors = createDebug.useColors();
+    debug2.color = createDebug.selectColor(namespace);
+    debug2.extend = extend;
+    debug2.destroy = createDebug.destroy;
+    Object.defineProperty(debug2, "enabled", {
+      enumerable: true,
+      configurable: false,
+      get: () => {
+        if (enableOverride !== null) {
+          return enableOverride;
+        }
+        if (namespacesCache !== createDebug.namespaces) {
+          namespacesCache = createDebug.namespaces;
+          enabledCache = createDebug.enabled(namespace);
+        }
+        return enabledCache;
+      },
+      set: (v2) => {
+        enableOverride = v2;
+      }
+    });
+    if (typeof createDebug.init === "function") {
+      createDebug.init(debug2);
+    }
+    return debug2;
+  }
+  function extend(namespace, delimiter) {
+    const newDebug = createDebug(this.namespace + (typeof delimiter === "undefined" ? ":" : delimiter) + namespace);
+    newDebug.log = this.log;
+    return newDebug;
+  }
+  function enable(namespaces) {
+    createDebug.save(namespaces);
+    createDebug.namespaces = namespaces;
+    createDebug.names = [];
+    createDebug.skips = [];
+    const split2 = (typeof namespaces === "string" ? namespaces : "").trim().replace(/\s+/g, ",").split(",").filter(Boolean);
+    for (const ns of split2) {
+      if (ns[0] === "-") {
+        createDebug.skips.push(ns.slice(1));
+      } else {
+        createDebug.names.push(ns);
+      }
+    }
+  }
+  function matchesTemplate(search, template) {
+    let searchIndex = 0;
+    let templateIndex = 0;
+    let starIndex = -1;
+    let matchIndex = 0;
+    while (searchIndex < search.length) {
+      if (templateIndex < template.length && (template[templateIndex] === search[searchIndex] || template[templateIndex] === "*")) {
+        if (template[templateIndex] === "*") {
+          starIndex = templateIndex;
+          matchIndex = searchIndex;
+          templateIndex++;
+        } else {
+          searchIndex++;
+          templateIndex++;
+        }
+      } else if (starIndex !== -1) {
+        templateIndex = starIndex + 1;
+        matchIndex++;
+        searchIndex = matchIndex;
+      } else {
+        return false;
+      }
+    }
+    while (templateIndex < template.length && template[templateIndex] === "*") {
+      templateIndex++;
+    }
+    return templateIndex === template.length;
+  }
+  function disable() {
+    const namespaces = [
+      ...createDebug.names,
+      ...createDebug.skips.map((namespace) => "-" + namespace)
+    ].join(",");
+    createDebug.enable("");
+    return namespaces;
+  }
+  function enabled(name) {
+    for (const skip of createDebug.skips) {
+      if (matchesTemplate(name, skip)) {
+        return false;
+      }
+    }
+    for (const ns of createDebug.names) {
+      if (matchesTemplate(name, ns)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  function coerce(val) {
+    if (val instanceof Error) {
+      return val.stack || val.message;
+    }
+    return val;
+  }
+  function destroy() {
+    console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
+  }
+  createDebug.enable(createDebug.load());
+  return createDebug;
+}
+var common = setup;
+(function(module, exports) {
+  var define_process_env_default2 = {};
+  exports.formatArgs = formatArgs;
+  exports.save = save;
+  exports.load = load;
+  exports.useColors = useColors;
+  exports.storage = localstorage();
+  exports.destroy = /* @__PURE__ */ (() => {
+    let warned = false;
+    return () => {
+      if (!warned) {
+        warned = true;
+        console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
+      }
+    };
+  })();
+  exports.colors = [
+    "#0000CC",
+    "#0000FF",
+    "#0033CC",
+    "#0033FF",
+    "#0066CC",
+    "#0066FF",
+    "#0099CC",
+    "#0099FF",
+    "#00CC00",
+    "#00CC33",
+    "#00CC66",
+    "#00CC99",
+    "#00CCCC",
+    "#00CCFF",
+    "#3300CC",
+    "#3300FF",
+    "#3333CC",
+    "#3333FF",
+    "#3366CC",
+    "#3366FF",
+    "#3399CC",
+    "#3399FF",
+    "#33CC00",
+    "#33CC33",
+    "#33CC66",
+    "#33CC99",
+    "#33CCCC",
+    "#33CCFF",
+    "#6600CC",
+    "#6600FF",
+    "#6633CC",
+    "#6633FF",
+    "#66CC00",
+    "#66CC33",
+    "#9900CC",
+    "#9900FF",
+    "#9933CC",
+    "#9933FF",
+    "#99CC00",
+    "#99CC33",
+    "#CC0000",
+    "#CC0033",
+    "#CC0066",
+    "#CC0099",
+    "#CC00CC",
+    "#CC00FF",
+    "#CC3300",
+    "#CC3333",
+    "#CC3366",
+    "#CC3399",
+    "#CC33CC",
+    "#CC33FF",
+    "#CC6600",
+    "#CC6633",
+    "#CC9900",
+    "#CC9933",
+    "#CCCC00",
+    "#CCCC33",
+    "#FF0000",
+    "#FF0033",
+    "#FF0066",
+    "#FF0099",
+    "#FF00CC",
+    "#FF00FF",
+    "#FF3300",
+    "#FF3333",
+    "#FF3366",
+    "#FF3399",
+    "#FF33CC",
+    "#FF33FF",
+    "#FF6600",
+    "#FF6633",
+    "#FF9900",
+    "#FF9933",
+    "#FFCC00",
+    "#FFCC33"
+  ];
+  function useColors() {
+    if (typeof window !== "undefined" && window.process && (window.process.type === "renderer" || window.process.__nwjs)) {
+      return true;
+    }
+    if (typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
+      return false;
+    }
+    let m2;
+    return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || // Is firebug? http://stackoverflow.com/a/398120/376773
+    typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || // Is firefox >= v31?
+    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+    typeof navigator !== "undefined" && navigator.userAgent && (m2 = navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/)) && parseInt(m2[1], 10) >= 31 || // Double check webkit in userAgent just in case we are in a worker
+    typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
+  }
+  function formatArgs(args) {
+    args[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + args[0] + (this.useColors ? "%c " : " ") + "+" + module.exports.humanize(this.diff);
+    if (!this.useColors) {
+      return;
+    }
+    const c2 = "color: " + this.color;
+    args.splice(1, 0, c2, "color: inherit");
+    let index2 = 0;
+    let lastC = 0;
+    args[0].replace(/%[a-zA-Z%]/g, (match) => {
+      if (match === "%%") {
+        return;
+      }
+      index2++;
+      if (match === "%c") {
+        lastC = index2;
+      }
+    });
+    args.splice(lastC, 0, c2);
+  }
+  exports.log = console.debug || console.log || (() => {
+  });
+  function save(namespaces) {
+    try {
+      if (namespaces) {
+        exports.storage.setItem("debug", namespaces);
+      } else {
+        exports.storage.removeItem("debug");
+      }
+    } catch (error) {
+    }
+  }
+  function load() {
+    let r2;
+    try {
+      r2 = exports.storage.getItem("debug") || exports.storage.getItem("DEBUG");
+    } catch (error) {
+    }
+    if (!r2 && typeof process !== "undefined" && "env" in process) {
+      r2 = define_process_env_default2.DEBUG;
+    }
+    return r2;
+  }
+  function localstorage() {
+    try {
+      return localStorage;
+    } catch (error) {
+    }
+  }
+  module.exports = common(exports);
+  const { formatters } = module.exports;
+  formatters.j = function(v2) {
+    try {
+      return JSON.stringify(v2);
+    } catch (error) {
+      return "[UnexpectedJSONParseError]: " + error.message;
+    }
+  };
+})(browser, browser.exports);
+var browserExports = browser.exports;
+const initDebug = /* @__PURE__ */ getDefaultExportFromCjs(browserExports);
+const Signature = {
+  LocalFileHeader: 67324752,
+  DataDescriptor: 134695760,
+  CentralFileHeader: 33639248,
+  EndOfCentralDirectory: 101010256
+};
+const DataDescriptor = {
+  get(array) {
+    return {
+      signature: UINT32_LE.get(array, 0),
+      compressedSize: UINT32_LE.get(array, 8),
+      uncompressedSize: UINT32_LE.get(array, 12)
+    };
+  },
+  len: 16
+};
+const LocalFileHeaderToken = {
+  get(array) {
+    const flags = UINT16_LE.get(array, 6);
+    return {
+      signature: UINT32_LE.get(array, 0),
+      minVersion: UINT16_LE.get(array, 4),
+      dataDescriptor: !!(flags & 8),
+      compressedMethod: UINT16_LE.get(array, 8),
+      compressedSize: UINT32_LE.get(array, 18),
+      uncompressedSize: UINT32_LE.get(array, 22),
+      filenameLength: UINT16_LE.get(array, 26),
+      extraFieldLength: UINT16_LE.get(array, 28),
+      filename: null
+    };
+  },
+  len: 30
+};
+const EndOfCentralDirectoryRecordToken = {
+  get(array) {
+    return {
+      signature: UINT32_LE.get(array, 0),
+      nrOfThisDisk: UINT16_LE.get(array, 4),
+      nrOfThisDiskWithTheStart: UINT16_LE.get(array, 6),
+      nrOfEntriesOnThisDisk: UINT16_LE.get(array, 8),
+      nrOfEntriesOfSize: UINT16_LE.get(array, 10),
+      sizeOfCd: UINT32_LE.get(array, 12),
+      offsetOfStartOfCd: UINT32_LE.get(array, 16),
+      zipFileCommentLength: UINT16_LE.get(array, 20)
+    };
+  },
+  len: 22
+};
+const FileHeader = {
+  get(array) {
+    const flags = UINT16_LE.get(array, 8);
+    return {
+      signature: UINT32_LE.get(array, 0),
+      minVersion: UINT16_LE.get(array, 6),
+      dataDescriptor: !!(flags & 8),
+      compressedMethod: UINT16_LE.get(array, 10),
+      compressedSize: UINT32_LE.get(array, 20),
+      uncompressedSize: UINT32_LE.get(array, 24),
+      filenameLength: UINT16_LE.get(array, 28),
+      extraFieldLength: UINT16_LE.get(array, 30),
+      fileCommentLength: UINT16_LE.get(array, 32),
+      relativeOffsetOfLocalHeader: UINT32_LE.get(array, 42),
+      filename: null
+    };
+  },
+  len: 46
+};
+function signatureToArray(signature) {
+  const signatureBytes = new Uint8Array(UINT32_LE.len);
+  UINT32_LE.put(signatureBytes, 0, signature);
+  return signatureBytes;
+}
+const debug = initDebug("tokenizer:inflate");
+const syncBufferSize = 256 * 1024;
+const ddSignatureArray = signatureToArray(Signature.DataDescriptor);
+const eocdSignatureBytes = signatureToArray(Signature.EndOfCentralDirectory);
+class ZipHandler {
+  constructor(tokenizer) {
+    this.tokenizer = tokenizer;
+    this.syncBuffer = new Uint8Array(syncBufferSize);
+  }
+  async isZip() {
+    return await this.peekSignature() === Signature.LocalFileHeader;
+  }
+  peekSignature() {
+    return this.tokenizer.peekToken(UINT32_LE);
+  }
+  async findEndOfCentralDirectoryLocator() {
+    const randomReadTokenizer = this.tokenizer;
+    const chunkLength = Math.min(16 * 1024, randomReadTokenizer.fileInfo.size);
+    const buffer = this.syncBuffer.subarray(0, chunkLength);
+    await this.tokenizer.readBuffer(buffer, { position: randomReadTokenizer.fileInfo.size - chunkLength });
+    for (let i = buffer.length - 4; i >= 0; i--) {
+      if (buffer[i] === eocdSignatureBytes[0] && buffer[i + 1] === eocdSignatureBytes[1] && buffer[i + 2] === eocdSignatureBytes[2] && buffer[i + 3] === eocdSignatureBytes[3]) {
+        return randomReadTokenizer.fileInfo.size - chunkLength + i;
+      }
+    }
+    return -1;
+  }
+  async readCentralDirectory() {
+    if (!this.tokenizer.supportsRandomAccess()) {
+      debug("Cannot reading central-directory without random-read support");
+      return;
+    }
+    debug("Reading central-directory...");
+    const pos = this.tokenizer.position;
+    const offset2 = await this.findEndOfCentralDirectoryLocator();
+    if (offset2 > 0) {
+      debug("Central-directory 32-bit signature found");
+      const eocdHeader = await this.tokenizer.readToken(EndOfCentralDirectoryRecordToken, offset2);
+      const files = [];
+      this.tokenizer.setPosition(eocdHeader.offsetOfStartOfCd);
+      for (let n = 0; n < eocdHeader.nrOfEntriesOfSize; ++n) {
+        const entry = await this.tokenizer.readToken(FileHeader);
+        if (entry.signature !== Signature.CentralFileHeader) {
+          throw new Error("Expected Central-File-Header signature");
+        }
+        entry.filename = await this.tokenizer.readToken(new StringType(entry.filenameLength, "utf-8"));
+        await this.tokenizer.ignore(entry.extraFieldLength);
+        await this.tokenizer.ignore(entry.fileCommentLength);
+        files.push(entry);
+        debug(`Add central-directory file-entry: n=${n + 1}/${files.length}: filename=${files[n].filename}`);
+      }
+      this.tokenizer.setPosition(pos);
+      return files;
+    }
+    this.tokenizer.setPosition(pos);
+  }
+  async unzip(fileCb) {
+    const entries = await this.readCentralDirectory();
+    if (entries) {
+      return this.iterateOverCentralDirectory(entries, fileCb);
+    }
+    let stop = false;
+    do {
+      const zipHeader = await this.readLocalFileHeader();
+      if (!zipHeader)
+        break;
+      const next = fileCb(zipHeader);
+      stop = !!next.stop;
+      let fileData;
+      await this.tokenizer.ignore(zipHeader.extraFieldLength);
+      if (zipHeader.dataDescriptor && zipHeader.compressedSize === 0) {
+        const chunks = [];
+        let len = syncBufferSize;
+        debug("Compressed-file-size unknown, scanning for next data-descriptor-signature....");
+        let nextHeaderIndex = -1;
+        while (nextHeaderIndex < 0 && len === syncBufferSize) {
+          len = await this.tokenizer.peekBuffer(this.syncBuffer, { mayBeLess: true });
+          nextHeaderIndex = indexOf(this.syncBuffer.subarray(0, len), ddSignatureArray);
+          const size2 = nextHeaderIndex >= 0 ? nextHeaderIndex : len;
+          if (next.handler) {
+            const data = new Uint8Array(size2);
+            await this.tokenizer.readBuffer(data);
+            chunks.push(data);
+          } else {
+            await this.tokenizer.ignore(size2);
+          }
+        }
+        debug(`Found data-descriptor-signature at pos=${this.tokenizer.position}`);
+        if (next.handler) {
+          await this.inflate(zipHeader, mergeArrays(chunks), next.handler);
+        }
+      } else {
+        if (next.handler) {
+          debug(`Reading compressed-file-data: ${zipHeader.compressedSize} bytes`);
+          fileData = new Uint8Array(zipHeader.compressedSize);
+          await this.tokenizer.readBuffer(fileData);
+          await this.inflate(zipHeader, fileData, next.handler);
+        } else {
+          debug(`Ignoring compressed-file-data: ${zipHeader.compressedSize} bytes`);
+          await this.tokenizer.ignore(zipHeader.compressedSize);
+        }
+      }
+      debug(`Reading data-descriptor at pos=${this.tokenizer.position}`);
+      if (zipHeader.dataDescriptor) {
+        const dataDescriptor = await this.tokenizer.readToken(DataDescriptor);
+        if (dataDescriptor.signature !== 134695760) {
+          throw new Error(`Expected data-descriptor-signature at position ${this.tokenizer.position - DataDescriptor.len}`);
+        }
+      }
+    } while (!stop);
+  }
+  async iterateOverCentralDirectory(entries, fileCb) {
+    for (const fileHeader of entries) {
+      const next = fileCb(fileHeader);
+      if (next.handler) {
+        this.tokenizer.setPosition(fileHeader.relativeOffsetOfLocalHeader);
+        const zipHeader = await this.readLocalFileHeader();
+        if (zipHeader) {
+          await this.tokenizer.ignore(zipHeader.extraFieldLength);
+          const fileData = new Uint8Array(fileHeader.compressedSize);
+          await this.tokenizer.readBuffer(fileData);
+          await this.inflate(zipHeader, fileData, next.handler);
+        }
+      }
+      if (next.stop)
+        break;
+    }
+  }
+  async inflate(zipHeader, fileData, cb) {
+    if (zipHeader.compressedMethod === 0) {
+      return cb(fileData);
+    }
+    if (zipHeader.compressedMethod !== 8) {
+      throw new Error(`Unsupported ZIP compression method: ${zipHeader.compressedMethod}`);
+    }
+    debug(`Decompress filename=${zipHeader.filename}, compressed-size=${fileData.length}`);
+    const uncompressedData = await ZipHandler.decompressDeflateRaw(fileData);
+    return cb(uncompressedData);
+  }
+  static async decompressDeflateRaw(data) {
+    const input = new ReadableStream({
+      start(controller) {
+        controller.enqueue(data);
+        controller.close();
+      }
+    });
+    const ds = new DecompressionStream("deflate-raw");
+    const output = input.pipeThrough(ds);
+    try {
+      const response = new Response(output);
+      const buffer = await response.arrayBuffer();
+      return new Uint8Array(buffer);
+    } catch (err) {
+      const message = err instanceof Error ? `Failed to deflate ZIP entry: ${err.message}` : "Unknown decompression error in ZIP entry";
+      throw new TypeError(message);
+    }
+  }
+  async readLocalFileHeader() {
+    const signature = await this.tokenizer.peekToken(UINT32_LE);
+    if (signature === Signature.LocalFileHeader) {
+      const header = await this.tokenizer.readToken(LocalFileHeaderToken);
+      header.filename = await this.tokenizer.readToken(new StringType(header.filenameLength, "utf-8"));
+      return header;
+    }
+    if (signature === Signature.CentralFileHeader) {
+      return false;
+    }
+    if (signature === 3759263696) {
+      throw new Error("Encrypted ZIP");
+    }
+    throw new Error("Unexpected signature");
+  }
+}
+function indexOf(buffer, portion) {
+  const bufferLength = buffer.length;
+  const portionLength = portion.length;
+  if (portionLength > bufferLength)
+    return -1;
+  for (let i = 0; i <= bufferLength - portionLength; i++) {
+    let found = true;
+    for (let j2 = 0; j2 < portionLength; j2++) {
+      if (buffer[i + j2] !== portion[j2]) {
+        found = false;
+        break;
+      }
+    }
+    if (found) {
+      return i;
+    }
+  }
+  return -1;
+}
+function mergeArrays(chunks) {
+  const totalLength = chunks.reduce((acc, curr) => acc + curr.length, 0);
+  const mergedArray = new Uint8Array(totalLength);
+  let offset2 = 0;
+  for (const chunk of chunks) {
+    mergedArray.set(chunk, offset2);
+    offset2 += chunk.length;
+  }
+  return mergedArray;
+}
+class GzipHandler {
+  constructor(tokenizer) {
+    this.tokenizer = tokenizer;
+  }
+  inflate() {
+    const tokenizer = this.tokenizer;
+    return new ReadableStream({
+      async pull(controller) {
+        const buffer = new Uint8Array(1024);
+        const size2 = await tokenizer.readBuffer(buffer, { mayBeLess: true });
+        if (size2 === 0) {
+          controller.close();
+          return;
+        }
+        controller.enqueue(buffer.subarray(0, size2));
+      }
+    }).pipeThrough(new DecompressionStream("gzip"));
+  }
+}
+({
+  utf8: new globalThis.TextDecoder("utf8")
+});
+new globalThis.TextEncoder();
+Array.from({ length: 256 }, (_2, index2) => index2.toString(16).padStart(2, "0"));
+function getUintBE(view) {
+  const { byteLength } = view;
+  if (byteLength === 6) {
+    return view.getUint16(0) * 2 ** 32 + view.getUint32(2);
+  }
+  if (byteLength === 5) {
+    return view.getUint8(0) * 2 ** 32 + view.getUint32(1);
+  }
+  if (byteLength === 4) {
+    return view.getUint32(0);
+  }
+  if (byteLength === 3) {
+    return view.getUint8(0) * 2 ** 16 + view.getUint16(1);
+  }
+  if (byteLength === 2) {
+    return view.getUint16(0);
+  }
+  if (byteLength === 1) {
+    return view.getUint8(0);
+  }
+}
+function stringToBytes(string, encoding) {
+  if (encoding === "utf-16le") {
+    const bytes = [];
+    for (let index2 = 0; index2 < string.length; index2++) {
+      const code = string.charCodeAt(index2);
+      bytes.push(code & 255, code >> 8 & 255);
+    }
+    return bytes;
+  }
+  if (encoding === "utf-16be") {
+    const bytes = [];
+    for (let index2 = 0; index2 < string.length; index2++) {
+      const code = string.charCodeAt(index2);
+      bytes.push(code >> 8 & 255, code & 255);
+    }
+    return bytes;
+  }
+  return [...string].map((character) => character.charCodeAt(0));
+}
+function tarHeaderChecksumMatches(arrayBuffer, offset2 = 0) {
+  const readSum = Number.parseInt(new StringType(6).get(arrayBuffer, 148).replace(/\0.*$/, "").trim(), 8);
+  if (Number.isNaN(readSum)) {
+    return false;
+  }
+  let sum = 8 * 32;
+  for (let index2 = offset2; index2 < offset2 + 148; index2++) {
+    sum += arrayBuffer[index2];
+  }
+  for (let index2 = offset2 + 156; index2 < offset2 + 512; index2++) {
+    sum += arrayBuffer[index2];
+  }
+  return readSum === sum;
+}
+const uint32SyncSafeToken = {
+  get: (buffer, offset2) => buffer[offset2 + 3] & 127 | buffer[offset2 + 2] << 7 | buffer[offset2 + 1] << 14 | buffer[offset2] << 21,
+  len: 4
+};
+const extensions = [
+  "jpg",
+  "png",
+  "apng",
+  "gif",
+  "webp",
+  "flif",
+  "xcf",
+  "cr2",
+  "cr3",
+  "orf",
+  "arw",
+  "dng",
+  "nef",
+  "rw2",
+  "raf",
+  "tif",
+  "bmp",
+  "icns",
+  "jxr",
+  "psd",
+  "indd",
+  "zip",
+  "tar",
+  "rar",
+  "gz",
+  "bz2",
+  "7z",
+  "dmg",
+  "mp4",
+  "mid",
+  "mkv",
+  "webm",
+  "mov",
+  "avi",
+  "mpg",
+  "mp2",
+  "mp3",
+  "m4a",
+  "oga",
+  "ogg",
+  "ogv",
+  "opus",
+  "flac",
+  "wav",
+  "spx",
+  "amr",
+  "pdf",
+  "epub",
+  "elf",
+  "macho",
+  "exe",
+  "swf",
+  "rtf",
+  "wasm",
+  "woff",
+  "woff2",
+  "eot",
+  "ttf",
+  "otf",
+  "ttc",
+  "ico",
+  "flv",
+  "ps",
+  "xz",
+  "sqlite",
+  "nes",
+  "crx",
+  "xpi",
+  "cab",
+  "deb",
+  "ar",
+  "rpm",
+  "Z",
+  "lz",
+  "cfb",
+  "mxf",
+  "mts",
+  "blend",
+  "bpg",
+  "docx",
+  "pptx",
+  "xlsx",
+  "3gp",
+  "3g2",
+  "j2c",
+  "jp2",
+  "jpm",
+  "jpx",
+  "mj2",
+  "aif",
+  "qcp",
+  "odt",
+  "ods",
+  "odp",
+  "xml",
+  "mobi",
+  "heic",
+  "cur",
+  "ktx",
+  "ape",
+  "wv",
+  "dcm",
+  "ics",
+  "glb",
+  "pcap",
+  "dsf",
+  "lnk",
+  "alias",
+  "voc",
+  "ac3",
+  "m4v",
+  "m4p",
+  "m4b",
+  "f4v",
+  "f4p",
+  "f4b",
+  "f4a",
+  "mie",
+  "asf",
+  "ogm",
+  "ogx",
+  "mpc",
+  "arrow",
+  "shp",
+  "aac",
+  "mp1",
+  "it",
+  "s3m",
+  "xm",
+  "skp",
+  "avif",
+  "eps",
+  "lzh",
+  "pgp",
+  "asar",
+  "stl",
+  "chm",
+  "3mf",
+  "zst",
+  "jxl",
+  "vcf",
+  "jls",
+  "pst",
+  "dwg",
+  "parquet",
+  "class",
+  "arj",
+  "cpio",
+  "ace",
+  "avro",
+  "icc",
+  "fbx",
+  "vsdx",
+  "vtt",
+  "apk",
+  "drc",
+  "lz4",
+  "potx",
+  "xltx",
+  "dotx",
+  "xltm",
+  "ott",
+  "ots",
+  "otp",
+  "odg",
+  "otg",
+  "xlsm",
+  "docm",
+  "dotm",
+  "potm",
+  "pptm",
+  "jar",
+  "jmp",
+  "rm",
+  "sav",
+  "ppsm",
+  "ppsx",
+  "tar.gz",
+  "reg",
+  "dat"
+];
+const mimeTypes = [
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/webp",
+  "image/flif",
+  "image/x-xcf",
+  "image/x-canon-cr2",
+  "image/x-canon-cr3",
+  "image/tiff",
+  "image/bmp",
+  "image/vnd.ms-photo",
+  "image/vnd.adobe.photoshop",
+  "application/x-indesign",
+  "application/epub+zip",
+  "application/x-xpinstall",
+  "application/vnd.ms-powerpoint.slideshow.macroenabled.12",
+  "application/vnd.oasis.opendocument.text",
+  "application/vnd.oasis.opendocument.spreadsheet",
+  "application/vnd.oasis.opendocument.presentation",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "application/vnd.openxmlformats-officedocument.presentationml.slideshow",
+  "application/zip",
+  "application/x-tar",
+  "application/x-rar-compressed",
+  "application/gzip",
+  "application/x-bzip2",
+  "application/x-7z-compressed",
+  "application/x-apple-diskimage",
+  "application/vnd.apache.arrow.file",
+  "video/mp4",
+  "audio/midi",
+  "video/matroska",
+  "video/webm",
+  "video/quicktime",
+  "video/vnd.avi",
+  "audio/wav",
+  "audio/qcelp",
+  "audio/x-ms-asf",
+  "video/x-ms-asf",
+  "application/vnd.ms-asf",
+  "video/mpeg",
+  "video/3gpp",
+  "audio/mpeg",
+  "audio/mp4",
+  // RFC 4337
+  "video/ogg",
+  "audio/ogg",
+  "audio/ogg; codecs=opus",
+  "application/ogg",
+  "audio/flac",
+  "audio/ape",
+  "audio/wavpack",
+  "audio/amr",
+  "application/pdf",
+  "application/x-elf",
+  "application/x-mach-binary",
+  "application/x-msdownload",
+  "application/x-shockwave-flash",
+  "application/rtf",
+  "application/wasm",
+  "font/woff",
+  "font/woff2",
+  "application/vnd.ms-fontobject",
+  "font/ttf",
+  "font/otf",
+  "font/collection",
+  "image/x-icon",
+  "video/x-flv",
+  "application/postscript",
+  "application/eps",
+  "application/x-xz",
+  "application/x-sqlite3",
+  "application/x-nintendo-nes-rom",
+  "application/x-google-chrome-extension",
+  "application/vnd.ms-cab-compressed",
+  "application/x-deb",
+  "application/x-unix-archive",
+  "application/x-rpm",
+  "application/x-compress",
+  "application/x-lzip",
+  "application/x-cfb",
+  "application/x-mie",
+  "application/mxf",
+  "video/mp2t",
+  "application/x-blender",
+  "image/bpg",
+  "image/j2c",
+  "image/jp2",
+  "image/jpx",
+  "image/jpm",
+  "image/mj2",
+  "audio/aiff",
+  "application/xml",
+  "application/x-mobipocket-ebook",
+  "image/heif",
+  "image/heif-sequence",
+  "image/heic",
+  "image/heic-sequence",
+  "image/icns",
+  "image/ktx",
+  "application/dicom",
+  "audio/x-musepack",
+  "text/calendar",
+  "text/vcard",
+  "text/vtt",
+  "model/gltf-binary",
+  "application/vnd.tcpdump.pcap",
+  "audio/x-dsf",
+  // Non-standard
+  "application/x.ms.shortcut",
+  // Invented by us
+  "application/x.apple.alias",
+  // Invented by us
+  "audio/x-voc",
+  "audio/vnd.dolby.dd-raw",
+  "audio/x-m4a",
+  "image/apng",
+  "image/x-olympus-orf",
+  "image/x-sony-arw",
+  "image/x-adobe-dng",
+  "image/x-nikon-nef",
+  "image/x-panasonic-rw2",
+  "image/x-fujifilm-raf",
+  "video/x-m4v",
+  "video/3gpp2",
+  "application/x-esri-shape",
+  "audio/aac",
+  "audio/x-it",
+  "audio/x-s3m",
+  "audio/x-xm",
+  "video/MP1S",
+  "video/MP2P",
+  "application/vnd.sketchup.skp",
+  "image/avif",
+  "application/x-lzh-compressed",
+  "application/pgp-encrypted",
+  "application/x-asar",
+  "model/stl",
+  "application/vnd.ms-htmlhelp",
+  "model/3mf",
+  "image/jxl",
+  "application/zstd",
+  "image/jls",
+  "application/vnd.ms-outlook",
+  "image/vnd.dwg",
+  "application/vnd.apache.parquet",
+  "application/java-vm",
+  "application/x-arj",
+  "application/x-cpio",
+  "application/x-ace-compressed",
+  "application/avro",
+  "application/vnd.iccprofile",
+  "application/x.autodesk.fbx",
+  // Invented by us
+  "application/vnd.visio",
+  "application/vnd.android.package-archive",
+  "application/vnd.google.draco",
+  // Invented by us
+  "application/x-lz4",
+  // Invented by us
+  "application/vnd.openxmlformats-officedocument.presentationml.template",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.template",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.template",
+  "application/vnd.ms-excel.template.macroenabled.12",
+  "application/vnd.oasis.opendocument.text-template",
+  "application/vnd.oasis.opendocument.spreadsheet-template",
+  "application/vnd.oasis.opendocument.presentation-template",
+  "application/vnd.oasis.opendocument.graphics",
+  "application/vnd.oasis.opendocument.graphics-template",
+  "application/vnd.ms-excel.sheet.macroenabled.12",
+  "application/vnd.ms-word.document.macroenabled.12",
+  "application/vnd.ms-word.template.macroenabled.12",
+  "application/vnd.ms-powerpoint.template.macroenabled.12",
+  "application/vnd.ms-powerpoint.presentation.macroenabled.12",
+  "application/java-archive",
+  "application/vnd.rn-realmedia",
+  "application/x-spss-sav",
+  "application/x-ms-regedit",
+  "application/x-ft-windows-registry-hive",
+  "application/x-jmp-data"
+];
+const reasonableDetectionSizeInBytes = 4100;
+const maximumMpegOffsetTolerance = reasonableDetectionSizeInBytes - 2;
+const maximumZipEntrySizeInBytes = 1024 * 1024;
+const maximumZipEntryCount = 1024;
+const maximumZipBufferedReadSizeInBytes = 2 ** 31 - 1;
+const maximumUntrustedSkipSizeInBytes = 16 * 1024 * 1024;
+const maximumUnknownSizePayloadProbeSizeInBytes = maximumZipEntrySizeInBytes;
+const maximumZipTextEntrySizeInBytes = maximumZipEntrySizeInBytes;
+const maximumNestedGzipDetectionSizeInBytes = maximumUntrustedSkipSizeInBytes;
+const maximumNestedGzipProbeDepth = 1;
+const unknownSizeGzipProbeTimeoutInMilliseconds = 100;
+const maximumId3HeaderSizeInBytes = maximumUntrustedSkipSizeInBytes;
+const maximumEbmlDocumentTypeSizeInBytes = 64;
+const maximumEbmlElementPayloadSizeInBytes = maximumUnknownSizePayloadProbeSizeInBytes;
+const maximumEbmlElementCount = 256;
+const maximumPngChunkCount = 512;
+const maximumPngStreamScanBudgetInBytes = maximumUntrustedSkipSizeInBytes;
+const maximumAsfHeaderObjectCount = 512;
+const maximumTiffTagCount = 512;
+const maximumDetectionReentryCount = 256;
+const maximumPngChunkSizeInBytes = maximumUnknownSizePayloadProbeSizeInBytes;
+const maximumAsfHeaderPayloadSizeInBytes = maximumUnknownSizePayloadProbeSizeInBytes;
+const maximumTiffStreamIfdOffsetInBytes = maximumUnknownSizePayloadProbeSizeInBytes;
+const maximumTiffIfdOffsetInBytes = maximumUntrustedSkipSizeInBytes;
+const recoverableZipErrorMessages = /* @__PURE__ */ new Set([
+  "Unexpected signature",
+  "Encrypted ZIP",
+  "Expected Central-File-Header signature"
+]);
+const recoverableZipErrorMessagePrefixes = [
+  "ZIP entry count exceeds ",
+  "Unsupported ZIP compression method:",
+  "ZIP entry compressed data exceeds ",
+  "ZIP entry decompressed data exceeds ",
+  "Expected data-descriptor-signature at position "
+];
+const recoverableZipErrorCodes = /* @__PURE__ */ new Set([
+  "Z_BUF_ERROR",
+  "Z_DATA_ERROR",
+  "ERR_INVALID_STATE"
+]);
+class ParserHardLimitError extends Error {
+}
+function patchWebByobTokenizerClose(tokenizer) {
+  var _a2;
+  const streamReader = tokenizer == null ? void 0 : tokenizer.streamReader;
+  if (((_a2 = streamReader == null ? void 0 : streamReader.constructor) == null ? void 0 : _a2.name) !== "WebStreamByobReader") {
+    return tokenizer;
+  }
+  const { reader } = streamReader;
+  const cancelAndRelease = async () => {
+    await reader.cancel();
+    reader.releaseLock();
+  };
+  streamReader.close = cancelAndRelease;
+  streamReader.abort = async () => {
+    streamReader.interrupted = true;
+    await cancelAndRelease();
+  };
+  return tokenizer;
+}
+function getSafeBound(value, maximum, reason) {
+  if (!Number.isFinite(value) || value < 0 || value > maximum) {
+    throw new ParserHardLimitError(`${reason} has invalid size ${value} (maximum ${maximum} bytes)`);
+  }
+  return value;
+}
+async function safeIgnore(tokenizer, length, { maximumLength = maximumUntrustedSkipSizeInBytes, reason = "skip" } = {}) {
+  const safeLength = getSafeBound(length, maximumLength, reason);
+  await tokenizer.ignore(safeLength);
+}
+async function safeReadBuffer(tokenizer, buffer, options, { maximumLength = buffer.length, reason = "read" } = {}) {
+  const length = buffer.length;
+  const safeLength = getSafeBound(length, maximumLength, reason);
+  return tokenizer.readBuffer(buffer, {
+    ...options,
+    length: safeLength
+  });
+}
+async function decompressDeflateRawWithLimit(data, { maximumLength = maximumZipEntrySizeInBytes } = {}) {
+  const input = new ReadableStream({
+    start(controller) {
+      controller.enqueue(data);
+      controller.close();
+    }
+  });
+  const output = input.pipeThrough(new DecompressionStream("deflate-raw"));
+  const reader = output.getReader();
+  const chunks = [];
+  let totalLength = 0;
+  try {
+    for (; ; ) {
+      const { done, value } = await reader.read();
+      if (done) {
+        break;
+      }
+      totalLength += value.length;
+      if (totalLength > maximumLength) {
+        await reader.cancel();
+        throw new Error(`ZIP entry decompressed data exceeds ${maximumLength} bytes`);
+      }
+      chunks.push(value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  const uncompressedData = new Uint8Array(totalLength);
+  let offset2 = 0;
+  for (const chunk of chunks) {
+    uncompressedData.set(chunk, offset2);
+    offset2 += chunk.length;
+  }
+  return uncompressedData;
+}
+const zipDataDescriptorSignature = 134695760;
+const zipDataDescriptorLengthInBytes = 16;
+const zipDataDescriptorOverlapLengthInBytes = zipDataDescriptorLengthInBytes - 1;
+function findZipDataDescriptorOffset(buffer, bytesConsumed) {
+  if (buffer.length < zipDataDescriptorLengthInBytes) {
+    return -1;
+  }
+  const lastPossibleDescriptorOffset = buffer.length - zipDataDescriptorLengthInBytes;
+  for (let index2 = 0; index2 <= lastPossibleDescriptorOffset; index2++) {
+    if (UINT32_LE.get(buffer, index2) === zipDataDescriptorSignature && UINT32_LE.get(buffer, index2 + 8) === bytesConsumed + index2) {
+      return index2;
+    }
+  }
+  return -1;
+}
+function isPngAncillaryChunk(type) {
+  return (type.codePointAt(0) & 32) !== 0;
+}
+function mergeByteChunks(chunks, totalLength) {
+  const merged = new Uint8Array(totalLength);
+  let offset2 = 0;
+  for (const chunk of chunks) {
+    merged.set(chunk, offset2);
+    offset2 += chunk.length;
+  }
+  return merged;
+}
+async function readZipDataDescriptorEntryWithLimit(zipHandler, { shouldBuffer, maximumLength = maximumZipEntrySizeInBytes } = {}) {
+  const { syncBuffer } = zipHandler;
+  const { length: syncBufferLength } = syncBuffer;
+  const chunks = [];
+  let bytesConsumed = 0;
+  for (; ; ) {
+    const length = await zipHandler.tokenizer.peekBuffer(syncBuffer, { mayBeLess: true });
+    const dataDescriptorOffset = findZipDataDescriptorOffset(syncBuffer.subarray(0, length), bytesConsumed);
+    const retainedLength = dataDescriptorOffset >= 0 ? 0 : length === syncBufferLength ? Math.min(zipDataDescriptorOverlapLengthInBytes, length - 1) : 0;
+    const chunkLength = dataDescriptorOffset >= 0 ? dataDescriptorOffset : length - retainedLength;
+    if (chunkLength === 0) {
+      break;
+    }
+    bytesConsumed += chunkLength;
+    if (bytesConsumed > maximumLength) {
+      throw new Error(`ZIP entry compressed data exceeds ${maximumLength} bytes`);
+    }
+    if (shouldBuffer) {
+      const data = new Uint8Array(chunkLength);
+      await zipHandler.tokenizer.readBuffer(data);
+      chunks.push(data);
+    } else {
+      await zipHandler.tokenizer.ignore(chunkLength);
+    }
+    if (dataDescriptorOffset >= 0) {
+      break;
+    }
+  }
+  if (!hasUnknownFileSize(zipHandler.tokenizer)) {
+    zipHandler.knownSizeDescriptorScannedBytes += bytesConsumed;
+  }
+  if (!shouldBuffer) {
+    return;
+  }
+  return mergeByteChunks(chunks, bytesConsumed);
+}
+function getRemainingZipScanBudget(zipHandler, startOffset) {
+  if (hasUnknownFileSize(zipHandler.tokenizer)) {
+    return Math.max(0, maximumUntrustedSkipSizeInBytes - (zipHandler.tokenizer.position - startOffset));
+  }
+  return Math.max(0, maximumZipEntrySizeInBytes - zipHandler.knownSizeDescriptorScannedBytes);
+}
+async function readZipEntryData(zipHandler, zipHeader, { shouldBuffer, maximumDescriptorLength = maximumZipEntrySizeInBytes } = {}) {
+  if (zipHeader.dataDescriptor && zipHeader.compressedSize === 0) {
+    return readZipDataDescriptorEntryWithLimit(zipHandler, {
+      shouldBuffer,
+      maximumLength: maximumDescriptorLength
+    });
+  }
+  if (!shouldBuffer) {
+    await safeIgnore(zipHandler.tokenizer, zipHeader.compressedSize, {
+      maximumLength: hasUnknownFileSize(zipHandler.tokenizer) ? maximumZipEntrySizeInBytes : zipHandler.tokenizer.fileInfo.size,
+      reason: "ZIP entry compressed data"
+    });
+    return;
+  }
+  const maximumLength = getMaximumZipBufferedReadLength(zipHandler.tokenizer);
+  if (!Number.isFinite(zipHeader.compressedSize) || zipHeader.compressedSize < 0 || zipHeader.compressedSize > maximumLength) {
+    throw new Error(`ZIP entry compressed data exceeds ${maximumLength} bytes`);
+  }
+  const fileData = new Uint8Array(zipHeader.compressedSize);
+  await zipHandler.tokenizer.readBuffer(fileData);
+  return fileData;
+}
+ZipHandler.prototype.inflate = async function(zipHeader, fileData, callback) {
+  if (zipHeader.compressedMethod === 0) {
+    return callback(fileData);
+  }
+  if (zipHeader.compressedMethod !== 8) {
+    throw new Error(`Unsupported ZIP compression method: ${zipHeader.compressedMethod}`);
+  }
+  const uncompressedData = await decompressDeflateRawWithLimit(fileData, { maximumLength: maximumZipEntrySizeInBytes });
+  return callback(uncompressedData);
+};
+ZipHandler.prototype.unzip = async function(fileCallback) {
+  let stop = false;
+  let zipEntryCount = 0;
+  const zipScanStart = this.tokenizer.position;
+  this.knownSizeDescriptorScannedBytes = 0;
+  do {
+    if (hasExceededUnknownSizeScanBudget(this.tokenizer, zipScanStart, maximumUntrustedSkipSizeInBytes)) {
+      throw new ParserHardLimitError(`ZIP stream probing exceeds ${maximumUntrustedSkipSizeInBytes} bytes`);
+    }
+    const zipHeader = await this.readLocalFileHeader();
+    if (!zipHeader) {
+      break;
+    }
+    zipEntryCount++;
+    if (zipEntryCount > maximumZipEntryCount) {
+      throw new Error(`ZIP entry count exceeds ${maximumZipEntryCount}`);
+    }
+    const next = fileCallback(zipHeader);
+    stop = Boolean(next.stop);
+    await this.tokenizer.ignore(zipHeader.extraFieldLength);
+    const fileData = await readZipEntryData(this, zipHeader, {
+      shouldBuffer: Boolean(next.handler),
+      maximumDescriptorLength: Math.min(maximumZipEntrySizeInBytes, getRemainingZipScanBudget(this, zipScanStart))
+    });
+    if (next.handler) {
+      await this.inflate(zipHeader, fileData, next.handler);
+    }
+    if (zipHeader.dataDescriptor) {
+      const dataDescriptor = new Uint8Array(zipDataDescriptorLengthInBytes);
+      await this.tokenizer.readBuffer(dataDescriptor);
+      if (UINT32_LE.get(dataDescriptor, 0) !== zipDataDescriptorSignature) {
+        throw new Error(`Expected data-descriptor-signature at position ${this.tokenizer.position - dataDescriptor.length}`);
+      }
+    }
+    if (hasExceededUnknownSizeScanBudget(this.tokenizer, zipScanStart, maximumUntrustedSkipSizeInBytes)) {
+      throw new ParserHardLimitError(`ZIP stream probing exceeds ${maximumUntrustedSkipSizeInBytes} bytes`);
+    }
+  } while (!stop);
+};
+function createByteLimitedReadableStream(stream, maximumBytes) {
+  const reader = stream.getReader();
+  let emittedBytes = 0;
+  let sourceDone = false;
+  let sourceCanceled = false;
+  const cancelSource = async (reason) => {
+    if (sourceDone || sourceCanceled) {
+      return;
+    }
+    sourceCanceled = true;
+    await reader.cancel(reason);
+  };
+  return new ReadableStream({
+    async pull(controller) {
+      if (emittedBytes >= maximumBytes) {
+        controller.close();
+        await cancelSource();
+        return;
+      }
+      const { done, value } = await reader.read();
+      if (done || !value) {
+        sourceDone = true;
+        controller.close();
+        return;
+      }
+      const remainingBytes = maximumBytes - emittedBytes;
+      if (value.length > remainingBytes) {
+        controller.enqueue(value.subarray(0, remainingBytes));
+        emittedBytes += remainingBytes;
+        controller.close();
+        await cancelSource();
+        return;
+      }
+      controller.enqueue(value);
+      emittedBytes += value.length;
+    },
+    async cancel(reason) {
+      await cancelSource(reason);
+    }
+  });
+}
+async function fileTypeFromBuffer(input, options) {
+  return new FileTypeParser(options).fromBuffer(input);
+}
+function getFileTypeFromMimeType(mimeType) {
+  mimeType = mimeType.toLowerCase();
+  switch (mimeType) {
+    case "application/epub+zip":
+      return {
+        ext: "epub",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.text":
+      return {
+        ext: "odt",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.text-template":
+      return {
+        ext: "ott",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.spreadsheet":
+      return {
+        ext: "ods",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.spreadsheet-template":
+      return {
+        ext: "ots",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.presentation":
+      return {
+        ext: "odp",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.presentation-template":
+      return {
+        ext: "otp",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.graphics":
+      return {
+        ext: "odg",
+        mime: mimeType
+      };
+    case "application/vnd.oasis.opendocument.graphics-template":
+      return {
+        ext: "otg",
+        mime: mimeType
+      };
+    case "application/vnd.openxmlformats-officedocument.presentationml.slideshow":
+      return {
+        ext: "ppsx",
+        mime: mimeType
+      };
+    case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+      return {
+        ext: "xlsx",
+        mime: mimeType
+      };
+    case "application/vnd.ms-excel.sheet.macroenabled":
+      return {
+        ext: "xlsm",
+        mime: "application/vnd.ms-excel.sheet.macroenabled.12"
+      };
+    case "application/vnd.openxmlformats-officedocument.spreadsheetml.template":
+      return {
+        ext: "xltx",
+        mime: mimeType
+      };
+    case "application/vnd.ms-excel.template.macroenabled":
+      return {
+        ext: "xltm",
+        mime: "application/vnd.ms-excel.template.macroenabled.12"
+      };
+    case "application/vnd.ms-powerpoint.slideshow.macroenabled":
+      return {
+        ext: "ppsm",
+        mime: "application/vnd.ms-powerpoint.slideshow.macroenabled.12"
+      };
+    case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+      return {
+        ext: "docx",
+        mime: mimeType
+      };
+    case "application/vnd.ms-word.document.macroenabled":
+      return {
+        ext: "docm",
+        mime: "application/vnd.ms-word.document.macroenabled.12"
+      };
+    case "application/vnd.openxmlformats-officedocument.wordprocessingml.template":
+      return {
+        ext: "dotx",
+        mime: mimeType
+      };
+    case "application/vnd.ms-word.template.macroenabledtemplate":
+      return {
+        ext: "dotm",
+        mime: "application/vnd.ms-word.template.macroenabled.12"
+      };
+    case "application/vnd.openxmlformats-officedocument.presentationml.template":
+      return {
+        ext: "potx",
+        mime: mimeType
+      };
+    case "application/vnd.ms-powerpoint.template.macroenabled":
+      return {
+        ext: "potm",
+        mime: "application/vnd.ms-powerpoint.template.macroenabled.12"
+      };
+    case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+      return {
+        ext: "pptx",
+        mime: mimeType
+      };
+    case "application/vnd.ms-powerpoint.presentation.macroenabled":
+      return {
+        ext: "pptm",
+        mime: "application/vnd.ms-powerpoint.presentation.macroenabled.12"
+      };
+    case "application/vnd.ms-visio.drawing":
+      return {
+        ext: "vsdx",
+        mime: "application/vnd.visio"
+      };
+    case "application/vnd.ms-package.3dmanufacturing-3dmodel+xml":
+      return {
+        ext: "3mf",
+        mime: "model/3mf"
+      };
+  }
+}
+function _check(buffer, headers, options) {
+  options = {
+    offset: 0,
+    ...options
+  };
+  for (const [index2, header] of headers.entries()) {
+    if (options.mask) {
+      if (header !== (options.mask[index2] & buffer[index2 + options.offset])) {
+        return false;
+      }
+    } else if (header !== buffer[index2 + options.offset]) {
+      return false;
+    }
+  }
+  return true;
+}
+function normalizeSampleSize(sampleSize) {
+  if (!Number.isFinite(sampleSize)) {
+    return reasonableDetectionSizeInBytes;
+  }
+  return Math.max(1, Math.trunc(sampleSize));
+}
+function readByobReaderWithSignal(reader, buffer, signal) {
+  if (signal === void 0) {
+    return reader.read(buffer);
+  }
+  signal.throwIfAborted();
+  return new Promise((resolve, reject) => {
+    const cleanup = () => {
+      signal.removeEventListener("abort", onAbort);
+    };
+    const onAbort = () => {
+      const abortReason = signal.reason;
+      cleanup();
+      (async () => {
+        try {
+          await reader.cancel(abortReason);
+        } catch {
+        }
+      })();
+      reject(abortReason);
+    };
+    signal.addEventListener("abort", onAbort, { once: true });
+    (async () => {
+      try {
+        const result = await reader.read(buffer);
+        cleanup();
+        resolve(result);
+      } catch (error) {
+        cleanup();
+        reject(error);
+      }
+    })();
+  });
+}
+function normalizeMpegOffsetTolerance(mpegOffsetTolerance) {
+  if (!Number.isFinite(mpegOffsetTolerance)) {
+    return 0;
+  }
+  return Math.max(0, Math.min(maximumMpegOffsetTolerance, Math.trunc(mpegOffsetTolerance)));
+}
+function getKnownFileSizeOrMaximum(fileSize) {
+  if (!Number.isFinite(fileSize)) {
+    return Number.MAX_SAFE_INTEGER;
+  }
+  return Math.max(0, fileSize);
+}
+function hasUnknownFileSize(tokenizer) {
+  const fileSize = tokenizer.fileInfo.size;
+  return !Number.isFinite(fileSize) || fileSize === Number.MAX_SAFE_INTEGER;
+}
+function hasExceededUnknownSizeScanBudget(tokenizer, startOffset, maximumBytes) {
+  return hasUnknownFileSize(tokenizer) && tokenizer.position - startOffset > maximumBytes;
+}
+function getMaximumZipBufferedReadLength(tokenizer) {
+  const fileSize = tokenizer.fileInfo.size;
+  const remainingBytes = Number.isFinite(fileSize) ? Math.max(0, fileSize - tokenizer.position) : Number.MAX_SAFE_INTEGER;
+  return Math.min(remainingBytes, maximumZipBufferedReadSizeInBytes);
+}
+function isRecoverableZipError(error) {
+  if (error instanceof EndOfStreamError) {
+    return true;
+  }
+  if (error instanceof ParserHardLimitError) {
+    return true;
+  }
+  if (!(error instanceof Error)) {
+    return false;
+  }
+  if (recoverableZipErrorMessages.has(error.message)) {
+    return true;
+  }
+  if (recoverableZipErrorCodes.has(error.code)) {
+    return true;
+  }
+  for (const prefix2 of recoverableZipErrorMessagePrefixes) {
+    if (error.message.startsWith(prefix2)) {
+      return true;
+    }
+  }
+  return false;
+}
+function canReadZipEntryForDetection(zipHeader, maximumSize = maximumZipEntrySizeInBytes) {
+  const sizes = [zipHeader.compressedSize, zipHeader.uncompressedSize];
+  for (const size2 of sizes) {
+    if (!Number.isFinite(size2) || size2 < 0 || size2 > maximumSize) {
+      return false;
+    }
+  }
+  return true;
+}
+function createOpenXmlZipDetectionState() {
+  return {
+    hasContentTypesEntry: false,
+    hasParsedContentTypesEntry: false,
+    isParsingContentTypes: false,
+    hasUnparseableContentTypes: false,
+    hasWordDirectory: false,
+    hasPresentationDirectory: false,
+    hasSpreadsheetDirectory: false,
+    hasThreeDimensionalModelEntry: false
+  };
+}
+function updateOpenXmlZipDetectionStateFromFilename(openXmlState, filename) {
+  if (filename.startsWith("word/")) {
+    openXmlState.hasWordDirectory = true;
+  }
+  if (filename.startsWith("ppt/")) {
+    openXmlState.hasPresentationDirectory = true;
+  }
+  if (filename.startsWith("xl/")) {
+    openXmlState.hasSpreadsheetDirectory = true;
+  }
+  if (filename.startsWith("3D/") && filename.endsWith(".model")) {
+    openXmlState.hasThreeDimensionalModelEntry = true;
+  }
+}
+function getOpenXmlFileTypeFromZipEntries(openXmlState) {
+  if (!openXmlState.hasContentTypesEntry || openXmlState.hasUnparseableContentTypes || openXmlState.isParsingContentTypes || openXmlState.hasParsedContentTypesEntry) {
+    return;
+  }
+  if (openXmlState.hasWordDirectory) {
+    return {
+      ext: "docx",
+      mime: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    };
+  }
+  if (openXmlState.hasPresentationDirectory) {
+    return {
+      ext: "pptx",
+      mime: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    };
+  }
+  if (openXmlState.hasSpreadsheetDirectory) {
+    return {
+      ext: "xlsx",
+      mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    };
+  }
+  if (openXmlState.hasThreeDimensionalModelEntry) {
+    return {
+      ext: "3mf",
+      mime: "model/3mf"
+    };
+  }
+}
+function getOpenXmlMimeTypeFromContentTypesXml(xmlContent) {
+  const endPosition = xmlContent.indexOf('.main+xml"');
+  if (endPosition === -1) {
+    const mimeType = "application/vnd.ms-package.3dmanufacturing-3dmodel+xml";
+    if (xmlContent.includes(`ContentType="${mimeType}"`)) {
+      return mimeType;
+    }
+    return;
+  }
+  const truncatedContent = xmlContent.slice(0, endPosition);
+  const firstQuotePosition = truncatedContent.lastIndexOf('"');
+  return truncatedContent.slice(firstQuotePosition + 1);
+}
+class FileTypeParser {
+  constructor(options) {
+    // Detections with a high degree of certainty in identifying the correct file type
+    __publicField(this, "detectConfident", async (tokenizer) => {
+      this.buffer = new Uint8Array(reasonableDetectionSizeInBytes);
+      if (tokenizer.fileInfo.size === void 0) {
+        tokenizer.fileInfo.size = Number.MAX_SAFE_INTEGER;
+      }
+      this.tokenizer = tokenizer;
+      if (hasUnknownFileSize(tokenizer)) {
+        await tokenizer.peekBuffer(this.buffer, { length: 3, mayBeLess: true });
+        if (this.check([31, 139, 8])) {
+          return this.detectGzip(tokenizer);
+        }
+      }
+      await tokenizer.peekBuffer(this.buffer, { length: 32, mayBeLess: true });
+      if (this.check([66, 77])) {
+        return {
+          ext: "bmp",
+          mime: "image/bmp"
+        };
+      }
+      if (this.check([11, 119])) {
+        return {
+          ext: "ac3",
+          mime: "audio/vnd.dolby.dd-raw"
+        };
+      }
+      if (this.check([120, 1])) {
+        return {
+          ext: "dmg",
+          mime: "application/x-apple-diskimage"
+        };
+      }
+      if (this.check([77, 90])) {
+        return {
+          ext: "exe",
+          mime: "application/x-msdownload"
+        };
+      }
+      if (this.check([37, 33])) {
+        await tokenizer.peekBuffer(this.buffer, { length: 24, mayBeLess: true });
+        if (this.checkString("PS-Adobe-", { offset: 2 }) && this.checkString(" EPSF-", { offset: 14 })) {
+          return {
+            ext: "eps",
+            mime: "application/eps"
+          };
+        }
+        return {
+          ext: "ps",
+          mime: "application/postscript"
+        };
+      }
+      if (this.check([31, 160]) || this.check([31, 157])) {
+        return {
+          ext: "Z",
+          mime: "application/x-compress"
+        };
+      }
+      if (this.check([199, 113])) {
+        return {
+          ext: "cpio",
+          mime: "application/x-cpio"
+        };
+      }
+      if (this.check([96, 234])) {
+        return {
+          ext: "arj",
+          mime: "application/x-arj"
+        };
+      }
+      if (this.check([239, 187, 191])) {
+        if (this.detectionReentryCount >= maximumDetectionReentryCount) {
+          return;
+        }
+        this.detectionReentryCount++;
+        await this.tokenizer.ignore(3);
+        return this.detectConfident(tokenizer);
+      }
+      if (this.check([71, 73, 70])) {
+        return {
+          ext: "gif",
+          mime: "image/gif"
+        };
+      }
+      if (this.check([73, 73, 188])) {
+        return {
+          ext: "jxr",
+          mime: "image/vnd.ms-photo"
+        };
+      }
+      if (this.check([31, 139, 8])) {
+        return this.detectGzip(tokenizer);
+      }
+      if (this.check([66, 90, 104])) {
+        return {
+          ext: "bz2",
+          mime: "application/x-bzip2"
+        };
+      }
+      if (this.checkString("ID3")) {
+        await safeIgnore(tokenizer, 6, {
+          maximumLength: 6,
+          reason: "ID3 header prefix"
+        });
+        const id3HeaderLength = await tokenizer.readToken(uint32SyncSafeToken);
+        const isUnknownFileSize = hasUnknownFileSize(tokenizer);
+        if (!Number.isFinite(id3HeaderLength) || id3HeaderLength < 0 || isUnknownFileSize && (id3HeaderLength > maximumId3HeaderSizeInBytes || tokenizer.position + id3HeaderLength > maximumId3HeaderSizeInBytes)) {
+          return;
+        }
+        if (tokenizer.position + id3HeaderLength > tokenizer.fileInfo.size) {
+          if (isUnknownFileSize) {
+            return;
+          }
+          return {
+            ext: "mp3",
+            mime: "audio/mpeg"
+          };
+        }
+        try {
+          await safeIgnore(tokenizer, id3HeaderLength, {
+            maximumLength: isUnknownFileSize ? maximumId3HeaderSizeInBytes : tokenizer.fileInfo.size,
+            reason: "ID3 payload"
+          });
+        } catch (error) {
+          if (error instanceof EndOfStreamError) {
+            return;
+          }
+          throw error;
+        }
+        if (this.detectionReentryCount >= maximumDetectionReentryCount) {
+          return;
+        }
+        this.detectionReentryCount++;
+        return this.parseTokenizer(tokenizer, this.detectionReentryCount);
+      }
+      if (this.checkString("MP+")) {
+        return {
+          ext: "mpc",
+          mime: "audio/x-musepack"
+        };
+      }
+      if ((this.buffer[0] === 67 || this.buffer[0] === 70) && this.check([87, 83], { offset: 1 })) {
+        return {
+          ext: "swf",
+          mime: "application/x-shockwave-flash"
+        };
+      }
+      if (this.check([255, 216, 255])) {
+        if (this.check([247], { offset: 3 })) {
+          return {
+            ext: "jls",
+            mime: "image/jls"
+          };
+        }
+        return {
+          ext: "jpg",
+          mime: "image/jpeg"
+        };
+      }
+      if (this.check([79, 98, 106, 1])) {
+        return {
+          ext: "avro",
+          mime: "application/avro"
+        };
+      }
+      if (this.checkString("FLIF")) {
+        return {
+          ext: "flif",
+          mime: "image/flif"
+        };
+      }
+      if (this.checkString("8BPS")) {
+        return {
+          ext: "psd",
+          mime: "image/vnd.adobe.photoshop"
+        };
+      }
+      if (this.checkString("MPCK")) {
+        return {
+          ext: "mpc",
+          mime: "audio/x-musepack"
+        };
+      }
+      if (this.checkString("FORM")) {
+        return {
+          ext: "aif",
+          mime: "audio/aiff"
+        };
+      }
+      if (this.checkString("icns", { offset: 0 })) {
+        return {
+          ext: "icns",
+          mime: "image/icns"
+        };
+      }
+      if (this.check([80, 75, 3, 4])) {
+        let fileType;
+        const openXmlState = createOpenXmlZipDetectionState();
+        try {
+          await new ZipHandler(tokenizer).unzip((zipHeader) => {
+            updateOpenXmlZipDetectionStateFromFilename(openXmlState, zipHeader.filename);
+            const isOpenXmlContentTypesEntry = zipHeader.filename === "[Content_Types].xml";
+            const openXmlFileTypeFromEntries = getOpenXmlFileTypeFromZipEntries(openXmlState);
+            if (!isOpenXmlContentTypesEntry && openXmlFileTypeFromEntries) {
+              fileType = openXmlFileTypeFromEntries;
+              return {
+                stop: true
+              };
+            }
+            switch (zipHeader.filename) {
+              case "META-INF/mozilla.rsa":
+                fileType = {
+                  ext: "xpi",
+                  mime: "application/x-xpinstall"
+                };
+                return {
+                  stop: true
+                };
+              case "META-INF/MANIFEST.MF":
+                fileType = {
+                  ext: "jar",
+                  mime: "application/java-archive"
+                };
+                return {
+                  stop: true
+                };
+              case "mimetype":
+                if (!canReadZipEntryForDetection(zipHeader, maximumZipTextEntrySizeInBytes)) {
+                  return {};
+                }
+                return {
+                  async handler(fileData) {
+                    const mimeType = new TextDecoder("utf-8").decode(fileData).trim();
+                    fileType = getFileTypeFromMimeType(mimeType);
+                  },
+                  stop: true
+                };
+              case "[Content_Types].xml": {
+                openXmlState.hasContentTypesEntry = true;
+                if (!canReadZipEntryForDetection(zipHeader, maximumZipTextEntrySizeInBytes)) {
+                  openXmlState.hasUnparseableContentTypes = true;
+                  return {};
+                }
+                openXmlState.isParsingContentTypes = true;
+                return {
+                  async handler(fileData) {
+                    const xmlContent = new TextDecoder("utf-8").decode(fileData);
+                    const mimeType = getOpenXmlMimeTypeFromContentTypesXml(xmlContent);
+                    if (mimeType) {
+                      fileType = getFileTypeFromMimeType(mimeType);
+                    }
+                    openXmlState.hasParsedContentTypesEntry = true;
+                    openXmlState.isParsingContentTypes = false;
+                  },
+                  stop: true
+                };
+              }
+              default:
+                if (/classes\d*\.dex/.test(zipHeader.filename)) {
+                  fileType = {
+                    ext: "apk",
+                    mime: "application/vnd.android.package-archive"
+                  };
+                  return { stop: true };
+                }
+                return {};
+            }
+          });
+        } catch (error) {
+          if (!isRecoverableZipError(error)) {
+            throw error;
+          }
+          if (openXmlState.isParsingContentTypes) {
+            openXmlState.isParsingContentTypes = false;
+            openXmlState.hasUnparseableContentTypes = true;
+          }
+        }
+        return fileType ?? getOpenXmlFileTypeFromZipEntries(openXmlState) ?? {
+          ext: "zip",
+          mime: "application/zip"
+        };
+      }
+      if (this.checkString("OggS")) {
+        await tokenizer.ignore(28);
+        const type = new Uint8Array(8);
+        await tokenizer.readBuffer(type);
+        if (_check(type, [79, 112, 117, 115, 72, 101, 97, 100])) {
+          return {
+            ext: "opus",
+            mime: "audio/ogg; codecs=opus"
+          };
+        }
+        if (_check(type, [128, 116, 104, 101, 111, 114, 97])) {
+          return {
+            ext: "ogv",
+            mime: "video/ogg"
+          };
+        }
+        if (_check(type, [1, 118, 105, 100, 101, 111, 0])) {
+          return {
+            ext: "ogm",
+            mime: "video/ogg"
+          };
+        }
+        if (_check(type, [127, 70, 76, 65, 67])) {
+          return {
+            ext: "oga",
+            mime: "audio/ogg"
+          };
+        }
+        if (_check(type, [83, 112, 101, 101, 120, 32, 32])) {
+          return {
+            ext: "spx",
+            mime: "audio/ogg"
+          };
+        }
+        if (_check(type, [1, 118, 111, 114, 98, 105, 115])) {
+          return {
+            ext: "ogg",
+            mime: "audio/ogg"
+          };
+        }
+        return {
+          ext: "ogx",
+          mime: "application/ogg"
+        };
+      }
+      if (this.check([80, 75]) && (this.buffer[2] === 3 || this.buffer[2] === 5 || this.buffer[2] === 7) && (this.buffer[3] === 4 || this.buffer[3] === 6 || this.buffer[3] === 8)) {
+        return {
+          ext: "zip",
+          mime: "application/zip"
+        };
+      }
+      if (this.checkString("MThd")) {
+        return {
+          ext: "mid",
+          mime: "audio/midi"
+        };
+      }
+      if (this.checkString("wOFF") && (this.check([0, 1, 0, 0], { offset: 4 }) || this.checkString("OTTO", { offset: 4 }))) {
+        return {
+          ext: "woff",
+          mime: "font/woff"
+        };
+      }
+      if (this.checkString("wOF2") && (this.check([0, 1, 0, 0], { offset: 4 }) || this.checkString("OTTO", { offset: 4 }))) {
+        return {
+          ext: "woff2",
+          mime: "font/woff2"
+        };
+      }
+      if (this.check([212, 195, 178, 161]) || this.check([161, 178, 195, 212])) {
+        return {
+          ext: "pcap",
+          mime: "application/vnd.tcpdump.pcap"
+        };
+      }
+      if (this.checkString("DSD ")) {
+        return {
+          ext: "dsf",
+          mime: "audio/x-dsf"
+          // Non-standard
+        };
+      }
+      if (this.checkString("LZIP")) {
+        return {
+          ext: "lz",
+          mime: "application/x-lzip"
+        };
+      }
+      if (this.checkString("fLaC")) {
+        return {
+          ext: "flac",
+          mime: "audio/flac"
+        };
+      }
+      if (this.check([66, 80, 71, 251])) {
+        return {
+          ext: "bpg",
+          mime: "image/bpg"
+        };
+      }
+      if (this.checkString("wvpk")) {
+        return {
+          ext: "wv",
+          mime: "audio/wavpack"
+        };
+      }
+      if (this.checkString("%PDF")) {
+        return {
+          ext: "pdf",
+          mime: "application/pdf"
+        };
+      }
+      if (this.check([0, 97, 115, 109])) {
+        return {
+          ext: "wasm",
+          mime: "application/wasm"
+        };
+      }
+      if (this.check([73, 73])) {
+        const fileType = await this.readTiffHeader(false);
+        if (fileType) {
+          return fileType;
+        }
+      }
+      if (this.check([77, 77])) {
+        const fileType = await this.readTiffHeader(true);
+        if (fileType) {
+          return fileType;
+        }
+      }
+      if (this.checkString("MAC ")) {
+        return {
+          ext: "ape",
+          mime: "audio/ape"
+        };
+      }
+      if (this.check([26, 69, 223, 163])) {
+        async function readField() {
+          const msb = await tokenizer.peekNumber(UINT8);
+          let mask = 128;
+          let ic = 0;
+          while ((msb & mask) === 0 && mask !== 0) {
+            ++ic;
+            mask >>= 1;
+          }
+          const id = new Uint8Array(ic + 1);
+          await safeReadBuffer(tokenizer, id, void 0, {
+            maximumLength: id.length,
+            reason: "EBML field"
+          });
+          return id;
+        }
+        async function readElement() {
+          const idField = await readField();
+          const lengthField = await readField();
+          lengthField[0] ^= 128 >> lengthField.length - 1;
+          const nrLength = Math.min(6, lengthField.length);
+          const idView = new DataView(idField.buffer);
+          const lengthView = new DataView(lengthField.buffer, lengthField.length - nrLength, nrLength);
+          return {
+            id: getUintBE(idView),
+            len: getUintBE(lengthView)
+          };
+        }
+        async function readChildren(children) {
+          let ebmlElementCount = 0;
+          while (children > 0) {
+            ebmlElementCount++;
+            if (ebmlElementCount > maximumEbmlElementCount) {
+              return;
+            }
+            if (hasExceededUnknownSizeScanBudget(tokenizer, ebmlScanStart, maximumUntrustedSkipSizeInBytes)) {
+              return;
+            }
+            const previousPosition = tokenizer.position;
+            const element = await readElement();
+            if (element.id === 17026) {
+              if (element.len > maximumEbmlDocumentTypeSizeInBytes) {
+                return;
+              }
+              const documentTypeLength = getSafeBound(element.len, maximumEbmlDocumentTypeSizeInBytes, "EBML DocType");
+              const rawValue = await tokenizer.readToken(new StringType(documentTypeLength));
+              return rawValue.replaceAll(/\00.*$/g, "");
+            }
+            if (hasUnknownFileSize(tokenizer) && (!Number.isFinite(element.len) || element.len < 0 || element.len > maximumEbmlElementPayloadSizeInBytes)) {
+              return;
+            }
+            await safeIgnore(tokenizer, element.len, {
+              maximumLength: hasUnknownFileSize(tokenizer) ? maximumEbmlElementPayloadSizeInBytes : tokenizer.fileInfo.size,
+              reason: "EBML payload"
+            });
+            --children;
+            if (tokenizer.position <= previousPosition) {
+              return;
+            }
+          }
+        }
+        const rootElement = await readElement();
+        const ebmlScanStart = tokenizer.position;
+        const documentType = await readChildren(rootElement.len);
+        switch (documentType) {
+          case "webm":
+            return {
+              ext: "webm",
+              mime: "video/webm"
+            };
+          case "matroska":
+            return {
+              ext: "mkv",
+              mime: "video/matroska"
+            };
+          default:
+            return;
+        }
+      }
+      if (this.checkString("SQLi")) {
+        return {
+          ext: "sqlite",
+          mime: "application/x-sqlite3"
+        };
+      }
+      if (this.check([78, 69, 83, 26])) {
+        return {
+          ext: "nes",
+          mime: "application/x-nintendo-nes-rom"
+        };
+      }
+      if (this.checkString("Cr24")) {
+        return {
+          ext: "crx",
+          mime: "application/x-google-chrome-extension"
+        };
+      }
+      if (this.checkString("MSCF") || this.checkString("ISc(")) {
+        return {
+          ext: "cab",
+          mime: "application/vnd.ms-cab-compressed"
+        };
+      }
+      if (this.check([237, 171, 238, 219])) {
+        return {
+          ext: "rpm",
+          mime: "application/x-rpm"
+        };
+      }
+      if (this.check([197, 208, 211, 198])) {
+        return {
+          ext: "eps",
+          mime: "application/eps"
+        };
+      }
+      if (this.check([40, 181, 47, 253])) {
+        return {
+          ext: "zst",
+          mime: "application/zstd"
+        };
+      }
+      if (this.check([127, 69, 76, 70])) {
+        return {
+          ext: "elf",
+          mime: "application/x-elf"
+        };
+      }
+      if (this.check([33, 66, 68, 78])) {
+        return {
+          ext: "pst",
+          mime: "application/vnd.ms-outlook"
+        };
+      }
+      if (this.checkString("PAR1") || this.checkString("PARE")) {
+        return {
+          ext: "parquet",
+          mime: "application/vnd.apache.parquet"
+        };
+      }
+      if (this.checkString("ttcf")) {
+        return {
+          ext: "ttc",
+          mime: "font/collection"
+        };
+      }
+      if (this.check([254, 237, 250, 206]) || this.check([254, 237, 250, 207]) || this.check([206, 250, 237, 254]) || this.check([207, 250, 237, 254])) {
+        return {
+          ext: "macho",
+          mime: "application/x-mach-binary"
+        };
+      }
+      if (this.check([4, 34, 77, 24])) {
+        return {
+          ext: "lz4",
+          mime: "application/x-lz4"
+          // Invented by us
+        };
+      }
+      if (this.checkString("regf")) {
+        return {
+          ext: "dat",
+          mime: "application/x-ft-windows-registry-hive"
+        };
+      }
+      if (this.checkString("$FL2") || this.checkString("$FL3")) {
+        return {
+          ext: "sav",
+          mime: "application/x-spss-sav"
+        };
+      }
+      if (this.check([79, 84, 84, 79, 0])) {
+        return {
+          ext: "otf",
+          mime: "font/otf"
+        };
+      }
+      if (this.checkString("#!AMR")) {
+        return {
+          ext: "amr",
+          mime: "audio/amr"
+        };
+      }
+      if (this.checkString("{\\rtf")) {
+        return {
+          ext: "rtf",
+          mime: "application/rtf"
+        };
+      }
+      if (this.check([70, 76, 86, 1])) {
+        return {
+          ext: "flv",
+          mime: "video/x-flv"
+        };
+      }
+      if (this.checkString("IMPM")) {
+        return {
+          ext: "it",
+          mime: "audio/x-it"
+        };
+      }
+      if (this.checkString("-lh0-", { offset: 2 }) || this.checkString("-lh1-", { offset: 2 }) || this.checkString("-lh2-", { offset: 2 }) || this.checkString("-lh3-", { offset: 2 }) || this.checkString("-lh4-", { offset: 2 }) || this.checkString("-lh5-", { offset: 2 }) || this.checkString("-lh6-", { offset: 2 }) || this.checkString("-lh7-", { offset: 2 }) || this.checkString("-lzs-", { offset: 2 }) || this.checkString("-lz4-", { offset: 2 }) || this.checkString("-lz5-", { offset: 2 }) || this.checkString("-lhd-", { offset: 2 })) {
+        return {
+          ext: "lzh",
+          mime: "application/x-lzh-compressed"
+        };
+      }
+      if (this.check([0, 0, 1, 186])) {
+        if (this.check([33], { offset: 4, mask: [241] })) {
+          return {
+            ext: "mpg",
+            // May also be .ps, .mpeg
+            mime: "video/MP1S"
+          };
+        }
+        if (this.check([68], { offset: 4, mask: [196] })) {
+          return {
+            ext: "mpg",
+            // May also be .mpg, .m2p, .vob or .sub
+            mime: "video/MP2P"
+          };
+        }
+      }
+      if (this.checkString("ITSF")) {
+        return {
+          ext: "chm",
+          mime: "application/vnd.ms-htmlhelp"
+        };
+      }
+      if (this.check([202, 254, 186, 190])) {
+        const machOArchitectureCount = UINT32_BE.get(this.buffer, 4);
+        const javaClassFileMajorVersion = UINT16_BE.get(this.buffer, 6);
+        if (machOArchitectureCount > 0 && machOArchitectureCount <= 30) {
+          return {
+            ext: "macho",
+            mime: "application/x-mach-binary"
+          };
+        }
+        if (javaClassFileMajorVersion > 30) {
+          return {
+            ext: "class",
+            mime: "application/java-vm"
+          };
+        }
+      }
+      if (this.checkString(".RMF")) {
+        return {
+          ext: "rm",
+          mime: "application/vnd.rn-realmedia"
+        };
+      }
+      if (this.checkString("DRACO")) {
+        return {
+          ext: "drc",
+          mime: "application/vnd.google.draco"
+          // Invented by us
+        };
+      }
+      if (this.check([253, 55, 122, 88, 90, 0])) {
+        return {
+          ext: "xz",
+          mime: "application/x-xz"
+        };
+      }
+      if (this.checkString("<?xml ")) {
+        return {
+          ext: "xml",
+          mime: "application/xml"
+        };
+      }
+      if (this.check([55, 122, 188, 175, 39, 28])) {
+        return {
+          ext: "7z",
+          mime: "application/x-7z-compressed"
+        };
+      }
+      if (this.check([82, 97, 114, 33, 26, 7]) && (this.buffer[6] === 0 || this.buffer[6] === 1)) {
+        return {
+          ext: "rar",
+          mime: "application/x-rar-compressed"
+        };
+      }
+      if (this.checkString("solid ")) {
+        return {
+          ext: "stl",
+          mime: "model/stl"
+        };
+      }
+      if (this.checkString("AC")) {
+        const version = new StringType(4, "latin1").get(this.buffer, 2);
+        if (version.match("^d*") && version >= 1e3 && version <= 1050) {
+          return {
+            ext: "dwg",
+            mime: "image/vnd.dwg"
+          };
+        }
+      }
+      if (this.checkString("070707")) {
+        return {
+          ext: "cpio",
+          mime: "application/x-cpio"
+        };
+      }
+      if (this.checkString("BLENDER")) {
+        return {
+          ext: "blend",
+          mime: "application/x-blender"
+        };
+      }
+      if (this.checkString("!<arch>")) {
+        await tokenizer.ignore(8);
+        const string = await tokenizer.readToken(new StringType(13, "ascii"));
+        if (string === "debian-binary") {
+          return {
+            ext: "deb",
+            mime: "application/x-deb"
+          };
+        }
+        return {
+          ext: "ar",
+          mime: "application/x-unix-archive"
+        };
+      }
+      if (this.checkString("WEBVTT") && // One of LF, CR, tab, space, or end of file must follow "WEBVTT" per the spec (see `fixture/fixture-vtt-*.vtt` for examples). Note that `\0` is technically the null character (there is no such thing as an EOF character). However, checking for `\0` gives us the same result as checking for the end of the stream.
+      ["\n", "\r", "	", " ", "\0"].some((char7) => this.checkString(char7, { offset: 6 }))) {
+        return {
+          ext: "vtt",
+          mime: "text/vtt"
+        };
+      }
+      if (this.check([137, 80, 78, 71, 13, 10, 26, 10])) {
+        const pngFileType = {
+          ext: "png",
+          mime: "image/png"
+        };
+        const apngFileType = {
+          ext: "apng",
+          mime: "image/apng"
+        };
+        await tokenizer.ignore(8);
+        async function readChunkHeader() {
+          return {
+            length: await tokenizer.readToken(INT32_BE),
+            type: await tokenizer.readToken(new StringType(4, "latin1"))
+          };
+        }
+        const isUnknownPngStream = hasUnknownFileSize(tokenizer);
+        const pngScanStart = tokenizer.position;
+        let pngChunkCount = 0;
+        let hasSeenImageHeader = false;
+        do {
+          pngChunkCount++;
+          if (pngChunkCount > maximumPngChunkCount) {
+            break;
+          }
+          if (hasExceededUnknownSizeScanBudget(tokenizer, pngScanStart, maximumPngStreamScanBudgetInBytes)) {
+            break;
+          }
+          const previousPosition = tokenizer.position;
+          const chunk = await readChunkHeader();
+          if (chunk.length < 0) {
+            return;
+          }
+          if (chunk.type === "IHDR") {
+            if (chunk.length !== 13) {
+              return;
+            }
+            hasSeenImageHeader = true;
+          }
+          switch (chunk.type) {
+            case "IDAT":
+              return pngFileType;
+            case "acTL":
+              return apngFileType;
+            default:
+              if (!hasSeenImageHeader && chunk.type !== "CgBI") {
+                return;
+              }
+              if (isUnknownPngStream && chunk.length > maximumPngChunkSizeInBytes) {
+                return hasSeenImageHeader && isPngAncillaryChunk(chunk.type) ? pngFileType : void 0;
+              }
+              try {
+                await safeIgnore(tokenizer, chunk.length + 4, {
+                  maximumLength: isUnknownPngStream ? maximumPngChunkSizeInBytes + 4 : tokenizer.fileInfo.size,
+                  reason: "PNG chunk payload"
+                });
+              } catch (error) {
+                if (!isUnknownPngStream && (error instanceof ParserHardLimitError || error instanceof EndOfStreamError)) {
+                  return pngFileType;
+                }
+                throw error;
+              }
+          }
+          if (tokenizer.position <= previousPosition) {
+            break;
+          }
+        } while (tokenizer.position + 8 < tokenizer.fileInfo.size);
+        return pngFileType;
+      }
+      if (this.check([65, 82, 82, 79, 87, 49, 0, 0])) {
+        return {
+          ext: "arrow",
+          mime: "application/vnd.apache.arrow.file"
+        };
+      }
+      if (this.check([103, 108, 84, 70, 2, 0, 0, 0])) {
+        return {
+          ext: "glb",
+          mime: "model/gltf-binary"
+        };
+      }
+      if (this.check([102, 114, 101, 101], { offset: 4 }) || this.check([109, 100, 97, 116], { offset: 4 }) || this.check([109, 111, 111, 118], { offset: 4 }) || this.check([119, 105, 100, 101], { offset: 4 })) {
+        return {
+          ext: "mov",
+          mime: "video/quicktime"
+        };
+      }
+      if (this.check([73, 73, 82, 79, 8, 0, 0, 0, 24])) {
+        return {
+          ext: "orf",
+          mime: "image/x-olympus-orf"
+        };
+      }
+      if (this.checkString("gimp xcf ")) {
+        return {
+          ext: "xcf",
+          mime: "image/x-xcf"
+        };
+      }
+      if (this.checkString("ftyp", { offset: 4 }) && (this.buffer[8] & 96) !== 0) {
+        const brandMajor = new StringType(4, "latin1").get(this.buffer, 8).replace("\0", " ").trim();
+        switch (brandMajor) {
+          case "avif":
+          case "avis":
+            return { ext: "avif", mime: "image/avif" };
+          case "mif1":
+            return { ext: "heic", mime: "image/heif" };
+          case "msf1":
+            return { ext: "heic", mime: "image/heif-sequence" };
+          case "heic":
+          case "heix":
+            return { ext: "heic", mime: "image/heic" };
+          case "hevc":
+          case "hevx":
+            return { ext: "heic", mime: "image/heic-sequence" };
+          case "qt":
+            return { ext: "mov", mime: "video/quicktime" };
+          case "M4V":
+          case "M4VH":
+          case "M4VP":
+            return { ext: "m4v", mime: "video/x-m4v" };
+          case "M4P":
+            return { ext: "m4p", mime: "video/mp4" };
+          case "M4B":
+            return { ext: "m4b", mime: "audio/mp4" };
+          case "M4A":
+            return { ext: "m4a", mime: "audio/x-m4a" };
+          case "F4V":
+            return { ext: "f4v", mime: "video/mp4" };
+          case "F4P":
+            return { ext: "f4p", mime: "video/mp4" };
+          case "F4A":
+            return { ext: "f4a", mime: "audio/mp4" };
+          case "F4B":
+            return { ext: "f4b", mime: "audio/mp4" };
+          case "crx":
+            return { ext: "cr3", mime: "image/x-canon-cr3" };
+          default:
+            if (brandMajor.startsWith("3g")) {
+              if (brandMajor.startsWith("3g2")) {
+                return { ext: "3g2", mime: "video/3gpp2" };
+              }
+              return { ext: "3gp", mime: "video/3gpp" };
+            }
+            return { ext: "mp4", mime: "video/mp4" };
+        }
+      }
+      if (this.checkString("REGEDIT4\r\n")) {
+        return {
+          ext: "reg",
+          mime: "application/x-ms-regedit"
+        };
+      }
+      if (this.check([82, 73, 70, 70])) {
+        if (this.checkString("WEBP", { offset: 8 })) {
+          return {
+            ext: "webp",
+            mime: "image/webp"
+          };
+        }
+        if (this.check([65, 86, 73], { offset: 8 })) {
+          return {
+            ext: "avi",
+            mime: "video/vnd.avi"
+          };
+        }
+        if (this.check([87, 65, 86, 69], { offset: 8 })) {
+          return {
+            ext: "wav",
+            mime: "audio/wav"
+          };
+        }
+        if (this.check([81, 76, 67, 77], { offset: 8 })) {
+          return {
+            ext: "qcp",
+            mime: "audio/qcelp"
+          };
+        }
+      }
+      if (this.check([73, 73, 85, 0, 24, 0, 0, 0, 136, 231, 116, 216])) {
+        return {
+          ext: "rw2",
+          mime: "image/x-panasonic-rw2"
+        };
+      }
+      if (this.check([48, 38, 178, 117, 142, 102, 207, 17, 166, 217])) {
+        let isMalformedAsf = false;
+        try {
+          async function readHeader() {
+            const guid = new Uint8Array(16);
+            await safeReadBuffer(tokenizer, guid, void 0, {
+              maximumLength: guid.length,
+              reason: "ASF header GUID"
+            });
+            return {
+              id: guid,
+              size: Number(await tokenizer.readToken(UINT64_LE))
+            };
+          }
+          await safeIgnore(tokenizer, 30, {
+            maximumLength: 30,
+            reason: "ASF header prelude"
+          });
+          const isUnknownFileSize = hasUnknownFileSize(tokenizer);
+          const asfHeaderScanStart = tokenizer.position;
+          let asfHeaderObjectCount = 0;
+          while (tokenizer.position + 24 < tokenizer.fileInfo.size) {
+            asfHeaderObjectCount++;
+            if (asfHeaderObjectCount > maximumAsfHeaderObjectCount) {
+              break;
+            }
+            if (hasExceededUnknownSizeScanBudget(tokenizer, asfHeaderScanStart, maximumUntrustedSkipSizeInBytes)) {
+              break;
+            }
+            const previousPosition = tokenizer.position;
+            const header = await readHeader();
+            let payload = header.size - 24;
+            if (!Number.isFinite(payload) || payload < 0) {
+              isMalformedAsf = true;
+              break;
+            }
+            if (_check(header.id, [145, 7, 220, 183, 183, 169, 207, 17, 142, 230, 0, 192, 12, 32, 83, 101])) {
+              const typeId = new Uint8Array(16);
+              payload -= await safeReadBuffer(tokenizer, typeId, void 0, {
+                maximumLength: typeId.length,
+                reason: "ASF stream type GUID"
+              });
+              if (_check(typeId, [64, 158, 105, 248, 77, 91, 207, 17, 168, 253, 0, 128, 95, 92, 68, 43])) {
+                return {
+                  ext: "asf",
+                  mime: "audio/x-ms-asf"
+                };
+              }
+              if (_check(typeId, [192, 239, 25, 188, 77, 91, 207, 17, 168, 253, 0, 128, 95, 92, 68, 43])) {
+                return {
+                  ext: "asf",
+                  mime: "video/x-ms-asf"
+                };
+              }
+              break;
+            }
+            if (isUnknownFileSize && payload > maximumAsfHeaderPayloadSizeInBytes) {
+              isMalformedAsf = true;
+              break;
+            }
+            await safeIgnore(tokenizer, payload, {
+              maximumLength: isUnknownFileSize ? maximumAsfHeaderPayloadSizeInBytes : tokenizer.fileInfo.size,
+              reason: "ASF header payload"
+            });
+            if (tokenizer.position <= previousPosition) {
+              isMalformedAsf = true;
+              break;
+            }
+          }
+        } catch (error) {
+          if (error instanceof EndOfStreamError || error instanceof ParserHardLimitError) {
+            if (hasUnknownFileSize(tokenizer)) {
+              isMalformedAsf = true;
+            }
+          } else {
+            throw error;
+          }
+        }
+        if (isMalformedAsf) {
+          return;
+        }
+        return {
+          ext: "asf",
+          mime: "application/vnd.ms-asf"
+        };
+      }
+      if (this.check([171, 75, 84, 88, 32, 49, 49, 187, 13, 10, 26, 10])) {
+        return {
+          ext: "ktx",
+          mime: "image/ktx"
+        };
+      }
+      if ((this.check([126, 16, 4]) || this.check([126, 24, 4])) && this.check([48, 77, 73, 69], { offset: 4 })) {
+        return {
+          ext: "mie",
+          mime: "application/x-mie"
+        };
+      }
+      if (this.check([39, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], { offset: 2 })) {
+        return {
+          ext: "shp",
+          mime: "application/x-esri-shape"
+        };
+      }
+      if (this.check([255, 79, 255, 81])) {
+        return {
+          ext: "j2c",
+          mime: "image/j2c"
+        };
+      }
+      if (this.check([0, 0, 0, 12, 106, 80, 32, 32, 13, 10, 135, 10])) {
+        await tokenizer.ignore(20);
+        const type = await tokenizer.readToken(new StringType(4, "ascii"));
+        switch (type) {
+          case "jp2 ":
+            return {
+              ext: "jp2",
+              mime: "image/jp2"
+            };
+          case "jpx ":
+            return {
+              ext: "jpx",
+              mime: "image/jpx"
+            };
+          case "jpm ":
+            return {
+              ext: "jpm",
+              mime: "image/jpm"
+            };
+          case "mjp2":
+            return {
+              ext: "mj2",
+              mime: "image/mj2"
+            };
+          default:
+            return;
+        }
+      }
+      if (this.check([255, 10]) || this.check([0, 0, 0, 12, 74, 88, 76, 32, 13, 10, 135, 10])) {
+        return {
+          ext: "jxl",
+          mime: "image/jxl"
+        };
+      }
+      if (this.check([254, 255])) {
+        if (this.checkString("<?xml ", { offset: 2, encoding: "utf-16be" })) {
+          return {
+            ext: "xml",
+            mime: "application/xml"
+          };
+        }
+        return void 0;
+      }
+      if (this.check([208, 207, 17, 224, 161, 177, 26, 225])) {
+        return {
+          ext: "cfb",
+          mime: "application/x-cfb"
+        };
+      }
+      await tokenizer.peekBuffer(this.buffer, { length: Math.min(256, tokenizer.fileInfo.size), mayBeLess: true });
+      if (this.check([97, 99, 115, 112], { offset: 36 })) {
+        return {
+          ext: "icc",
+          mime: "application/vnd.iccprofile"
+        };
+      }
+      if (this.checkString("**ACE", { offset: 7 }) && this.checkString("**", { offset: 12 })) {
+        return {
+          ext: "ace",
+          mime: "application/x-ace-compressed"
+        };
+      }
+      if (this.checkString("BEGIN:")) {
+        if (this.checkString("VCARD", { offset: 6 })) {
+          return {
+            ext: "vcf",
+            mime: "text/vcard"
+          };
+        }
+        if (this.checkString("VCALENDAR", { offset: 6 })) {
+          return {
+            ext: "ics",
+            mime: "text/calendar"
+          };
+        }
+      }
+      if (this.checkString("FUJIFILMCCD-RAW")) {
+        return {
+          ext: "raf",
+          mime: "image/x-fujifilm-raf"
+        };
+      }
+      if (this.checkString("Extended Module:")) {
+        return {
+          ext: "xm",
+          mime: "audio/x-xm"
+        };
+      }
+      if (this.checkString("Creative Voice File")) {
+        return {
+          ext: "voc",
+          mime: "audio/x-voc"
+        };
+      }
+      if (this.check([4, 0, 0, 0]) && this.buffer.length >= 16) {
+        const jsonSize = new DataView(this.buffer.buffer).getUint32(12, true);
+        if (jsonSize > 12 && this.buffer.length >= jsonSize + 16) {
+          try {
+            const header = new TextDecoder().decode(this.buffer.subarray(16, jsonSize + 16));
+            const json = JSON.parse(header);
+            if (json.files) {
+              return {
+                ext: "asar",
+                mime: "application/x-asar"
+              };
+            }
+          } catch {
+          }
+        }
+      }
+      if (this.check([6, 14, 43, 52, 2, 5, 1, 1, 13, 1, 2, 1, 1, 2])) {
+        return {
+          ext: "mxf",
+          mime: "application/mxf"
+        };
+      }
+      if (this.checkString("SCRM", { offset: 44 })) {
+        return {
+          ext: "s3m",
+          mime: "audio/x-s3m"
+        };
+      }
+      if (this.check([71]) && this.check([71], { offset: 188 })) {
+        return {
+          ext: "mts",
+          mime: "video/mp2t"
+        };
+      }
+      if (this.check([71], { offset: 4 }) && this.check([71], { offset: 196 })) {
+        return {
+          ext: "mts",
+          mime: "video/mp2t"
+        };
+      }
+      if (this.check([66, 79, 79, 75, 77, 79, 66, 73], { offset: 60 })) {
+        return {
+          ext: "mobi",
+          mime: "application/x-mobipocket-ebook"
+        };
+      }
+      if (this.check([68, 73, 67, 77], { offset: 128 })) {
+        return {
+          ext: "dcm",
+          mime: "application/dicom"
+        };
+      }
+      if (this.check([76, 0, 0, 0, 1, 20, 2, 0, 0, 0, 0, 0, 192, 0, 0, 0, 0, 0, 0, 70])) {
+        return {
+          ext: "lnk",
+          mime: "application/x.ms.shortcut"
+          // Invented by us
+        };
+      }
+      if (this.check([98, 111, 111, 107, 0, 0, 0, 0, 109, 97, 114, 107, 0, 0, 0, 0])) {
+        return {
+          ext: "alias",
+          mime: "application/x.apple.alias"
+          // Invented by us
+        };
+      }
+      if (this.checkString("Kaydara FBX Binary  \0")) {
+        return {
+          ext: "fbx",
+          mime: "application/x.autodesk.fbx"
+          // Invented by us
+        };
+      }
+      if (this.check([76, 80], { offset: 34 }) && (this.check([0, 0, 1], { offset: 8 }) || this.check([1, 0, 2], { offset: 8 }) || this.check([2, 0, 2], { offset: 8 }))) {
+        return {
+          ext: "eot",
+          mime: "application/vnd.ms-fontobject"
+        };
+      }
+      if (this.check([6, 6, 237, 245, 216, 29, 70, 229, 189, 49, 239, 231, 254, 116, 183, 29])) {
+        return {
+          ext: "indd",
+          mime: "application/x-indesign"
+        };
+      }
+      if (this.check([255, 255, 0, 0, 7, 0, 0, 0, 4, 0, 0, 0, 1, 0, 1, 0]) || this.check([0, 0, 255, 255, 0, 0, 0, 7, 0, 0, 0, 4, 0, 1, 0, 1])) {
+        return {
+          ext: "jmp",
+          mime: "application/x-jmp-data"
+        };
+      }
+      await tokenizer.peekBuffer(this.buffer, { length: Math.min(512, tokenizer.fileInfo.size), mayBeLess: true });
+      if (this.checkString("ustar", { offset: 257 }) && (this.checkString("\0", { offset: 262 }) || this.checkString(" ", { offset: 262 })) || this.check([0, 0, 0, 0, 0, 0], { offset: 257 }) && tarHeaderChecksumMatches(this.buffer)) {
+        return {
+          ext: "tar",
+          mime: "application/x-tar"
+        };
+      }
+      if (this.check([255, 254])) {
+        const encoding = "utf-16le";
+        if (this.checkString("<?xml ", { offset: 2, encoding })) {
+          return {
+            ext: "xml",
+            mime: "application/xml"
+          };
+        }
+        if (this.check([255, 14], { offset: 2 }) && this.checkString("SketchUp Model", { offset: 4, encoding })) {
+          return {
+            ext: "skp",
+            mime: "application/vnd.sketchup.skp"
+          };
+        }
+        if (this.checkString("Windows Registry Editor Version 5.00\r\n", { offset: 2, encoding })) {
+          return {
+            ext: "reg",
+            mime: "application/x-ms-regedit"
+          };
+        }
+        return void 0;
+      }
+      if (this.checkString("-----BEGIN PGP MESSAGE-----")) {
+        return {
+          ext: "pgp",
+          mime: "application/pgp-encrypted"
+        };
+      }
+    });
+    // Detections with limited supporting data, resulting in a higher likelihood of false positives
+    __publicField(this, "detectImprecise", async (tokenizer) => {
+      this.buffer = new Uint8Array(reasonableDetectionSizeInBytes);
+      const fileSize = getKnownFileSizeOrMaximum(tokenizer.fileInfo.size);
+      await tokenizer.peekBuffer(this.buffer, { length: Math.min(8, fileSize), mayBeLess: true });
+      if (this.check([0, 0, 1, 186]) || this.check([0, 0, 1, 179])) {
+        return {
+          ext: "mpg",
+          mime: "video/mpeg"
+        };
+      }
+      if (this.check([0, 1, 0, 0, 0])) {
+        return {
+          ext: "ttf",
+          mime: "font/ttf"
+        };
+      }
+      if (this.check([0, 0, 1, 0])) {
+        return {
+          ext: "ico",
+          mime: "image/x-icon"
+        };
+      }
+      if (this.check([0, 0, 2, 0])) {
+        return {
+          ext: "cur",
+          mime: "image/x-icon"
+        };
+      }
+      await tokenizer.peekBuffer(this.buffer, { length: Math.min(2 + this.options.mpegOffsetTolerance, fileSize), mayBeLess: true });
+      if (this.buffer.length >= 2 + this.options.mpegOffsetTolerance) {
+        for (let depth = 0; depth <= this.options.mpegOffsetTolerance; ++depth) {
+          const type = this.scanMpeg(depth);
+          if (type) {
+            return type;
+          }
+        }
+      }
+    });
+    const normalizedMpegOffsetTolerance = normalizeMpegOffsetTolerance(options == null ? void 0 : options.mpegOffsetTolerance);
+    this.options = {
+      ...options,
+      mpegOffsetTolerance: normalizedMpegOffsetTolerance
+    };
+    this.detectors = [
+      ...this.options.customDetectors ?? [],
+      { id: "core", detect: this.detectConfident },
+      { id: "core.imprecise", detect: this.detectImprecise }
+    ];
+    this.tokenizerOptions = {
+      abortSignal: this.options.signal
+    };
+    this.gzipProbeDepth = 0;
+  }
+  getTokenizerOptions() {
+    return {
+      ...this.tokenizerOptions
+    };
+  }
+  createTokenizerFromWebStream(stream) {
+    return patchWebByobTokenizerClose(fromWebStream(stream, this.getTokenizerOptions()));
+  }
+  async parseTokenizer(tokenizer, detectionReentryCount = 0) {
+    this.detectionReentryCount = detectionReentryCount;
+    const initialPosition = tokenizer.position;
+    for (const detector of this.detectors) {
+      let fileType;
+      try {
+        fileType = await detector.detect(tokenizer);
+      } catch (error) {
+        if (error instanceof EndOfStreamError) {
+          return;
+        }
+        if (error instanceof ParserHardLimitError) {
+          return;
+        }
+        throw error;
+      }
+      if (fileType) {
+        return fileType;
+      }
+      if (initialPosition !== tokenizer.position) {
+        return void 0;
+      }
+    }
+  }
+  async fromTokenizer(tokenizer) {
+    try {
+      return await this.parseTokenizer(tokenizer);
+    } finally {
+      await tokenizer.close();
+    }
+  }
+  async fromBuffer(input) {
+    if (!(input instanceof Uint8Array || input instanceof ArrayBuffer)) {
+      throw new TypeError(`Expected the \`input\` argument to be of type \`Uint8Array\` or \`ArrayBuffer\`, got \`${typeof input}\``);
+    }
+    const buffer = input instanceof Uint8Array ? input : new Uint8Array(input);
+    if (!((buffer == null ? void 0 : buffer.length) > 1)) {
+      return;
+    }
+    return this.fromTokenizer(fromBuffer(buffer, this.getTokenizerOptions()));
+  }
+  async fromBlob(blob) {
+    var _a2;
+    (_a2 = this.options.signal) == null ? void 0 : _a2.throwIfAborted();
+    const tokenizer = fromBlob(blob, this.getTokenizerOptions());
+    return this.fromTokenizer(tokenizer);
+  }
+  async fromStream(stream) {
+    var _a2;
+    (_a2 = this.options.signal) == null ? void 0 : _a2.throwIfAborted();
+    const tokenizer = this.createTokenizerFromWebStream(stream);
+    return this.fromTokenizer(tokenizer);
+  }
+  async toDetectionStream(stream, options) {
+    const sampleSize = normalizeSampleSize((options == null ? void 0 : options.sampleSize) ?? reasonableDetectionSizeInBytes);
+    let detectedFileType;
+    let firstChunk;
+    const reader = stream.getReader({ mode: "byob" });
+    try {
+      const { value: chunk, done } = await readByobReaderWithSignal(reader, new Uint8Array(sampleSize), this.options.signal);
+      firstChunk = chunk;
+      if (!done && chunk) {
+        try {
+          detectedFileType = await this.fromBuffer(chunk.subarray(0, sampleSize));
+        } catch (error) {
+          if (!(error instanceof EndOfStreamError)) {
+            throw error;
+          }
+          detectedFileType = void 0;
+        }
+      }
+      firstChunk = chunk;
+    } finally {
+      reader.releaseLock();
+    }
+    const transformStream = new TransformStream({
+      async start(controller) {
+        controller.enqueue(firstChunk);
+      },
+      transform(chunk, controller) {
+        controller.enqueue(chunk);
+      }
+    });
+    const newStream = stream.pipeThrough(transformStream);
+    newStream.fileType = detectedFileType;
+    return newStream;
+  }
+  async detectGzip(tokenizer) {
+    var _a2;
+    if (this.gzipProbeDepth >= maximumNestedGzipProbeDepth) {
+      return {
+        ext: "gz",
+        mime: "application/gzip"
+      };
+    }
+    const gzipHandler = new GzipHandler(tokenizer);
+    const limitedInflatedStream = createByteLimitedReadableStream(gzipHandler.inflate(), maximumNestedGzipDetectionSizeInBytes);
+    const hasUnknownSize = hasUnknownFileSize(tokenizer);
+    let timeout2;
+    let probeSignal;
+    let probeParser;
+    let compressedFileType;
+    if (hasUnknownSize) {
+      const timeoutController = new AbortController();
+      timeout2 = setTimeout(() => {
+        timeoutController.abort(new DOMException(`Operation timed out after ${unknownSizeGzipProbeTimeoutInMilliseconds} ms`, "TimeoutError"));
+      }, unknownSizeGzipProbeTimeoutInMilliseconds);
+      probeSignal = this.options.signal === void 0 ? timeoutController.signal : AbortSignal.any([this.options.signal, timeoutController.signal]);
+      probeParser = new FileTypeParser({
+        ...this.options,
+        signal: probeSignal
+      });
+      probeParser.gzipProbeDepth = this.gzipProbeDepth + 1;
+    } else {
+      this.gzipProbeDepth++;
+    }
+    try {
+      compressedFileType = await (probeParser ?? this).fromStream(limitedInflatedStream);
+    } catch (error) {
+      if ((error == null ? void 0 : error.name) === "AbortError" && ((_a2 = probeSignal == null ? void 0 : probeSignal.reason) == null ? void 0 : _a2.name) !== "TimeoutError") {
+        throw error;
+      }
+    } finally {
+      clearTimeout(timeout2);
+      if (!hasUnknownSize) {
+        this.gzipProbeDepth--;
+      }
+    }
+    if ((compressedFileType == null ? void 0 : compressedFileType.ext) === "tar") {
+      return {
+        ext: "tar.gz",
+        mime: "application/gzip"
+      };
+    }
+    return {
+      ext: "gz",
+      mime: "application/gzip"
+    };
+  }
+  check(header, options) {
+    return _check(this.buffer, header, options);
+  }
+  checkString(header, options) {
+    return this.check(stringToBytes(header, options == null ? void 0 : options.encoding), options);
+  }
+  async readTiffTag(bigEndian) {
+    const tagId = await this.tokenizer.readToken(bigEndian ? UINT16_BE : UINT16_LE);
+    await this.tokenizer.ignore(10);
+    switch (tagId) {
+      case 50341:
+        return {
+          ext: "arw",
+          mime: "image/x-sony-arw"
+        };
+      case 50706:
+        return {
+          ext: "dng",
+          mime: "image/x-adobe-dng"
+        };
+    }
+  }
+  async readTiffIFD(bigEndian) {
+    const numberOfTags = await this.tokenizer.readToken(bigEndian ? UINT16_BE : UINT16_LE);
+    if (numberOfTags > maximumTiffTagCount) {
+      return;
+    }
+    if (hasUnknownFileSize(this.tokenizer) && 2 + numberOfTags * 12 > maximumTiffIfdOffsetInBytes) {
+      return;
+    }
+    for (let n = 0; n < numberOfTags; ++n) {
+      const fileType = await this.readTiffTag(bigEndian);
+      if (fileType) {
+        return fileType;
+      }
+    }
+  }
+  async readTiffHeader(bigEndian) {
+    const tiffFileType = {
+      ext: "tif",
+      mime: "image/tiff"
+    };
+    const version = (bigEndian ? UINT16_BE : UINT16_LE).get(this.buffer, 2);
+    const ifdOffset = (bigEndian ? UINT32_BE : UINT32_LE).get(this.buffer, 4);
+    if (version === 42) {
+      if (ifdOffset >= 6) {
+        if (this.checkString("CR", { offset: 8 })) {
+          return {
+            ext: "cr2",
+            mime: "image/x-canon-cr2"
+          };
+        }
+        if (ifdOffset >= 8) {
+          const someId1 = (bigEndian ? UINT16_BE : UINT16_LE).get(this.buffer, 8);
+          const someId2 = (bigEndian ? UINT16_BE : UINT16_LE).get(this.buffer, 10);
+          if (someId1 === 28 && someId2 === 254 || someId1 === 31 && someId2 === 11) {
+            return {
+              ext: "nef",
+              mime: "image/x-nikon-nef"
+            };
+          }
+        }
+      }
+      if (hasUnknownFileSize(this.tokenizer) && ifdOffset > maximumTiffStreamIfdOffsetInBytes) {
+        return tiffFileType;
+      }
+      const maximumTiffOffset = hasUnknownFileSize(this.tokenizer) ? maximumTiffIfdOffsetInBytes : this.tokenizer.fileInfo.size;
+      try {
+        await safeIgnore(this.tokenizer, ifdOffset, {
+          maximumLength: maximumTiffOffset,
+          reason: "TIFF IFD offset"
+        });
+      } catch (error) {
+        if (error instanceof EndOfStreamError) {
+          return;
+        }
+        throw error;
+      }
+      let fileType;
+      try {
+        fileType = await this.readTiffIFD(bigEndian);
+      } catch (error) {
+        if (error instanceof EndOfStreamError) {
+          return;
+        }
+        throw error;
+      }
+      return fileType ?? tiffFileType;
+    }
+    if (version === 43) {
+      return tiffFileType;
+    }
+  }
+  /**
+  	Scan check MPEG 1 or 2 Layer 3 header, or 'layer 0' for ADTS (MPEG sync-word 0xFFE).
+  
+  	@param offset - Offset to scan for sync-preamble.
+  	@returns {{ext: string, mime: string}}
+  	*/
+  scanMpeg(offset2) {
+    if (this.check([255, 224], { offset: offset2, mask: [255, 224] })) {
+      if (this.check([16], { offset: offset2 + 1, mask: [22] })) {
+        if (this.check([8], { offset: offset2 + 1, mask: [8] })) {
+          return {
+            ext: "aac",
+            mime: "audio/aac"
+          };
+        }
+        return {
+          ext: "aac",
+          mime: "audio/aac"
+        };
+      }
+      if (this.check([2], { offset: offset2 + 1, mask: [6] })) {
+        return {
+          ext: "mp3",
+          mime: "audio/mpeg"
+        };
+      }
+      if (this.check([4], { offset: offset2 + 1, mask: [6] })) {
+        return {
+          ext: "mp2",
+          mime: "audio/mpeg"
+        };
+      }
+      if (this.check([6], { offset: offset2 + 1, mask: [6] })) {
+        return {
+          ext: "mp1",
+          mime: "audio/mpeg"
+        };
+      }
+    }
+  }
+}
+new Set(extensions);
+new Set(mimeTypes);
+const DEFAULT_CONTENT_TYPE = "application/octet-stream";
+function isUsableContentType(contentType) {
+  if (!contentType) {
+    return false;
+  }
+  const trimmed = contentType.trim();
+  return trimmed.length > 0 && trimmed !== DEFAULT_CONTENT_TYPE;
+}
+async function resolveBlobContentType(bytes, hint) {
+  if (isUsableContentType(hint)) {
+    return hint.trim();
+  }
+  const detected = await fileTypeFromBuffer(bytes);
+  return (detected == null ? void 0 : detected.mime) ?? DEFAULT_CONTENT_TYPE;
+}
 const MAXIMUM_CONCURRENT_UPLOADS = 10;
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1e3;
@@ -11601,17 +15851,22 @@ class StorageClient {
     }
     throw new Error("Expected v4 response body");
   }
-  async putFile(blobBytes, onProgress) {
+  async putFile(blobBytes, onProgress, contentTypeHint, filenameHint) {
     const httpHeaders = {
       "Content-Type": "application/json"
     };
+    const contentType = await resolveBlobContentType(blobBytes, contentTypeHint);
     const file = new Blob([new Uint8Array(blobBytes)], {
-      type: "application/octet-stream"
+      type: contentType
     });
     const fileHeaders = {
-      "Content-Type": "application/octet-stream",
+      "Content-Type": contentType,
       "Content-Length": file.size.toString()
     };
+    const contentDisposition = formatBlobContentDisposition(filenameHint);
+    if (contentDisposition) {
+      fileHeaders["Content-Disposition"] = contentDisposition;
+    }
     const { chunks, chunkHashes, blobHashTree } = await this.processFileForUpload(file, fileHeaders);
     const blobRootHash = blobHashTree.tree.hash;
     const hashString2 = blobRootHash.toShaString();
@@ -11765,14 +16020,14 @@ async function createActorWithConfig(createActor2, options) {
   const storageClient = new StorageClient(config.bucket_name, config.storage_gateway_url, config.backend_canister_id, config.project_id, agent);
   const MOTOKO_DEDUPLICATION_SENTINEL = "!caf!";
   const uploadFile = async (file) => {
-    const { hash } = await storageClient.putFile(await file.getBytes(), file.onProgress);
+    const { hash } = await storageClient.putFile(await file.getBytes(), file.onProgress, file.contentType, file.filename);
     return new TextEncoder().encode(MOTOKO_DEDUPLICATION_SENTINEL + hash);
   };
   const downloadFile2 = async (bytes) => {
     const hashWithPrefix = new TextDecoder().decode(new Uint8Array(bytes));
     const hash = hashWithPrefix.substring(MOTOKO_DEDUPLICATION_SENTINEL.length);
     const url = await storageClient.getDirectURL(hash);
-    return ExternalBlob$2.fromURL(url);
+    return ExternalBlob$1.fromURL(url);
   };
   return createActor2(config.backend_canister_id, uploadFile, downloadFile2, actorOptions);
 }
@@ -11826,11 +16081,11 @@ var FocusManager = (_b = class extends Subscribable {
       __privateSet(this, _cleanup, void 0);
     }
   }
-  setEventListener(setup) {
+  setEventListener(setup2) {
     var _a2;
-    __privateSet(this, _setup, setup);
+    __privateSet(this, _setup, setup2);
     (_a2 = __privateGet(this, _cleanup)) == null ? void 0 : _a2.call(this);
-    __privateSet(this, _cleanup, setup((focused) => {
+    __privateSet(this, _cleanup, setup2((focused) => {
       if (typeof focused === "boolean") {
         this.setFocused(focused);
       } else {
@@ -11923,8 +16178,8 @@ function timeUntilStale(updatedAt, staleTime) {
 function resolveStaleTime(staleTime, query) {
   return typeof staleTime === "function" ? staleTime(query) : staleTime;
 }
-function resolveEnabled(enabled, query) {
-  return typeof enabled === "function" ? enabled(query) : enabled;
+function resolveQueryBoolean(option, query) {
+  return typeof option === "function" ? option(query) : option;
 }
 function matchQuery(filters, query) {
   const {
@@ -12297,11 +16552,11 @@ var OnlineManager = (_d = class extends Subscribable {
       __privateSet(this, _cleanup2, void 0);
     }
   }
-  setEventListener(setup) {
+  setEventListener(setup2) {
     var _a2;
-    __privateSet(this, _setup2, setup);
+    __privateSet(this, _setup2, setup2);
     (_a2 = __privateGet(this, _cleanup2)) == null ? void 0 : _a2.call(this);
-    __privateSet(this, _cleanup2, setup(this.setOnline.bind(this)));
+    __privateSet(this, _cleanup2, setup2(this.setOnline.bind(this)));
   }
   setOnline(online) {
     const changed = __privateGet(this, _online) !== online;
@@ -12461,16 +16716,120 @@ var Removable = (_e = class {
     );
   }
   clearGcTimeout() {
-    if (__privateGet(this, _gcTimeout)) {
+    if (__privateGet(this, _gcTimeout) !== void 0) {
       timeoutManager.clearTimeout(__privateGet(this, _gcTimeout));
       __privateSet(this, _gcTimeout, void 0);
     }
   }
 }, _gcTimeout = new WeakMap(), _e);
+function infiniteQueryBehavior(pages) {
+  return {
+    onFetch: (context, query) => {
+      var _a2, _b2, _c2, _d2, _e2;
+      const options = context.options;
+      const direction = (_c2 = (_b2 = (_a2 = context.fetchOptions) == null ? void 0 : _a2.meta) == null ? void 0 : _b2.fetchMore) == null ? void 0 : _c2.direction;
+      const oldPages = ((_d2 = context.state.data) == null ? void 0 : _d2.pages) || [];
+      const oldPageParams = ((_e2 = context.state.data) == null ? void 0 : _e2.pageParams) || [];
+      let result = { pages: [], pageParams: [] };
+      let currentPage = 0;
+      const fetchFn = async () => {
+        let cancelled = false;
+        const addSignalProperty = (object) => {
+          addConsumeAwareSignal(
+            object,
+            () => context.signal,
+            () => cancelled = true
+          );
+        };
+        const queryFn = ensureQueryFn(context.options, context.fetchOptions);
+        const fetchPage = async (data, param, previous) => {
+          if (cancelled) {
+            return Promise.reject(context.signal.reason);
+          }
+          if (param == null && data.pages.length) {
+            return Promise.resolve(data);
+          }
+          const createQueryFnContext = () => {
+            const queryFnContext2 = {
+              client: context.client,
+              queryKey: context.queryKey,
+              pageParam: param,
+              direction: previous ? "backward" : "forward",
+              meta: context.options.meta
+            };
+            addSignalProperty(queryFnContext2);
+            return queryFnContext2;
+          };
+          const queryFnContext = createQueryFnContext();
+          const page = await queryFn(queryFnContext);
+          const { maxPages } = context.options;
+          const addTo = previous ? addToStart : addToEnd;
+          return {
+            pages: addTo(data.pages, page, maxPages),
+            pageParams: addTo(data.pageParams, param, maxPages)
+          };
+        };
+        if (direction && oldPages.length) {
+          const previous = direction === "backward";
+          const pageParamFn = previous ? getPreviousPageParam : getNextPageParam;
+          const oldData = {
+            pages: oldPages,
+            pageParams: oldPageParams
+          };
+          const param = pageParamFn(options, oldData);
+          result = await fetchPage(oldData, param, previous);
+        } else {
+          const remainingPages = pages ?? oldPages.length;
+          do {
+            const param = currentPage === 0 ? oldPageParams[0] ?? options.initialPageParam : getNextPageParam(options, result);
+            if (currentPage > 0 && param == null) {
+              break;
+            }
+            result = await fetchPage(result, param);
+            currentPage++;
+          } while (currentPage < remainingPages);
+        }
+        return result;
+      };
+      if (context.options.persister) {
+        context.fetchFn = () => {
+          var _a3, _b3;
+          return (_b3 = (_a3 = context.options).persister) == null ? void 0 : _b3.call(
+            _a3,
+            fetchFn,
+            {
+              client: context.client,
+              queryKey: context.queryKey,
+              meta: context.options.meta,
+              signal: context.signal
+            },
+            query
+          );
+        };
+      } else {
+        context.fetchFn = fetchFn;
+      }
+    }
+  };
+}
+function getNextPageParam(options, { pages, pageParams }) {
+  const lastIndex = pages.length - 1;
+  return pages.length > 0 ? options.getNextPageParam(
+    pages[lastIndex],
+    pages,
+    pageParams[lastIndex],
+    pageParams
+  ) : void 0;
+}
+function getPreviousPageParam(options, { pages, pageParams }) {
+  var _a2;
+  return pages.length > 0 ? (_a2 = options.getPreviousPageParam) == null ? void 0 : _a2.call(options, pages[0], pages, pageParams[0], pageParams) : void 0;
+}
 var Query = (_f = class extends Removable {
   constructor(config) {
     super();
     __privateAdd(this, _Query_instances);
+    __privateAdd(this, _queryType);
     __privateAdd(this, _initialState);
     __privateAdd(this, _revertState);
     __privateAdd(this, _cache);
@@ -12493,12 +16852,18 @@ var Query = (_f = class extends Removable {
   get meta() {
     return this.options.meta;
   }
+  get queryType() {
+    return __privateGet(this, _queryType);
+  }
   get promise() {
     var _a2;
     return (_a2 = __privateGet(this, _retryer)) == null ? void 0 : _a2.promise;
   }
   setOptions(options) {
     this.options = { ...__privateGet(this, _defaultOptions), ...options };
+    if (options == null ? void 0 : options._type) {
+      __privateSet(this, _queryType, options._type);
+    }
     this.updateGcTime(this.options.gcTime);
     if (this.state && this.state.data === void 0) {
       const defaultState = getDefaultState$1(this.options);
@@ -12525,8 +16890,8 @@ var Query = (_f = class extends Removable {
     });
     return data;
   }
-  setState(state, setStateOptions) {
-    __privateMethod(this, _Query_instances, dispatch_fn).call(this, { type: "setState", state, setStateOptions });
+  setState(state) {
+    __privateMethod(this, _Query_instances, dispatch_fn).call(this, { type: "setState", state });
   }
   cancel(options) {
     var _a2, _b2;
@@ -12547,7 +16912,7 @@ var Query = (_f = class extends Removable {
   }
   isActive() {
     return this.observers.some(
-      (observer) => resolveEnabled(observer.options.enabled, this) !== false
+      (observer) => resolveQueryBoolean(observer.options.enabled, this) !== false
     );
   }
   isDisabled() {
@@ -12631,7 +16996,7 @@ var Query = (_f = class extends Removable {
     }
   }
   async fetch(options, fetchOptions) {
-    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2;
+    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2;
     if (this.state.fetchStatus !== "idle" && // If the promise in the retryer is already rejected, we have to definitely
     // re-start the fetch; there is a chance that the query is still in a
     // pending state when that happens
@@ -12697,10 +17062,13 @@ var Query = (_f = class extends Removable {
       return context2;
     };
     const context = createFetchContext();
-    (_b2 = this.options.behavior) == null ? void 0 : _b2.onFetch(context, this);
+    const behavior = __privateGet(this, _queryType) === "infinite" ? infiniteQueryBehavior(
+      this.options.pages
+    ) : this.options.behavior;
+    behavior == null ? void 0 : behavior.onFetch(context, this);
     __privateSet(this, _revertState, this.state);
-    if (this.state.fetchStatus === "idle" || this.state.fetchMeta !== ((_c2 = context.fetchOptions) == null ? void 0 : _c2.meta)) {
-      __privateMethod(this, _Query_instances, dispatch_fn).call(this, { type: "fetch", meta: (_d2 = context.fetchOptions) == null ? void 0 : _d2.meta });
+    if (this.state.fetchStatus === "idle" || this.state.fetchMeta !== ((_b2 = context.fetchOptions) == null ? void 0 : _b2.meta)) {
+      __privateMethod(this, _Query_instances, dispatch_fn).call(this, { type: "fetch", meta: (_c2 = context.fetchOptions) == null ? void 0 : _c2.meta });
     }
     __privateSet(this, _retryer, createRetryer({
       initialPromise: fetchOptions == null ? void 0 : fetchOptions.initialPromise,
@@ -12735,9 +17103,9 @@ var Query = (_f = class extends Removable {
         throw new Error(`${this.queryHash} data is undefined`);
       }
       this.setData(data);
-      (_f2 = (_e2 = __privateGet(this, _cache).config).onSuccess) == null ? void 0 : _f2.call(_e2, data, this);
-      (_h2 = (_g2 = __privateGet(this, _cache).config).onSettled) == null ? void 0 : _h2.call(
-        _g2,
+      (_e2 = (_d2 = __privateGet(this, _cache).config).onSuccess) == null ? void 0 : _e2.call(_d2, data, this);
+      (_g2 = (_f2 = __privateGet(this, _cache).config).onSettled) == null ? void 0 : _g2.call(
+        _f2,
         data,
         this.state.error,
         this
@@ -12758,13 +17126,13 @@ var Query = (_f = class extends Removable {
         type: "error",
         error
       });
-      (_j2 = (_i2 = __privateGet(this, _cache).config).onError) == null ? void 0 : _j2.call(
-        _i2,
+      (_i2 = (_h2 = __privateGet(this, _cache).config).onError) == null ? void 0 : _i2.call(
+        _h2,
         error,
         this
       );
-      (_l2 = (_k2 = __privateGet(this, _cache).config).onSettled) == null ? void 0 : _l2.call(
-        _k2,
+      (_k2 = (_j2 = __privateGet(this, _cache).config).onSettled) == null ? void 0 : _k2.call(
+        _j2,
         this.state.data,
         error,
         this
@@ -12774,7 +17142,7 @@ var Query = (_f = class extends Removable {
       this.scheduleGc();
     }
   }
-}, _initialState = new WeakMap(), _revertState = new WeakMap(), _cache = new WeakMap(), _client = new WeakMap(), _retryer = new WeakMap(), _defaultOptions = new WeakMap(), _abortSignalConsumed = new WeakMap(), _Query_instances = new WeakSet(), isInitialPausedFetch_fn = function() {
+}, _queryType = new WeakMap(), _initialState = new WeakMap(), _revertState = new WeakMap(), _cache = new WeakMap(), _client = new WeakMap(), _retryer = new WeakMap(), _defaultOptions = new WeakMap(), _abortSignalConsumed = new WeakMap(), _Query_instances = new WeakSet(), isInitialPausedFetch_fn = function() {
   return this.state.fetchStatus === "paused" && this.state.status === "pending";
 }, dispatch_fn = function(action) {
   const reducer = (state) => {
@@ -12959,7 +17327,7 @@ var QueryObserver = (_g = class extends Subscribable {
     const prevOptions = this.options;
     const prevQuery = __privateGet(this, _currentQuery);
     this.options = __privateGet(this, _client2).defaultQueryOptions(options);
-    if (this.options.enabled !== void 0 && typeof this.options.enabled !== "boolean" && typeof this.options.enabled !== "function" && typeof resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) !== "boolean") {
+    if (this.options.enabled !== void 0 && typeof this.options.enabled !== "boolean" && typeof this.options.enabled !== "function" && typeof resolveQueryBoolean(this.options.enabled, __privateGet(this, _currentQuery)) !== "boolean") {
       throw new Error(
         "Expected enabled to be a boolean or a callback that returns a boolean"
       );
@@ -12983,11 +17351,11 @@ var QueryObserver = (_g = class extends Subscribable {
       __privateMethod(this, _QueryObserver_instances, executeFetch_fn).call(this);
     }
     this.updateResult();
-    if (mounted && (__privateGet(this, _currentQuery) !== prevQuery || resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) !== resolveEnabled(prevOptions.enabled, __privateGet(this, _currentQuery)) || resolveStaleTime(this.options.staleTime, __privateGet(this, _currentQuery)) !== resolveStaleTime(prevOptions.staleTime, __privateGet(this, _currentQuery)))) {
+    if (mounted && (__privateGet(this, _currentQuery) !== prevQuery || resolveQueryBoolean(this.options.enabled, __privateGet(this, _currentQuery)) !== resolveQueryBoolean(prevOptions.enabled, __privateGet(this, _currentQuery)) || resolveStaleTime(this.options.staleTime, __privateGet(this, _currentQuery)) !== resolveStaleTime(prevOptions.staleTime, __privateGet(this, _currentQuery)))) {
       __privateMethod(this, _QueryObserver_instances, updateStaleTimeout_fn).call(this);
     }
     const nextRefetchInterval = __privateMethod(this, _QueryObserver_instances, computeRefetchInterval_fn).call(this);
-    if (mounted && (__privateGet(this, _currentQuery) !== prevQuery || resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) !== resolveEnabled(prevOptions.enabled, __privateGet(this, _currentQuery)) || nextRefetchInterval !== __privateGet(this, _currentRefetchInterval))) {
+    if (mounted && (__privateGet(this, _currentQuery) !== prevQuery || resolveQueryBoolean(this.options.enabled, __privateGet(this, _currentQuery)) !== resolveQueryBoolean(prevOptions.enabled, __privateGet(this, _currentQuery)) || nextRefetchInterval !== __privateGet(this, _currentRefetchInterval))) {
       __privateMethod(this, _QueryObserver_instances, updateRefetchInterval_fn).call(this, nextRefetchInterval);
     }
   }
@@ -13151,7 +17519,7 @@ var QueryObserver = (_g = class extends Subscribable {
       isStale: isStale(query, options),
       refetch: this.refetch,
       promise: __privateGet(this, _currentThenable),
-      isEnabled: resolveEnabled(options.enabled, query) !== false
+      isEnabled: resolveQueryBoolean(options.enabled, query) !== false
     };
     const nextResult = result;
     if (this.options.experimental_prefetchInRender) {
@@ -13261,7 +17629,7 @@ var QueryObserver = (_g = class extends Subscribable {
 }, updateRefetchInterval_fn = function(nextInterval) {
   __privateMethod(this, _QueryObserver_instances, clearRefetchInterval_fn).call(this);
   __privateSet(this, _currentRefetchInterval, nextInterval);
-  if (environmentManager.isServer() || resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) === false || !isValidTimeout(__privateGet(this, _currentRefetchInterval)) || __privateGet(this, _currentRefetchInterval) === 0) {
+  if (environmentManager.isServer() || resolveQueryBoolean(this.options.enabled, __privateGet(this, _currentQuery)) === false || !isValidTimeout(__privateGet(this, _currentRefetchInterval)) || __privateGet(this, _currentRefetchInterval) === 0) {
     return;
   }
   __privateSet(this, _refetchIntervalId, timeoutManager.setInterval(() => {
@@ -13273,12 +17641,12 @@ var QueryObserver = (_g = class extends Subscribable {
   __privateMethod(this, _QueryObserver_instances, updateStaleTimeout_fn).call(this);
   __privateMethod(this, _QueryObserver_instances, updateRefetchInterval_fn).call(this, __privateMethod(this, _QueryObserver_instances, computeRefetchInterval_fn).call(this));
 }, clearStaleTimeout_fn = function() {
-  if (__privateGet(this, _staleTimeoutId)) {
+  if (__privateGet(this, _staleTimeoutId) !== void 0) {
     timeoutManager.clearTimeout(__privateGet(this, _staleTimeoutId));
     __privateSet(this, _staleTimeoutId, void 0);
   }
 }, clearRefetchInterval_fn = function() {
-  if (__privateGet(this, _refetchIntervalId)) {
+  if (__privateGet(this, _refetchIntervalId) !== void 0) {
     timeoutManager.clearInterval(__privateGet(this, _refetchIntervalId));
     __privateSet(this, _refetchIntervalId, void 0);
   }
@@ -13308,132 +17676,29 @@ var QueryObserver = (_g = class extends Subscribable {
   });
 }, _g);
 function shouldLoadOnMount(query, options) {
-  return resolveEnabled(options.enabled, query) !== false && query.state.data === void 0 && !(query.state.status === "error" && options.retryOnMount === false);
+  return resolveQueryBoolean(options.enabled, query) !== false && query.state.data === void 0 && !(query.state.status === "error" && resolveQueryBoolean(options.retryOnMount, query) === false);
 }
 function shouldFetchOnMount(query, options) {
   return shouldLoadOnMount(query, options) || query.state.data !== void 0 && shouldFetchOn(query, options, options.refetchOnMount);
 }
 function shouldFetchOn(query, options, field) {
-  if (resolveEnabled(options.enabled, query) !== false && resolveStaleTime(options.staleTime, query) !== "static") {
+  if (resolveQueryBoolean(options.enabled, query) !== false && resolveStaleTime(options.staleTime, query) !== "static") {
     const value = typeof field === "function" ? field(query) : field;
     return value === "always" || value !== false && isStale(query, options);
   }
   return false;
 }
 function shouldFetchOptionally(query, prevQuery, options, prevOptions) {
-  return (query !== prevQuery || resolveEnabled(prevOptions.enabled, query) === false) && (!options.suspense || query.state.status !== "error") && isStale(query, options);
+  return (query !== prevQuery || resolveQueryBoolean(prevOptions.enabled, query) === false) && (!options.suspense || query.state.status !== "error") && isStale(query, options);
 }
 function isStale(query, options) {
-  return resolveEnabled(options.enabled, query) !== false && query.isStaleByTime(resolveStaleTime(options.staleTime, query));
+  return resolveQueryBoolean(options.enabled, query) !== false && query.isStaleByTime(resolveStaleTime(options.staleTime, query));
 }
 function shouldAssignObserverCurrentProperties(observer, optimisticResult) {
   if (!shallowEqualObjects(observer.getCurrentResult(), optimisticResult)) {
     return true;
   }
   return false;
-}
-function infiniteQueryBehavior(pages) {
-  return {
-    onFetch: (context, query) => {
-      var _a2, _b2, _c2, _d2, _e2;
-      const options = context.options;
-      const direction = (_c2 = (_b2 = (_a2 = context.fetchOptions) == null ? void 0 : _a2.meta) == null ? void 0 : _b2.fetchMore) == null ? void 0 : _c2.direction;
-      const oldPages = ((_d2 = context.state.data) == null ? void 0 : _d2.pages) || [];
-      const oldPageParams = ((_e2 = context.state.data) == null ? void 0 : _e2.pageParams) || [];
-      let result = { pages: [], pageParams: [] };
-      let currentPage = 0;
-      const fetchFn = async () => {
-        let cancelled = false;
-        const addSignalProperty = (object) => {
-          addConsumeAwareSignal(
-            object,
-            () => context.signal,
-            () => cancelled = true
-          );
-        };
-        const queryFn = ensureQueryFn(context.options, context.fetchOptions);
-        const fetchPage = async (data, param, previous) => {
-          if (cancelled) {
-            return Promise.reject();
-          }
-          if (param == null && data.pages.length) {
-            return Promise.resolve(data);
-          }
-          const createQueryFnContext = () => {
-            const queryFnContext2 = {
-              client: context.client,
-              queryKey: context.queryKey,
-              pageParam: param,
-              direction: previous ? "backward" : "forward",
-              meta: context.options.meta
-            };
-            addSignalProperty(queryFnContext2);
-            return queryFnContext2;
-          };
-          const queryFnContext = createQueryFnContext();
-          const page = await queryFn(queryFnContext);
-          const { maxPages } = context.options;
-          const addTo = previous ? addToStart : addToEnd;
-          return {
-            pages: addTo(data.pages, page, maxPages),
-            pageParams: addTo(data.pageParams, param, maxPages)
-          };
-        };
-        if (direction && oldPages.length) {
-          const previous = direction === "backward";
-          const pageParamFn = previous ? getPreviousPageParam : getNextPageParam;
-          const oldData = {
-            pages: oldPages,
-            pageParams: oldPageParams
-          };
-          const param = pageParamFn(options, oldData);
-          result = await fetchPage(oldData, param, previous);
-        } else {
-          const remainingPages = pages ?? oldPages.length;
-          do {
-            const param = currentPage === 0 ? oldPageParams[0] ?? options.initialPageParam : getNextPageParam(options, result);
-            if (currentPage > 0 && param == null) {
-              break;
-            }
-            result = await fetchPage(result, param);
-            currentPage++;
-          } while (currentPage < remainingPages);
-        }
-        return result;
-      };
-      if (context.options.persister) {
-        context.fetchFn = () => {
-          var _a3, _b3;
-          return (_b3 = (_a3 = context.options).persister) == null ? void 0 : _b3.call(
-            _a3,
-            fetchFn,
-            {
-              client: context.client,
-              queryKey: context.queryKey,
-              meta: context.options.meta,
-              signal: context.signal
-            },
-            query
-          );
-        };
-      } else {
-        context.fetchFn = fetchFn;
-      }
-    }
-  };
-}
-function getNextPageParam(options, { pages, pageParams }) {
-  const lastIndex = pages.length - 1;
-  return pages.length > 0 ? options.getNextPageParam(
-    pages[lastIndex],
-    pages,
-    pageParams[lastIndex],
-    pageParams
-  ) : void 0;
-}
-function getPreviousPageParam(options, { pages, pageParams }) {
-  var _a2;
-  return pages.length > 0 ? (_a2 = options.getPreviousPageParam) == null ? void 0 : _a2.call(options, pages[0], pages, pageParams[0], pageParams) : void 0;
 }
 var Mutation = (_h = class extends Removable {
   constructor(config) {
@@ -14245,14 +18510,14 @@ var QueryClient = (_l = class {
     return this.fetchQuery(options).then(noop$7).catch(noop$7);
   }
   fetchInfiniteQuery(options) {
-    options.behavior = infiniteQueryBehavior(options.pages);
+    options._type = "infinite";
     return this.fetchQuery(options);
   }
   prefetchInfiniteQuery(options) {
     return this.fetchInfiniteQuery(options).then(noop$7).catch(noop$7);
   }
   ensureInfiniteQueryData(options) {
-    options.behavior = infiniteQueryBehavior(options.pages);
+    options._type = "infinite";
     return this.ensureQueryData(options);
   }
   resumePausedMutations() {
@@ -14775,9 +19040,9 @@ react_production.useRef = function(initialValue) {
 react_production.useState = function(initialState) {
   return ReactSharedInternals$2.H.useState(initialState);
 };
-react_production.useSyncExternalStore = function(subscribe, getSnapshot, getServerSnapshot) {
+react_production.useSyncExternalStore = function(subscribe2, getSnapshot, getServerSnapshot) {
   return ReactSharedInternals$2.H.useSyncExternalStore(
-    subscribe,
+    subscribe2,
     getSnapshot,
     getServerSnapshot
   );
@@ -14785,13 +19050,13 @@ react_production.useSyncExternalStore = function(subscribe, getSnapshot, getServ
 react_production.useTransition = function() {
   return ReactSharedInternals$2.H.useTransition();
 };
-react_production.version = "19.1.5";
+react_production.version = "19.1.8";
 {
   react.exports = react_production;
 }
 var reactExports = react.exports;
 const React$2 = /* @__PURE__ */ getDefaultExportFromCjs(reactExports);
-const React$3 = /* @__PURE__ */ _mergeNamespaces({
+const React2 = /* @__PURE__ */ _mergeNamespaces({
   __proto__: null,
   default: React$2
 }, [reactExports]);
@@ -14888,7 +19153,8 @@ function useBaseQuery(options, Observer, queryClient2) {
     defaultedOptions
   );
   const query = client2.getQueryCache().get(defaultedOptions.queryHash);
-  defaultedOptions._optimisticResults = isRestoring ? "isRestoring" : "optimistic";
+  const subscribed = options.subscribed !== false;
+  defaultedOptions._optimisticResults = isRestoring ? "isRestoring" : subscribed ? "optimistic" : void 0;
   ensureSuspenseTimers(defaultedOptions);
   ensurePreventErrorBoundaryRetry(defaultedOptions, errorResetBoundary, query);
   useClearResetErrorBoundary(errorResetBoundary);
@@ -14900,7 +19166,7 @@ function useBaseQuery(options, Observer, queryClient2) {
     )
   );
   const result = observer.getOptimisticResult(defaultedOptions);
-  const shouldSubscribe = !isRestoring && options.subscribed !== false;
+  const shouldSubscribe = !isRestoring && subscribed;
   reactExports.useSyncExternalStore(
     reactExports.useCallback(
       (onStoreChange) => {
@@ -17347,7 +21613,7 @@ var scheduler_production = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-(function(exports$1) {
+(function(exports) {
   function push2(heap, node) {
     var index2 = heap.length;
     heap.push(node);
@@ -17381,15 +21647,15 @@ var scheduler_production = {};
     var diff = a2.sortIndex - b2.sortIndex;
     return 0 !== diff ? diff : a2.id - b2.id;
   }
-  exports$1.unstable_now = void 0;
+  exports.unstable_now = void 0;
   if ("object" === typeof performance && "function" === typeof performance.now) {
     var localPerformance = performance;
-    exports$1.unstable_now = function() {
+    exports.unstable_now = function() {
       return localPerformance.now();
     };
   } else {
     var localDate = Date, initialTime = localDate.now();
-    exports$1.unstable_now = function() {
+    exports.unstable_now = function() {
       return localDate.now() - initialTime;
     };
   }
@@ -17416,12 +21682,12 @@ var scheduler_production = {};
   }
   var isMessageLoopRunning = false, taskTimeoutID = -1, frameInterval = 5, startTime = -1;
   function shouldYieldToHost() {
-    return needsPaint ? true : exports$1.unstable_now() - startTime < frameInterval ? false : true;
+    return needsPaint ? true : exports.unstable_now() - startTime < frameInterval ? false : true;
   }
   function performWorkUntilDeadline() {
     needsPaint = false;
     if (isMessageLoopRunning) {
-      var currentTime = exports$1.unstable_now();
+      var currentTime = exports.unstable_now();
       startTime = currentTime;
       var hasMoreWork = true;
       try {
@@ -17441,7 +21707,7 @@ var scheduler_production = {};
                   var continuationCallback = callback(
                     currentTask.expirationTime <= currentTime
                   );
-                  currentTime = exports$1.unstable_now();
+                  currentTime = exports.unstable_now();
                   if ("function" === typeof continuationCallback) {
                     currentTask.callback = continuationCallback;
                     advanceTimers(currentTime);
@@ -17489,29 +21755,29 @@ var scheduler_production = {};
     schedulePerformWorkUntilDeadline = function() {
       localSetTimeout(performWorkUntilDeadline, 0);
     };
-  function requestHostTimeout(callback, ms) {
+  function requestHostTimeout(callback, ms2) {
     taskTimeoutID = localSetTimeout(function() {
-      callback(exports$1.unstable_now());
-    }, ms);
+      callback(exports.unstable_now());
+    }, ms2);
   }
-  exports$1.unstable_IdlePriority = 5;
-  exports$1.unstable_ImmediatePriority = 1;
-  exports$1.unstable_LowPriority = 4;
-  exports$1.unstable_NormalPriority = 3;
-  exports$1.unstable_Profiling = null;
-  exports$1.unstable_UserBlockingPriority = 2;
-  exports$1.unstable_cancelCallback = function(task) {
+  exports.unstable_IdlePriority = 5;
+  exports.unstable_ImmediatePriority = 1;
+  exports.unstable_LowPriority = 4;
+  exports.unstable_NormalPriority = 3;
+  exports.unstable_Profiling = null;
+  exports.unstable_UserBlockingPriority = 2;
+  exports.unstable_cancelCallback = function(task) {
     task.callback = null;
   };
-  exports$1.unstable_forceFrameRate = function(fps) {
+  exports.unstable_forceFrameRate = function(fps) {
     0 > fps || 125 < fps ? console.error(
       "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"
     ) : frameInterval = 0 < fps ? Math.floor(1e3 / fps) : 5;
   };
-  exports$1.unstable_getCurrentPriorityLevel = function() {
+  exports.unstable_getCurrentPriorityLevel = function() {
     return currentPriorityLevel;
   };
-  exports$1.unstable_next = function(eventHandler) {
+  exports.unstable_next = function(eventHandler) {
     switch (currentPriorityLevel) {
       case 1:
       case 2:
@@ -17529,10 +21795,10 @@ var scheduler_production = {};
       currentPriorityLevel = previousPriorityLevel;
     }
   };
-  exports$1.unstable_requestPaint = function() {
+  exports.unstable_requestPaint = function() {
     needsPaint = true;
   };
-  exports$1.unstable_runWithPriority = function(priorityLevel, eventHandler) {
+  exports.unstable_runWithPriority = function(priorityLevel, eventHandler) {
     switch (priorityLevel) {
       case 1:
       case 2:
@@ -17551,8 +21817,8 @@ var scheduler_production = {};
       currentPriorityLevel = previousPriorityLevel;
     }
   };
-  exports$1.unstable_scheduleCallback = function(priorityLevel, callback, options) {
-    var currentTime = exports$1.unstable_now();
+  exports.unstable_scheduleCallback = function(priorityLevel, callback, options) {
+    var currentTime = exports.unstable_now();
     "object" === typeof options && null !== options ? (options = options.delay, options = "number" === typeof options && 0 < options ? currentTime + options : currentTime) : options = currentTime;
     switch (priorityLevel) {
       case 1:
@@ -17582,8 +21848,8 @@ var scheduler_production = {};
     options > currentTime ? (priorityLevel.sortIndex = options, push2(timerQueue, priorityLevel), null === peek(taskQueue) && priorityLevel === peek(timerQueue) && (isHostTimeoutScheduled ? (localClearTimeout(taskTimeoutID), taskTimeoutID = -1) : isHostTimeoutScheduled = true, requestHostTimeout(handleTimeout, options - currentTime))) : (priorityLevel.sortIndex = timeout2, push2(taskQueue, priorityLevel), isHostCallbackScheduled || isPerformingWork || (isHostCallbackScheduled = true, isMessageLoopRunning || (isMessageLoopRunning = true, schedulePerformWorkUntilDeadline())));
     return priorityLevel;
   };
-  exports$1.unstable_shouldYield = shouldYieldToHost;
-  exports$1.unstable_wrapCallback = function(callback) {
+  exports.unstable_shouldYield = shouldYieldToHost;
+  exports.unstable_wrapCallback = function(callback) {
     var parentPriorityLevel = currentPriorityLevel;
     return function() {
       var previousPriorityLevel = currentPriorityLevel;
@@ -17751,7 +22017,7 @@ reactDom_production.useFormState = function(action, initialState, permalink) {
 reactDom_production.useFormStatus = function() {
   return ReactSharedInternals$1.H.useHostTransitionStatus();
 };
-reactDom_production.version = "19.1.5";
+reactDom_production.version = "19.1.8";
 function checkDCE$1() {
   if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") {
     return;
@@ -17767,7 +22033,7 @@ function checkDCE$1() {
   reactDom.exports = reactDom_production;
 }
 var reactDomExports = reactDom.exports;
-const ReactDOM$2 = /* @__PURE__ */ getDefaultExportFromCjs(reactDomExports);
+const vt = /* @__PURE__ */ getDefaultExportFromCjs(reactDomExports);
 /**
  * @license React
  * react-dom-client.production.js
@@ -20526,7 +24792,7 @@ function rerenderReducer(reducer) {
   }
   return [newState, dispatch];
 }
-function updateSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) {
+function updateSyncExternalStore(subscribe2, getSnapshot, getServerSnapshot) {
   var fiber = currentlyRenderingFiber, hook = updateWorkInProgressHook(), isHydrating$jscomp$0 = isHydrating;
   if (isHydrating$jscomp$0) {
     if (void 0 === getServerSnapshot) throw Error(formatProdErrorMessage(407));
@@ -20538,8 +24804,8 @@ function updateSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) {
   );
   snapshotChanged && (hook.memoizedState = getServerSnapshot, didReceiveUpdate = true);
   hook = hook.queue;
-  var create = subscribeToStore.bind(null, fiber, hook, subscribe);
-  updateEffectImpl(2048, 8, create, [subscribe]);
+  var create = subscribeToStore.bind(null, fiber, hook, subscribe2);
+  updateEffectImpl(2048, 8, create, [subscribe2]);
   if (hook.getSnapshot !== getSnapshot || snapshotChanged || null !== workInProgressHook && workInProgressHook.memoizedState.tag & 1) {
     fiber.flags |= 2048;
     pushSimpleEffect(
@@ -20570,8 +24836,8 @@ function updateStoreInstance(fiber, inst, nextSnapshot, getSnapshot) {
   inst.getSnapshot = getSnapshot;
   checkIfSnapshotChanged(inst) && forceStoreRerender(fiber);
 }
-function subscribeToStore(fiber, inst, subscribe) {
-  return subscribe(function() {
+function subscribeToStore(fiber, inst, subscribe2) {
+  return subscribe2(function() {
     checkIfSnapshotChanged(inst) && forceStoreRerender(fiber);
   });
 }
@@ -21265,7 +25531,7 @@ var ContextOnlyDispatcher = {
     mountWorkInProgressHook().memoizedState = stateHook;
     return [false, stateHook];
   },
-  useSyncExternalStore: function(subscribe, getSnapshot, getServerSnapshot) {
+  useSyncExternalStore: function(subscribe2, getSnapshot, getServerSnapshot) {
     var fiber = currentlyRenderingFiber, hook = mountWorkInProgressHook();
     if (isHydrating) {
       if (void 0 === getServerSnapshot)
@@ -21280,8 +25546,8 @@ var ContextOnlyDispatcher = {
     hook.memoizedState = getServerSnapshot;
     var inst = { value: getServerSnapshot, getSnapshot };
     hook.queue = inst;
-    mountEffect(subscribeToStore.bind(null, fiber, inst, subscribe), [
-      subscribe
+    mountEffect(subscribeToStore.bind(null, fiber, inst, subscribe2), [
+      subscribe2
     ]);
     fiber.flags |= 2048;
     pushSimpleEffect(
@@ -26661,11 +30927,11 @@ function getParent(inst) {
   while (inst && 5 !== inst.tag && 27 !== inst.tag);
   return inst ? inst : null;
 }
-function accumulateEnterLeaveListenersForEvent(dispatchQueue, event, target, common, inCapturePhase) {
-  for (var registrationName = event._reactName, listeners = []; null !== target && target !== common; ) {
+function accumulateEnterLeaveListenersForEvent(dispatchQueue, event, target, common2, inCapturePhase) {
+  for (var registrationName = event._reactName, listeners = []; null !== target && target !== common2; ) {
     var _instance3 = target, alternate = _instance3.alternate, stateNode = _instance3.stateNode;
     _instance3 = _instance3.tag;
-    if (null !== alternate && alternate === common) break;
+    if (null !== alternate && alternate === common2) break;
     5 !== _instance3 && 26 !== _instance3 && 27 !== _instance3 || null === stateNode || (alternate = stateNode, inCapturePhase ? (stateNode = getListener(target, registrationName), null != stateNode && listeners.unshift(
       createDispatchListener(target, stateNode, alternate)
     )) : inCapturePhase || (stateNode = getListener(target, registrationName), null != stateNode && listeners.push(
@@ -28732,12 +32998,12 @@ ReactDOMHydrationRoot.prototype.unstable_scheduleHydration = function(target) {
   }
 };
 var isomorphicReactPackageVersion$jscomp$inline_1785 = React.version;
-if ("19.1.5" !== isomorphicReactPackageVersion$jscomp$inline_1785)
+if ("19.1.8" !== isomorphicReactPackageVersion$jscomp$inline_1785)
   throw Error(
     formatProdErrorMessage(
       527,
       isomorphicReactPackageVersion$jscomp$inline_1785,
-      "19.1.5"
+      "19.1.8"
     )
   );
 ReactDOMSharedInternals.findDOMNode = function(componentOrElement) {
@@ -28755,10 +33021,10 @@ ReactDOMSharedInternals.findDOMNode = function(componentOrElement) {
 };
 var internals$jscomp$inline_2256 = {
   bundleType: 0,
-  version: "19.1.5",
+  version: "19.1.8",
   rendererPackageName: "react-dom",
   currentDispatcherRef: ReactSharedInternals,
-  reconcilerVersion: "19.1.5"
+  reconcilerVersion: "19.1.8"
 };
 if ("undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__) {
   var hook$jscomp$inline_2257 = __REACT_DEVTOOLS_GLOBAL_HOOK__;
@@ -28825,7 +33091,7 @@ reactDomClient_production.hydrateRoot = function(container, initialChildren, opt
   listenToAllSupportedEvents(container);
   return new ReactDOMHydrationRoot(initialChildren);
 };
-reactDomClient_production.version = "19.1.5";
+reactDomClient_production.version = "19.1.8";
 function checkDCE() {
   if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") {
     return;
@@ -28842,7 +33108,7 @@ function checkDCE() {
 }
 var clientExports = client.exports;
 const ReactDOM = /* @__PURE__ */ getDefaultExportFromCjs(clientExports);
-function setRef(ref, value) {
+function setRef$1(ref, value) {
   if (typeof ref === "function") {
     return ref(value);
   } else if (ref !== null && ref !== void 0) {
@@ -28853,7 +33119,7 @@ function composeRefs(...refs) {
   return (node) => {
     let hasCleanup = false;
     const cleanups = refs.map((ref) => {
-      const cleanup = setRef(ref, node);
+      const cleanup = setRef$1(ref, node);
       if (!hasCleanup && typeof cleanup == "function") {
         hasCleanup = true;
       }
@@ -28866,7 +33132,7 @@ function composeRefs(...refs) {
           if (typeof cleanup == "function") {
             cleanup();
           } else {
-            setRef(refs[i], null);
+            setRef$1(refs[i], null);
           }
         }
       };
@@ -28876,67 +33142,79 @@ function composeRefs(...refs) {
 function useComposedRefs(...refs) {
   return reactExports.useCallback(composeRefs(...refs), refs);
 }
-var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-var use = React$3[" use ".trim().toString()];
-function isPromiseLike(value) {
-  return typeof value === "object" && value !== null && "then" in value;
-}
-function isLazyComponent(element) {
-  return element != null && typeof element === "object" && "$$typeof" in element && element.$$typeof === REACT_LAZY_TYPE && "_payload" in element && isPromiseLike(element._payload);
-}
 // @__NO_SIDE_EFFECTS__
-function createSlot$1(ownerName) {
-  const SlotClone = /* @__PURE__ */ createSlotClone$1(ownerName);
+function createSlot(ownerName) {
   const Slot2 = reactExports.forwardRef((props, forwardedRef) => {
     let { children, ...slotProps } = props;
+    let slottableElement = null;
+    let hasSlottable = false;
+    const newChildren = [];
     if (isLazyComponent(children) && typeof use === "function") {
       children = use(children._payload);
     }
-    const childrenArray = reactExports.Children.toArray(children);
-    const slottable = childrenArray.find(isSlottable$1);
-    if (slottable) {
-      const newElement = slottable.props.children;
-      const newChildren = childrenArray.map((child) => {
-        if (child === slottable) {
-          if (reactExports.Children.count(newElement) > 1) return reactExports.Children.only(null);
-          return reactExports.isValidElement(newElement) ? newElement.props.children : null;
-        } else {
-          return child;
+    reactExports.Children.forEach(children, (maybeSlottable) => {
+      var _a2;
+      if (isSlottable(maybeSlottable)) {
+        hasSlottable = true;
+        const slottable = maybeSlottable;
+        let child = "child" in slottable.props ? slottable.props.child : slottable.props.children;
+        if (isLazyComponent(child) && typeof use === "function") {
+          child = use(child._payload);
         }
-      });
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(SlotClone, { ...slotProps, ref: forwardedRef, children: reactExports.isValidElement(newElement) ? reactExports.cloneElement(newElement, void 0, newChildren) : null });
+        slottableElement = getSlottableElementFromSlottable(slottable, child);
+        newChildren.push((_a2 = slottableElement == null ? void 0 : slottableElement.props) == null ? void 0 : _a2.children);
+      } else {
+        newChildren.push(maybeSlottable);
+      }
+    });
+    if (slottableElement) {
+      slottableElement = reactExports.cloneElement(slottableElement, void 0, newChildren);
+    } else if (
+      // A `Slottable` was found but it didn't resolve to a single element (e.g.
+      // it wrapped multiple elements, text, or a render-prop `child` that
+      // wasn't an element). Don't fall back to treating the `Slottable` wrapper
+      // itself as the slot target — throw a descriptive error below instead.
+      !hasSlottable && reactExports.Children.count(children) === 1 && reactExports.isValidElement(children)
+    ) {
+      slottableElement = children;
     }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(SlotClone, { ...slotProps, ref: forwardedRef, children });
+    const slottableElementRef = slottableElement ? getElementRef$1(slottableElement) : void 0;
+    const composedRef = useComposedRefs(forwardedRef, slottableElementRef);
+    if (!slottableElement) {
+      if (children || children === 0) {
+        throw new Error(
+          hasSlottable ? createSlottableError(ownerName) : createSlotError(ownerName)
+        );
+      }
+      return children;
+    }
+    const mergedProps = mergeProps(slotProps, slottableElement.props ?? {});
+    if (slottableElement.type !== reactExports.Fragment) {
+      mergedProps.ref = forwardedRef ? composedRef : slottableElementRef;
+    }
+    return reactExports.cloneElement(slottableElement, mergedProps);
   });
   Slot2.displayName = `${ownerName}.Slot`;
   return Slot2;
 }
-var Slot$3 = /* @__PURE__ */ createSlot$1("Slot");
+var Slot$3 = /* @__PURE__ */ createSlot("Slot");
+var SLOTTABLE_IDENTIFIER = Symbol.for("radix.slottable");
 // @__NO_SIDE_EFFECTS__
-function createSlotClone$1(ownerName) {
-  const SlotClone = reactExports.forwardRef((props, forwardedRef) => {
-    let { children, ...slotProps } = props;
-    if (isLazyComponent(children) && typeof use === "function") {
-      children = use(children._payload);
-    }
-    if (reactExports.isValidElement(children)) {
-      const childrenRef = getElementRef$2(children);
-      const props2 = mergeProps$1(slotProps, children.props);
-      if (children.type !== reactExports.Fragment) {
-        props2.ref = forwardedRef ? composeRefs(forwardedRef, childrenRef) : childrenRef;
-      }
-      return reactExports.cloneElement(children, props2);
-    }
-    return reactExports.Children.count(children) > 1 ? reactExports.Children.only(null) : null;
-  });
-  SlotClone.displayName = `${ownerName}.SlotClone`;
-  return SlotClone;
+function createSlottable(ownerName) {
+  const Slottable2 = (props) => "child" in props ? props.children(props.child) : props.children;
+  Slottable2.displayName = `${ownerName}.Slottable`;
+  Slottable2.__radixId = SLOTTABLE_IDENTIFIER;
+  return Slottable2;
 }
-var SLOTTABLE_IDENTIFIER$1 = Symbol("radix.slottable");
-function isSlottable$1(child) {
-  return reactExports.isValidElement(child) && typeof child.type === "function" && "__radixId" in child.type && child.type.__radixId === SLOTTABLE_IDENTIFIER$1;
-}
-function mergeProps$1(slotProps, childProps) {
+var getSlottableElementFromSlottable = (slottable, child) => {
+  if ("child" in slottable.props) {
+    const child2 = slottable.props.child;
+    if (!reactExports.isValidElement(child2)) return null;
+    return reactExports.cloneElement(child2, void 0, slottable.props.children(child2.props.children));
+  }
+  return reactExports.isValidElement(child) ? child : null;
+};
+function mergeProps(slotProps, childProps) {
   const overrideProps = { ...childProps };
   for (const propName in childProps) {
     const slotPropValue = slotProps[propName];
@@ -28960,7 +33238,7 @@ function mergeProps$1(slotProps, childProps) {
   }
   return { ...slotProps, ...overrideProps };
 }
-function getElementRef$2(element) {
+function getElementRef$1(element) {
   var _a2, _b2;
   let getter = (_a2 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a2.get;
   let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
@@ -28974,6 +33252,23 @@ function getElementRef$2(element) {
   }
   return element.props.ref || element.ref;
 }
+function isSlottable(child) {
+  return reactExports.isValidElement(child) && typeof child.type === "function" && "__radixId" in child.type && child.type.__radixId === SLOTTABLE_IDENTIFIER;
+}
+var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+function isLazyComponent(element) {
+  return element != null && typeof element === "object" && "$$typeof" in element && element.$$typeof === REACT_LAZY_TYPE && "_payload" in element && isPromiseLike(element._payload);
+}
+function isPromiseLike(value) {
+  return typeof value === "object" && value !== null && "then" in value;
+}
+var createSlotError = (ownerName) => {
+  return `${ownerName} failed to slot onto its children. Expected a single React element child or \`Slottable\`.`;
+};
+var createSlottableError = (ownerName) => {
+  return `${ownerName} failed to slot onto its \`Slottable\`. Expected \`Slottable\` to receive a single React element child.`;
+};
+var use = React2[" use ".trim().toString()];
 function r(e) {
   var t, f2, n = "";
   if ("string" == typeof e || "number" == typeof e) n += e;
@@ -31547,7 +35842,7 @@ function Input({ className, type, ...props }) {
     }
   );
 }
-var NODES$1 = [
+var NODES = [
   "a",
   "button",
   "div",
@@ -31566,8 +35861,8 @@ var NODES$1 = [
   "svg",
   "ul"
 ];
-var Primitive$1 = NODES$1.reduce((primitive, node) => {
-  const Slot2 = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
+var Primitive = NODES.reduce((primitive, node) => {
+  const Slot2 = /* @__PURE__ */ createSlot(`Primitive.${node}`);
   const Node2 = reactExports.forwardRef((props, forwardedRef) => {
     const { asChild, ...primitiveProps } = props;
     const Comp = asChild ? Slot2 : node;
@@ -31579,10 +35874,13 @@ var Primitive$1 = NODES$1.reduce((primitive, node) => {
   Node2.displayName = `Primitive.${node}`;
   return { ...primitive, [node]: Node2 };
 }, {});
+function dispatchDiscreteCustomEvent(target, event) {
+  if (target) reactDomExports.flushSync(() => target.dispatchEvent(event));
+}
 var NAME$3 = "Label";
 var Label$2 = reactExports.forwardRef((props, forwardedRef) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Primitive$1.label,
+    Primitive.label,
     {
       ...props,
       ref: forwardedRef,
@@ -31597,13 +35895,13 @@ var Label$2 = reactExports.forwardRef((props, forwardedRef) => {
   );
 });
 Label$2.displayName = NAME$3;
-var Root$7 = Label$2;
+var Root$6 = Label$2;
 function Label$1({
   className,
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Root$7,
+    Root$6,
     {
       "data-slot": "label",
       className: cn(
@@ -31915,7 +36213,7 @@ var $e = reactExports.forwardRef(function(e, t) {
       return;
     }
     setTimeout(() => {
-      ReactDOM$2.flushSync(() => {
+      vt.flushSync(() => {
         s((h2) => {
           let y2 = h2.findIndex((R2) => R2.id === d2.id);
           return y2 !== -1 ? [...h2.slice(0, y2), { ...h2[y2], ...d2 }, ...h2.slice(y2 + 1)] : [d2, ...h2];
@@ -32035,7 +36333,7 @@ var defaultAttributes = {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const Icon$1 = reactExports.forwardRef(
+const Icon = reactExports.forwardRef(
   ({
     color = "currentColor",
     size: size2 = 24,
@@ -32072,7 +36370,7 @@ const Icon$1 = reactExports.forwardRef(
  */
 const createLucideIcon = (iconName, iconNode) => {
   const Component2 = reactExports.forwardRef(
-    ({ className, ...props }, ref) => reactExports.createElement(Icon$1, {
+    ({ className, ...props }, ref) => reactExports.createElement(Icon, {
       ref,
       iconNode,
       className: mergeClasses(
@@ -32708,11 +37006,11 @@ const ApiKey = Record({
   "createdAt": Time,
   "description": Text
 });
-const ExternalBlob$1 = Vec(Nat8);
+const ExternalBlob2 = Vec(Nat8);
 const FileMetadata = Record({
   "id": Text,
   "ownerId": Principal2,
-  "blob": ExternalBlob$1,
+  "blob": ExternalBlob2,
   "name": Text,
   "createdAt": Time,
   "size": Nat,
@@ -32895,7 +37193,7 @@ Service({
   "_internet_identity_sign_in_finish": Func([], [Result], []),
   "_internet_identity_sign_in_start": Func([], [Vec(Nat8)], []),
   "addFile": Func(
-    [Text, Text, Nat, Opt(Text), ExternalBlob$1, Bool],
+    [Text, Text, Nat, Opt(Text), ExternalBlob2, Bool],
     [],
     []
   ),
@@ -33305,54 +37603,6 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "validateInviteCode": IDL2.Func([IDL2.Text], [IDL2.Bool], ["query"])
   });
 };
-class ExternalBlob2 {
-  constructor(directURL, blob) {
-    __publicField(this, "_blob");
-    __publicField(this, "directURL");
-    __publicField(this, "contentType");
-    __publicField(this, "filename");
-    __publicField(this, "onProgress");
-    if (blob) {
-      this._blob = blob;
-    }
-    this.directURL = directURL;
-  }
-  static fromURL(url) {
-    return new ExternalBlob2(url, null);
-  }
-  static fromBytes(blob, contentType, filename) {
-    const url = URL.createObjectURL(new Blob([new Uint8Array(blob)], {
-      type: (contentType == null ? void 0 : contentType.trim()) || "application/octet-stream"
-    }));
-    const externalBlob = new ExternalBlob2(url, blob);
-    if (contentType == null ? void 0 : contentType.trim()) {
-      externalBlob.contentType = contentType.trim();
-    }
-    if (filename == null ? void 0 : filename.trim()) {
-      externalBlob.filename = filename.trim();
-    }
-    return externalBlob;
-  }
-  async getBytes() {
-    if (this._blob) {
-      return this._blob;
-    }
-    const response = await fetch(this.directURL);
-    const blob = await response.blob();
-    this._blob = new Uint8Array(await blob.arrayBuffer());
-    return this._blob;
-  }
-  getDirectURL() {
-    return this.directURL;
-  }
-  withUploadProgress(onProgress) {
-    this.onProgress = onProgress;
-    return this;
-  }
-}
-new TextEncoder().encode("icfs-chunk/");
-new TextEncoder().encode("icfs-metadata/");
-new TextEncoder().encode("ynode/");
 function candid_some(value) {
   return [
     value
@@ -34799,26 +39049,11 @@ function AccessDenied() {
     ] })
   ] }) });
 }
-function createContext2(rootComponentName, defaultContext) {
-  const Context = reactExports.createContext(defaultContext);
-  const Provider2 = (props) => {
-    const { children, ...context } = props;
-    const value = reactExports.useMemo(() => context, Object.values(context));
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Context.Provider, { value, children });
-  };
-  Provider2.displayName = rootComponentName + "Provider";
-  function useContext2(consumerName) {
-    const context = reactExports.useContext(Context);
-    if (context) return context;
-    if (defaultContext !== void 0) return defaultContext;
-    throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
-  }
-  return [Provider2, useContext2];
-}
-function createContextScope$1(scopeName, createContextScopeDeps = []) {
+function createContextScope(scopeName, createContextScopeDeps = []) {
   let defaultContexts = [];
   function createContext3(rootComponentName, defaultContext) {
     const BaseContext = reactExports.createContext(defaultContext);
+    BaseContext.displayName = rootComponentName + "Context";
     const index2 = defaultContexts.length;
     defaultContexts = [...defaultContexts, defaultContext];
     const Provider2 = (props) => {
@@ -34829,12 +39064,14 @@ function createContextScope$1(scopeName, createContextScopeDeps = []) {
       return /* @__PURE__ */ jsxRuntimeExports.jsx(Context.Provider, { value, children });
     };
     Provider2.displayName = rootComponentName + "Provider";
-    function useContext2(consumerName, scope) {
+    function useContext2(consumerName, scope, options = {}) {
       var _a2;
+      const { optional = false } = options;
       const Context = ((_a2 = scope == null ? void 0 : scope[scopeName]) == null ? void 0 : _a2[index2]) || BaseContext;
       const context = reactExports.useContext(Context);
       if (context) return context;
       if (defaultContext !== void 0) return defaultContext;
+      if (optional) return void 0;
       throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
     }
     return [Provider2, useContext2];
@@ -34852,9 +39089,9 @@ function createContextScope$1(scopeName, createContextScopeDeps = []) {
     };
   };
   createScope.scopeName = scopeName;
-  return [createContext3, composeContextScopes$1(createScope, ...createContextScopeDeps)];
+  return [createContext3, composeContextScopes(createScope, ...createContextScopeDeps)];
 }
-function composeContextScopes$1(...scopes) {
+function composeContextScopes(...scopes) {
   const baseScope = scopes[0];
   if (scopes.length === 1) return baseScope;
   const createScope = () => {
@@ -34877,14 +39114,14 @@ function composeContextScopes$1(...scopes) {
 function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
   return function handleEvent(event) {
     originalEventHandler == null ? void 0 : originalEventHandler(event);
-    if (checkForDefaultPrevented === false || !event.defaultPrevented) {
+    if (checkForDefaultPrevented === false || !event || !event.defaultPrevented) {
       return ourEventHandler == null ? void 0 : ourEventHandler(event);
     }
   };
 }
 var useLayoutEffect2 = (globalThis == null ? void 0 : globalThis.document) ? reactExports.useLayoutEffect : () => {
 };
-var useReactId = React$3[" useId ".trim().toString()] || (() => void 0);
+var useReactId = React2[" useId ".trim().toString()] || (() => void 0);
 var count$1 = 0;
 function useId(deterministicId) {
   const [id, setId] = reactExports.useState(useReactId());
@@ -34893,7 +39130,7 @@ function useId(deterministicId) {
   }, [deterministicId]);
   return id ? `radix-${id}` : "";
 }
-var useInsertionEffect = React$3[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
+var useInsertionEffect = React2[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
 function useControllableState({
   prop,
   defaultProp,
@@ -34925,7 +39162,7 @@ function useControllableState({
     (nextValue) => {
       var _a2;
       if (isControlled) {
-        const value2 = isFunction$1(nextValue) ? nextValue(prop) : nextValue;
+        const value2 = isFunction$2(nextValue) ? nextValue(prop) : nextValue;
         if (value2 !== prop) {
           (_a2 = onChangeRef.current) == null ? void 0 : _a2.call(onChangeRef, value2);
         }
@@ -34956,135 +39193,8 @@ function useUncontrolledState({
   }, [value, prevValueRef]);
   return [value, setValue, onChangeRef];
 }
-function isFunction$1(value) {
+function isFunction$2(value) {
   return typeof value === "function";
-}
-// @__NO_SIDE_EFFECTS__
-function createSlot(ownerName) {
-  const SlotClone = /* @__PURE__ */ createSlotClone(ownerName);
-  const Slot2 = reactExports.forwardRef((props, forwardedRef) => {
-    const { children, ...slotProps } = props;
-    const childrenArray = reactExports.Children.toArray(children);
-    const slottable = childrenArray.find(isSlottable);
-    if (slottable) {
-      const newElement = slottable.props.children;
-      const newChildren = childrenArray.map((child) => {
-        if (child === slottable) {
-          if (reactExports.Children.count(newElement) > 1) return reactExports.Children.only(null);
-          return reactExports.isValidElement(newElement) ? newElement.props.children : null;
-        } else {
-          return child;
-        }
-      });
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(SlotClone, { ...slotProps, ref: forwardedRef, children: reactExports.isValidElement(newElement) ? reactExports.cloneElement(newElement, void 0, newChildren) : null });
-    }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(SlotClone, { ...slotProps, ref: forwardedRef, children });
-  });
-  Slot2.displayName = `${ownerName}.Slot`;
-  return Slot2;
-}
-// @__NO_SIDE_EFFECTS__
-function createSlotClone(ownerName) {
-  const SlotClone = reactExports.forwardRef((props, forwardedRef) => {
-    const { children, ...slotProps } = props;
-    if (reactExports.isValidElement(children)) {
-      const childrenRef = getElementRef$1(children);
-      const props2 = mergeProps(slotProps, children.props);
-      if (children.type !== reactExports.Fragment) {
-        props2.ref = forwardedRef ? composeRefs(forwardedRef, childrenRef) : childrenRef;
-      }
-      return reactExports.cloneElement(children, props2);
-    }
-    return reactExports.Children.count(children) > 1 ? reactExports.Children.only(null) : null;
-  });
-  SlotClone.displayName = `${ownerName}.SlotClone`;
-  return SlotClone;
-}
-var SLOTTABLE_IDENTIFIER = Symbol("radix.slottable");
-// @__NO_SIDE_EFFECTS__
-function createSlottable(ownerName) {
-  const Slottable2 = ({ children }) => {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children });
-  };
-  Slottable2.displayName = `${ownerName}.Slottable`;
-  Slottable2.__radixId = SLOTTABLE_IDENTIFIER;
-  return Slottable2;
-}
-function isSlottable(child) {
-  return reactExports.isValidElement(child) && typeof child.type === "function" && "__radixId" in child.type && child.type.__radixId === SLOTTABLE_IDENTIFIER;
-}
-function mergeProps(slotProps, childProps) {
-  const overrideProps = { ...childProps };
-  for (const propName in childProps) {
-    const slotPropValue = slotProps[propName];
-    const childPropValue = childProps[propName];
-    const isHandler = /^on[A-Z]/.test(propName);
-    if (isHandler) {
-      if (slotPropValue && childPropValue) {
-        overrideProps[propName] = (...args) => {
-          const result = childPropValue(...args);
-          slotPropValue(...args);
-          return result;
-        };
-      } else if (slotPropValue) {
-        overrideProps[propName] = slotPropValue;
-      }
-    } else if (propName === "style") {
-      overrideProps[propName] = { ...slotPropValue, ...childPropValue };
-    } else if (propName === "className") {
-      overrideProps[propName] = [slotPropValue, childPropValue].filter(Boolean).join(" ");
-    }
-  }
-  return { ...slotProps, ...overrideProps };
-}
-function getElementRef$1(element) {
-  var _a2, _b2;
-  let getter = (_a2 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a2.get;
-  let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
-  if (mayWarn) {
-    return element.ref;
-  }
-  getter = (_b2 = Object.getOwnPropertyDescriptor(element, "ref")) == null ? void 0 : _b2.get;
-  mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
-  if (mayWarn) {
-    return element.props.ref;
-  }
-  return element.props.ref || element.ref;
-}
-var NODES = [
-  "a",
-  "button",
-  "div",
-  "form",
-  "h2",
-  "h3",
-  "img",
-  "input",
-  "label",
-  "li",
-  "nav",
-  "ol",
-  "p",
-  "select",
-  "span",
-  "svg",
-  "ul"
-];
-var Primitive = NODES.reduce((primitive, node) => {
-  const Slot2 = /* @__PURE__ */ createSlot(`Primitive.${node}`);
-  const Node2 = reactExports.forwardRef((props, forwardedRef) => {
-    const { asChild, ...primitiveProps } = props;
-    const Comp = asChild ? Slot2 : node;
-    if (typeof window !== "undefined") {
-      window[Symbol.for("radix-ui")] = true;
-    }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Comp, { ...primitiveProps, ref: forwardedRef });
-  });
-  Node2.displayName = `Primitive.${node}`;
-  return { ...primitive, [node]: Node2 };
-}, {});
-function dispatchDiscreteCustomEvent(target, event) {
-  if (target) reactDomExports.flushSync(() => target.dispatchEvent(event));
 }
 function useCallbackRef$1(callback) {
   const callbackRef = reactExports.useRef(callback);
@@ -35096,18 +39206,6 @@ function useCallbackRef$1(callback) {
     return (_a2 = callbackRef.current) == null ? void 0 : _a2.call(callbackRef, ...args);
   }, []);
 }
-function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis == null ? void 0 : globalThis.document) {
-  const onEscapeKeyDown = useCallbackRef$1(onEscapeKeyDownProp);
-  reactExports.useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        onEscapeKeyDown(event);
-      }
-    };
-    ownerDocument.addEventListener("keydown", handleKeyDown, { capture: true });
-    return () => ownerDocument.removeEventListener("keydown", handleKeyDown, { capture: true });
-  }, [onEscapeKeyDown, ownerDocument]);
-}
 var DISMISSABLE_LAYER_NAME = "DismissableLayer";
 var CONTEXT_UPDATE = "dismissableLayer.update";
 var POINTER_DOWN_OUTSIDE = "dismissableLayer.pointerDownOutside";
@@ -35116,12 +39214,19 @@ var originalBodyPointerEvents;
 var DismissableLayerContext = reactExports.createContext({
   layers: /* @__PURE__ */ new Set(),
   layersWithOutsidePointerEventsDisabled: /* @__PURE__ */ new Set(),
-  branches: /* @__PURE__ */ new Set()
+  branches: /* @__PURE__ */ new Set(),
+  // Outside elements that belong to a layer's own dismiss affordance (eg, a
+  // dialog overlay). Pressing them should dismiss the layer regardless of
+  // whether or not they stop propagation.
+  //
+  // See https://github.com/radix-ui/primitives/issues/3346
+  dismissableSurfaces: /* @__PURE__ */ new Set()
 });
 var DismissableLayer = reactExports.forwardRef(
   (props, forwardedRef) => {
     const {
       disableOutsidePointerEvents = false,
+      deferPointerDownOutside = false,
       onEscapeKeyDown,
       onPointerDownOutside,
       onFocusOutside,
@@ -35133,22 +39238,45 @@ var DismissableLayer = reactExports.forwardRef(
     const [node, setNode] = reactExports.useState(null);
     const ownerDocument = (node == null ? void 0 : node.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document);
     const [, force] = reactExports.useState({});
-    const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
+    const composedRefs = useComposedRefs(forwardedRef, setNode);
     const layers = Array.from(context.layers);
-    const [highestLayerWithOutsidePointerEventsDisabled] = [...context.layersWithOutsidePointerEventsDisabled].slice(-1);
-    const highestLayerWithOutsidePointerEventsDisabledIndex = layers.indexOf(highestLayerWithOutsidePointerEventsDisabled);
+    const [highestLayerWithOutsidePointerEventsDisabled] = [
+      ...context.layersWithOutsidePointerEventsDisabled
+    ].slice(-1);
+    const highestLayerWithOutsidePointerEventsDisabledIndex = highestLayerWithOutsidePointerEventsDisabled ? layers.indexOf(highestLayerWithOutsidePointerEventsDisabled) : -1;
     const index2 = node ? layers.indexOf(node) : -1;
     const isBodyPointerEventsDisabled = context.layersWithOutsidePointerEventsDisabled.size > 0;
     const isPointerEventsEnabled = index2 >= highestLayerWithOutsidePointerEventsDisabledIndex;
-    const pointerDownOutside = usePointerDownOutside((event) => {
-      const target = event.target;
-      const isPointerDownOnBranch = [...context.branches].some((branch) => branch.contains(target));
-      if (!isPointerEventsEnabled || isPointerDownOnBranch) return;
-      onPointerDownOutside == null ? void 0 : onPointerDownOutside(event);
-      onInteractOutside == null ? void 0 : onInteractOutside(event);
-      if (!event.defaultPrevented) onDismiss == null ? void 0 : onDismiss();
-    }, ownerDocument);
+    const isDeferredPointerDownOutsideRef = reactExports.useRef(false);
+    const pointerDownOutside = usePointerDownOutside(
+      (event) => {
+        onPointerDownOutside == null ? void 0 : onPointerDownOutside(event);
+        onInteractOutside == null ? void 0 : onInteractOutside(event);
+        if (!event.defaultPrevented) onDismiss == null ? void 0 : onDismiss();
+      },
+      {
+        ownerDocument,
+        deferPointerDownOutside,
+        isDeferredPointerDownOutsideRef,
+        dismissableSurfaces: context.dismissableSurfaces,
+        shouldHandlePointerDownOutside: reactExports.useCallback(
+          (target) => {
+            if (!(target instanceof Node)) {
+              return false;
+            }
+            const isPointerDownOnBranch = [...context.branches].some(
+              (branch) => branch.contains(target)
+            );
+            return isPointerEventsEnabled && !isPointerDownOnBranch;
+          },
+          [context.branches, isPointerEventsEnabled]
+        )
+      }
+    );
     const focusOutside = useFocusOutside((event) => {
+      if (deferPointerDownOutside && isDeferredPointerDownOutsideRef.current) {
+        return;
+      }
       const target = event.target;
       const isFocusInBranch = [...context.branches].some((branch) => branch.contains(target));
       if (isFocusInBranch) return;
@@ -35156,15 +39284,24 @@ var DismissableLayer = reactExports.forwardRef(
       onInteractOutside == null ? void 0 : onInteractOutside(event);
       if (!event.defaultPrevented) onDismiss == null ? void 0 : onDismiss();
     }, ownerDocument);
-    useEscapeKeydown((event) => {
-      const isHighestLayer = index2 === context.layers.size - 1;
-      if (!isHighestLayer) return;
+    const isHighestLayer = node ? index2 === layers.length - 1 : false;
+    const handleKeyDown = useCallbackRef$1((event) => {
+      if (event.key !== "Escape") {
+        return;
+      }
       onEscapeKeyDown == null ? void 0 : onEscapeKeyDown(event);
       if (!event.defaultPrevented && onDismiss) {
         event.preventDefault();
         onDismiss();
       }
-    }, ownerDocument);
+    });
+    reactExports.useEffect(() => {
+      if (!isHighestLayer) {
+        return;
+      }
+      ownerDocument.addEventListener("keydown", handleKeyDown, { capture: true });
+      return () => ownerDocument.removeEventListener("keydown", handleKeyDown, { capture: true });
+    }, [ownerDocument, isHighestLayer, handleKeyDown]);
     reactExports.useEffect(() => {
       if (!node) return;
       if (disableOutsidePointerEvents) {
@@ -35177,8 +39314,11 @@ var DismissableLayer = reactExports.forwardRef(
       context.layers.add(node);
       dispatchUpdate();
       return () => {
-        if (disableOutsidePointerEvents && context.layersWithOutsidePointerEventsDisabled.size === 1) {
-          ownerDocument.body.style.pointerEvents = originalBodyPointerEvents;
+        if (disableOutsidePointerEvents) {
+          context.layersWithOutsidePointerEventsDisabled.delete(node);
+          if (context.layersWithOutsidePointerEventsDisabled.size === 0) {
+            ownerDocument.body.style.pointerEvents = originalBodyPointerEvents;
+          }
         }
       };
     }, [node, ownerDocument, disableOutsidePointerEvents, context]);
@@ -35232,35 +39372,116 @@ var DismissableLayerBranch = reactExports.forwardRef((props, forwardedRef) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.div, { ...props, ref: composedRefs });
 });
 DismissableLayerBranch.displayName = BRANCH_NAME;
-function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis == null ? void 0 : globalThis.document) {
+function useDismissableLayerSurface() {
+  const context = reactExports.useContext(DismissableLayerContext);
+  const [node, setNode] = reactExports.useState(null);
+  reactExports.useEffect(() => {
+    if (!node) {
+      return;
+    }
+    context.dismissableSurfaces.add(node);
+    return () => {
+      context.dismissableSurfaces.delete(node);
+    };
+  }, [node, context.dismissableSurfaces]);
+  return setNode;
+}
+var IS_TRUE = () => true;
+function usePointerDownOutside(onPointerDownOutside, args) {
+  const {
+    ownerDocument = globalThis == null ? void 0 : globalThis.document,
+    deferPointerDownOutside = false,
+    isDeferredPointerDownOutsideRef,
+    dismissableSurfaces,
+    shouldHandlePointerDownOutside = IS_TRUE
+  } = args;
   const handlePointerDownOutside = useCallbackRef$1(onPointerDownOutside);
   const isPointerInsideReactTreeRef = reactExports.useRef(false);
+  const isPointerDownOutsideRef = reactExports.useRef(false);
+  const interceptedOutsideInteractionEventsRef = reactExports.useRef(/* @__PURE__ */ new Map());
   const handleClickRef = reactExports.useRef(() => {
   });
   reactExports.useEffect(() => {
+    function resetOutsideInteraction() {
+      isPointerDownOutsideRef.current = false;
+      isDeferredPointerDownOutsideRef.current = false;
+      interceptedOutsideInteractionEventsRef.current.clear();
+    }
+    function isOutsideInteractionIntercepted() {
+      return Array.from(interceptedOutsideInteractionEventsRef.current.values()).some(Boolean);
+    }
+    function handleInteractionCapture(event) {
+      if (!isPointerDownOutsideRef.current) {
+        return;
+      }
+      const target = event.target;
+      const isDismissableSurface = target instanceof Node && [...dismissableSurfaces].some((surface) => surface.contains(target));
+      if (!isDismissableSurface) {
+        interceptedOutsideInteractionEventsRef.current.set(event.type, true);
+      }
+      if (event.type === "click") {
+        window.setTimeout(() => {
+          if (isPointerDownOutsideRef.current) {
+            handleClickRef.current();
+          }
+        }, 0);
+      }
+    }
+    function handleInteractionBubble(event) {
+      if (isPointerDownOutsideRef.current) {
+        interceptedOutsideInteractionEventsRef.current.set(event.type, false);
+      }
+    }
     const handlePointerDown = (event) => {
       if (event.target && !isPointerInsideReactTreeRef.current) {
         let handleAndDispatchPointerDownOutsideEvent2 = function() {
-          handleAndDispatchCustomEvent(
-            POINTER_DOWN_OUTSIDE,
-            handlePointerDownOutside,
-            eventDetail,
-            { discrete: true }
-          );
+          ownerDocument.removeEventListener("click", handleClickRef.current);
+          const wasOutsideInteractionIntercepted = isOutsideInteractionIntercepted();
+          resetOutsideInteraction();
+          if (!wasOutsideInteractionIntercepted) {
+            handleAndDispatchCustomEvent(
+              POINTER_DOWN_OUTSIDE,
+              handlePointerDownOutside,
+              eventDetail,
+              { discrete: true }
+            );
+          }
         };
+        if (!shouldHandlePointerDownOutside(event.target)) {
+          ownerDocument.removeEventListener("click", handleClickRef.current);
+          resetOutsideInteraction();
+          isPointerInsideReactTreeRef.current = false;
+          return;
+        }
         const eventDetail = { originalEvent: event };
-        if (event.pointerType === "touch") {
+        isPointerDownOutsideRef.current = true;
+        isDeferredPointerDownOutsideRef.current = deferPointerDownOutside && event.button === 0;
+        interceptedOutsideInteractionEventsRef.current.clear();
+        if (!deferPointerDownOutside || event.button !== 0) {
+          handleAndDispatchPointerDownOutsideEvent2();
+        } else {
           ownerDocument.removeEventListener("click", handleClickRef.current);
           handleClickRef.current = handleAndDispatchPointerDownOutsideEvent2;
           ownerDocument.addEventListener("click", handleClickRef.current, { once: true });
-        } else {
-          handleAndDispatchPointerDownOutsideEvent2();
         }
       } else {
         ownerDocument.removeEventListener("click", handleClickRef.current);
+        resetOutsideInteraction();
       }
       isPointerInsideReactTreeRef.current = false;
     };
+    const outsideInteractionEvents = [
+      "pointerup",
+      "mousedown",
+      "mouseup",
+      "touchstart",
+      "touchend",
+      "click"
+    ];
+    for (const eventName of outsideInteractionEvents) {
+      ownerDocument.addEventListener(eventName, handleInteractionCapture, true);
+      ownerDocument.addEventListener(eventName, handleInteractionBubble);
+    }
     const timerId = window.setTimeout(() => {
       ownerDocument.addEventListener("pointerdown", handlePointerDown);
     }, 0);
@@ -35268,8 +39489,19 @@ function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis 
       window.clearTimeout(timerId);
       ownerDocument.removeEventListener("pointerdown", handlePointerDown);
       ownerDocument.removeEventListener("click", handleClickRef.current);
+      for (const eventName of outsideInteractionEvents) {
+        ownerDocument.removeEventListener(eventName, handleInteractionCapture, true);
+        ownerDocument.removeEventListener(eventName, handleInteractionBubble);
+      }
     };
-  }, [ownerDocument, handlePointerDownOutside]);
+  }, [
+    ownerDocument,
+    handlePointerDownOutside,
+    deferPointerDownOutside,
+    isDeferredPointerDownOutsideRef,
+    dismissableSurfaces,
+    shouldHandlePointerDownOutside
+  ]);
   return {
     // ensures we check React component tree (not just DOM tree)
     onPointerDownCapture: () => isPointerInsideReactTreeRef.current = true
@@ -35325,7 +39557,7 @@ var FocusScope = reactExports.forwardRef((props, forwardedRef) => {
   const onMountAutoFocus = useCallbackRef$1(onMountAutoFocusProp);
   const onUnmountAutoFocus = useCallbackRef$1(onUnmountAutoFocusProp);
   const lastFocusedElementRef = reactExports.useRef(null);
-  const composedRefs = useComposedRefs(forwardedRef, (node) => setContainer(node));
+  const composedRefs = useComposedRefs(forwardedRef, setContainer);
   const focusScope = reactExports.useRef({
     paused: false,
     pause() {
@@ -35455,8 +39687,12 @@ function getTabbableCandidates(container) {
   return nodes;
 }
 function findVisible(elements, container) {
+  const canUseCheckVisibility = typeof container.checkVisibility === "function" && container.checkVisibility({ checkVisibilityCSS: true });
   for (const element of elements) {
-    if (!isHidden(element, { upTo: container })) return element;
+    const hidden = canUseCheckVisibility ? !element.checkVisibility({ checkVisibilityCSS: true }) : isHidden(element, { upTo: container });
+    if (!hidden) {
+      return element;
+    }
   }
 }
 function isHidden(node, { upTo }) {
@@ -35510,15 +39746,15 @@ function removeLinks(items) {
   return items.filter((item) => item.tagName !== "A");
 }
 var PORTAL_NAME$6 = "Portal";
-var Portal$4 = reactExports.forwardRef((props, forwardedRef) => {
+var Portal$2 = reactExports.forwardRef((props, forwardedRef) => {
   var _a2;
   const { container: containerProp, ...portalProps } = props;
   const [mounted, setMounted] = reactExports.useState(false);
   useLayoutEffect2(() => setMounted(true), []);
   const container = containerProp || mounted && ((_a2 = globalThis == null ? void 0 : globalThis.document) == null ? void 0 : _a2.body);
-  return container ? ReactDOM$2.createPortal(/* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.div, { ...portalProps, ref: forwardedRef }), container) : null;
+  return container ? reactDomExports.createPortal(/* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.div, { ...portalProps, ref: forwardedRef }), container) : null;
 });
-Portal$4.displayName = PORTAL_NAME$6;
+Portal$2.displayName = PORTAL_NAME$6;
 function useStateMachine$1(initialState, machine) {
   return reactExports.useReducer((state, event) => {
     const nextState = machine[state][event];
@@ -35529,7 +39765,7 @@ var Presence = (props) => {
   const { present, children } = props;
   const presence = usePresence(present);
   const child = typeof children === "function" ? children({ present: presence.isPresent }) : reactExports.Children.only(children);
-  const ref = useComposedRefs(presence.ref, getElementRef(child));
+  const ref = useStableComposedRefs(presence.ref, getElementRef(child));
   const forceMount = typeof children === "function";
   return forceMount || presence.isPresent ? reactExports.cloneElement(child, { ref }) : null;
 };
@@ -35539,6 +39775,7 @@ function usePresence(present) {
   const stylesRef = reactExports.useRef(null);
   const prevPresentRef = reactExports.useRef(present);
   const prevAnimationNameRef = reactExports.useRef("none");
+  const mountAnimationNameRef = reactExports.useRef(void 0);
   const initialState = present ? "mounted" : "unmounted";
   const [state, send] = useStateMachine$1(initialState, {
     mounted: {
@@ -35554,8 +39791,12 @@ function usePresence(present) {
     }
   });
   reactExports.useEffect(() => {
-    const currentAnimationName = getAnimationName(stylesRef.current);
-    prevAnimationNameRef.current = state === "mounted" ? currentAnimationName : "none";
+    if (state === "mounted") {
+      prevAnimationNameRef.current = mountAnimationNameRef.current ?? getAnimationName(stylesRef.current);
+      mountAnimationNameRef.current = void 0;
+    } else {
+      prevAnimationNameRef.current = "none";
+    }
   }, [state]);
   useLayoutEffect2(() => {
     const styles = stylesRef.current;
@@ -35565,6 +39806,7 @@ function usePresence(present) {
       const prevAnimationName = prevAnimationNameRef.current;
       const currentAnimationName = getAnimationName(styles);
       if (present) {
+        mountAnimationNameRef.current = currentAnimationName;
         send("MOUNT");
       } else if (currentAnimationName === "none" || (styles == null ? void 0 : styles.display) === "none") {
         send("UNMOUNT");
@@ -35620,10 +39862,50 @@ function usePresence(present) {
   return {
     isPresent: ["mounted", "unmountSuspended"].includes(state),
     ref: reactExports.useCallback((node2) => {
-      stylesRef.current = node2 ? getComputedStyle(node2) : null;
+      if (node2) {
+        const styles = getComputedStyle(node2);
+        stylesRef.current = styles;
+        mountAnimationNameRef.current = getAnimationName(styles);
+      } else {
+        stylesRef.current = null;
+      }
       setNode(node2);
     }, [])
   };
+}
+function setRef(ref, value) {
+  if (typeof ref === "function") {
+    return ref(value);
+  } else if (ref !== null && ref !== void 0) {
+    ref.current = value;
+  }
+}
+function useStableComposedRefs(...refs) {
+  const refsRef = reactExports.useRef(refs);
+  refsRef.current = refs;
+  return reactExports.useCallback((node) => {
+    const currentRefs = refsRef.current;
+    let hasCleanup = false;
+    const cleanups = currentRefs.map((ref) => {
+      const cleanup = setRef(ref, node);
+      if (!hasCleanup && typeof cleanup === "function") {
+        hasCleanup = true;
+      }
+      return cleanup;
+    });
+    if (hasCleanup) {
+      return () => {
+        for (let i = 0; i < cleanups.length; i++) {
+          const cleanup = cleanups[i];
+          if (typeof cleanup === "function") {
+            cleanup();
+          } else {
+            setRef(currentRefs[i], null);
+          }
+        }
+      };
+    }
+  }, []);
 }
 function getAnimationName(styles) {
   return (styles == null ? void 0 : styles.animationName) || "none";
@@ -35643,17 +39925,27 @@ function getElementRef(element) {
   return element.props.ref || element.ref;
 }
 var count = 0;
+var guards = null;
 function useFocusGuards() {
   reactExports.useEffect(() => {
-    const edgeGuards = document.querySelectorAll("[data-radix-focus-guard]");
-    document.body.insertAdjacentElement("afterbegin", edgeGuards[0] ?? createFocusGuard());
-    document.body.insertAdjacentElement("beforeend", edgeGuards[1] ?? createFocusGuard());
+    if (!guards) {
+      guards = { start: createFocusGuard(), end: createFocusGuard() };
+    }
+    const { start, end } = guards;
+    if (document.body.firstElementChild !== start) {
+      document.body.insertAdjacentElement("afterbegin", start);
+    }
+    if (document.body.lastElementChild !== end) {
+      document.body.insertAdjacentElement("beforeend", end);
+    }
     count++;
     return () => {
       if (count === 1) {
-        document.querySelectorAll("[data-radix-focus-guard]").forEach((node) => node.remove());
+        guards == null ? void 0 : guards.start.remove();
+        guards == null ? void 0 : guards.end.remove();
+        guards = null;
       }
-      count--;
+      count = Math.max(0, count - 1);
     };
   }, []);
 }
@@ -36447,7 +40739,7 @@ var hideOthers = function(originalTarget, parentNode, markerName) {
   return applyAttributeToOthers(targets, activeParentNode, markerName, "aria-hidden");
 };
 var DIALOG_NAME = "Dialog";
-var [createDialogContext, createDialogScope] = createContextScope$1(DIALOG_NAME);
+var [createDialogContext, createDialogScope] = createContextScope(DIALOG_NAME);
 var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
 var Dialog$1 = (props) => {
   const {
@@ -36496,7 +40788,7 @@ var DialogTrigger$1 = reactExports.forwardRef(
         type: "button",
         "aria-haspopup": "dialog",
         "aria-expanded": context.open,
-        "aria-controls": context.contentId,
+        "aria-controls": context.open ? context.contentId : void 0,
         "data-state": getState$1(context.open),
         ...triggerProps,
         ref: composedTriggerRef,
@@ -36507,19 +40799,19 @@ var DialogTrigger$1 = reactExports.forwardRef(
 );
 DialogTrigger$1.displayName = TRIGGER_NAME$5;
 var PORTAL_NAME$5 = "DialogPortal";
-var [PortalProvider$2, usePortalContext$2] = createDialogContext(PORTAL_NAME$5, {
+var [PortalProvider$3, usePortalContext$3] = createDialogContext(PORTAL_NAME$5, {
   forceMount: void 0
 });
 var DialogPortal$1 = (props) => {
   const { __scopeDialog, forceMount, children, container } = props;
   const context = useDialogContext(PORTAL_NAME$5, __scopeDialog);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$2, { scope: __scopeDialog, forceMount, children: reactExports.Children.map(children, (child) => /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children: child }) })) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$3, { scope: __scopeDialog, forceMount, children: reactExports.Children.map(children, (child) => /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { asChild: true, container, children: child }) })) });
 };
 DialogPortal$1.displayName = PORTAL_NAME$5;
 var OVERLAY_NAME$1 = "DialogOverlay";
 var DialogOverlay$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const portalContext = usePortalContext$2(OVERLAY_NAME$1, props.__scopeDialog);
+    const portalContext = usePortalContext$3(OVERLAY_NAME$1, props.__scopeDialog);
     const { forceMount = portalContext.forceMount, ...overlayProps } = props;
     const context = useDialogContext(OVERLAY_NAME$1, props.__scopeDialog);
     return context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlayImpl, { ...overlayProps, ref: forwardedRef }) }) : null;
@@ -36531,6 +40823,8 @@ var DialogOverlayImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDialog, ...overlayProps } = props;
     const context = useDialogContext(OVERLAY_NAME$1, __scopeDialog);
+    const registerDismissableSurface = useDismissableLayerSurface();
+    const composedRefs = useComposedRefs(forwardedRef, registerDismissableSurface);
     return (
       // Make sure `Content` is scrollable even when it doesn't live inside `RemoveScroll`
       // ie. when `Overlay` and `Content` are siblings
@@ -36539,7 +40833,7 @@ var DialogOverlayImpl = reactExports.forwardRef(
         {
           "data-state": getState$1(context.open),
           ...overlayProps,
-          ref: forwardedRef,
+          ref: composedRefs,
           style: { pointerEvents: "auto", ...overlayProps.style }
         }
       ) })
@@ -36549,7 +40843,7 @@ var DialogOverlayImpl = reactExports.forwardRef(
 var CONTENT_NAME$6 = "DialogContent";
 var DialogContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const portalContext = usePortalContext$2(CONTENT_NAME$6, props.__scopeDialog);
+    const portalContext = usePortalContext$3(CONTENT_NAME$6, props.__scopeDialog);
     const { forceMount = portalContext.forceMount, ...contentProps } = props;
     const context = useDialogContext(CONTENT_NAME$6, props.__scopeDialog);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentModal, { ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentNonModal, { ...contentProps, ref: forwardedRef }) });
@@ -36571,7 +40865,7 @@ var DialogContentModal = reactExports.forwardRef(
         ...props,
         ref: composedRefs,
         trapFocus: context.open,
-        disableOutsidePointerEvents: true,
+        disableOutsidePointerEvents: context.open,
         onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
           var _a2;
           event.preventDefault();
@@ -36637,38 +40931,31 @@ var DialogContentImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props;
     const context = useDialogContext(CONTENT_NAME$6, __scopeDialog);
-    const contentRef = reactExports.useRef(null);
-    const composedRefs = useComposedRefs(forwardedRef, contentRef);
     useFocusGuards();
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        FocusScope,
-        {
-          asChild: true,
-          loop: true,
-          trapped: trapFocus,
-          onMountAutoFocus: onOpenAutoFocus,
-          onUnmountAutoFocus: onCloseAutoFocus,
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-            DismissableLayer,
-            {
-              role: "dialog",
-              id: context.contentId,
-              "aria-describedby": context.descriptionId,
-              "aria-labelledby": context.titleId,
-              "data-state": getState$1(context.open),
-              ...contentProps,
-              ref: composedRefs,
-              onDismiss: () => context.onOpenChange(false)
-            }
-          )
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(TitleWarning, { titleId: context.titleId }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(DescriptionWarning$1, { contentRef, descriptionId: context.descriptionId })
-      ] })
-    ] });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      FocusScope,
+      {
+        asChild: true,
+        loop: true,
+        trapped: trapFocus,
+        onMountAutoFocus: onOpenAutoFocus,
+        onUnmountAutoFocus: onCloseAutoFocus,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          DismissableLayer,
+          {
+            role: "dialog",
+            id: context.contentId,
+            "aria-describedby": context.descriptionId,
+            "aria-labelledby": context.titleId,
+            "data-state": getState$1(context.open),
+            ...contentProps,
+            ref: forwardedRef,
+            deferPointerDownOutside: true,
+            onDismiss: () => context.onOpenChange(false)
+          }
+        )
+      }
+    ) });
   }
 );
 var TITLE_NAME$1 = "DialogTitle";
@@ -36709,58 +40996,15 @@ DialogClose.displayName = CLOSE_NAME;
 function getState$1(open) {
   return open ? "open" : "closed";
 }
-var TITLE_WARNING_NAME = "DialogTitleWarning";
-var [WarningProvider, useWarningContext] = createContext2(TITLE_WARNING_NAME, {
-  contentName: CONTENT_NAME$6,
-  titleName: TITLE_NAME$1,
-  docsSlug: "dialog"
-});
-var TitleWarning = ({ titleId }) => {
-  const titleWarningContext = useWarningContext(TITLE_WARNING_NAME);
-  const MESSAGE = `\`${titleWarningContext.contentName}\` requires a \`${titleWarningContext.titleName}\` for the component to be accessible for screen reader users.
-
-If you want to hide the \`${titleWarningContext.titleName}\`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/${titleWarningContext.docsSlug}`;
-  reactExports.useEffect(() => {
-    if (titleId) {
-      const hasTitle = document.getElementById(titleId);
-      if (!hasTitle) console.error(MESSAGE);
-    }
-  }, [MESSAGE, titleId]);
-  return null;
-};
-var DESCRIPTION_WARNING_NAME = "DialogDescriptionWarning";
-var DescriptionWarning$1 = ({ contentRef, descriptionId }) => {
-  const descriptionWarningContext = useWarningContext(DESCRIPTION_WARNING_NAME);
-  const MESSAGE = `Warning: Missing \`Description\` or \`aria-describedby={undefined}\` for {${descriptionWarningContext.contentName}}.`;
-  reactExports.useEffect(() => {
-    var _a2;
-    const describedById = (_a2 = contentRef.current) == null ? void 0 : _a2.getAttribute("aria-describedby");
-    if (descriptionId && describedById) {
-      const hasDescription = document.getElementById(descriptionId);
-      if (!hasDescription) console.warn(MESSAGE);
-    }
-  }, [MESSAGE, contentRef, descriptionId]);
-  return null;
-};
-var Root$6 = Dialog$1;
-var Trigger$3 = DialogTrigger$1;
-var Portal$3 = DialogPortal$1;
-var Overlay = DialogOverlay$1;
-var Content$1 = DialogContent$1;
-var Title = DialogTitle$1;
-var Description = DialogDescription$1;
-var Close = DialogClose;
 var ROOT_NAME = "AlertDialog";
-var [createAlertDialogContext] = createContextScope$1(ROOT_NAME, [
+var [createAlertDialogContext] = createContextScope(ROOT_NAME, [
   createDialogScope
 ]);
 var useDialogScope = createDialogScope();
 var AlertDialog$1 = (props) => {
   const { __scopeAlertDialog, ...alertDialogProps } = props;
   const dialogScope = useDialogScope(__scopeAlertDialog);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$6, { ...dialogScope, ...alertDialogProps, modal: true });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Dialog$1, { ...dialogScope, ...alertDialogProps, modal: true });
 };
 AlertDialog$1.displayName = ROOT_NAME;
 var TRIGGER_NAME$4 = "AlertDialogTrigger";
@@ -36768,7 +41012,7 @@ var AlertDialogTrigger = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeAlertDialog, ...triggerProps } = props;
     const dialogScope = useDialogScope(__scopeAlertDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger$3, { ...dialogScope, ...triggerProps, ref: forwardedRef });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTrigger$1, { ...dialogScope, ...triggerProps, ref: forwardedRef });
   }
 );
 AlertDialogTrigger.displayName = TRIGGER_NAME$4;
@@ -36776,7 +41020,7 @@ var PORTAL_NAME$4 = "AlertDialogPortal";
 var AlertDialogPortal$1 = (props) => {
   const { __scopeAlertDialog, ...portalProps } = props;
   const dialogScope = useDialogScope(__scopeAlertDialog);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$3, { ...dialogScope, ...portalProps });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogPortal$1, { ...dialogScope, ...portalProps });
 };
 AlertDialogPortal$1.displayName = PORTAL_NAME$4;
 var OVERLAY_NAME = "AlertDialogOverlay";
@@ -36784,13 +41028,12 @@ var AlertDialogOverlay$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeAlertDialog, ...overlayProps } = props;
     const dialogScope = useDialogScope(__scopeAlertDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Overlay, { ...dialogScope, ...overlayProps, ref: forwardedRef });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlay$1, { ...dialogScope, ...overlayProps, ref: forwardedRef });
   }
 );
 AlertDialogOverlay$1.displayName = OVERLAY_NAME;
 var CONTENT_NAME$5 = "AlertDialogContent";
 var [AlertDialogContentProvider, useAlertDialogContentContext] = createAlertDialogContext(CONTENT_NAME$5);
-var Slottable$1 = /* @__PURE__ */ createSlottable("AlertDialogContent");
 var AlertDialogContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeAlertDialog, children, ...contentProps } = props;
@@ -36798,34 +41041,23 @@ var AlertDialogContent$1 = reactExports.forwardRef(
     const contentRef = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, contentRef);
     const cancelRef = reactExports.useRef(null);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      WarningProvider,
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogContentProvider, { scope: __scopeAlertDialog, cancelRef, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      DialogContent$1,
       {
-        contentName: CONTENT_NAME$5,
-        titleName: TITLE_NAME,
-        docsSlug: "alert-dialog",
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogContentProvider, { scope: __scopeAlertDialog, cancelRef, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Content$1,
-          {
-            role: "alertdialog",
-            ...dialogScope,
-            ...contentProps,
-            ref: composedRefs,
-            onOpenAutoFocus: composeEventHandlers(contentProps.onOpenAutoFocus, (event) => {
-              var _a2;
-              event.preventDefault();
-              (_a2 = cancelRef.current) == null ? void 0 : _a2.focus({ preventScroll: true });
-            }),
-            onPointerDownOutside: (event) => event.preventDefault(),
-            onInteractOutside: (event) => event.preventDefault(),
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Slottable$1, { children }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(DescriptionWarning, { contentRef })
-            ]
-          }
-        ) })
+        role: "alertdialog",
+        ...dialogScope,
+        ...contentProps,
+        ref: composedRefs,
+        onOpenAutoFocus: composeEventHandlers(contentProps.onOpenAutoFocus, (event) => {
+          var _a2;
+          event.preventDefault();
+          (_a2 = cancelRef.current) == null ? void 0 : _a2.focus({ preventScroll: true });
+        }),
+        onPointerDownOutside: (event) => event.preventDefault(),
+        onInteractOutside: (event) => event.preventDefault(),
+        children
       }
-    );
+    ) });
   }
 );
 AlertDialogContent$1.displayName = CONTENT_NAME$5;
@@ -36834,7 +41066,7 @@ var AlertDialogTitle$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeAlertDialog, ...titleProps } = props;
     const dialogScope = useDialogScope(__scopeAlertDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Title, { ...dialogScope, ...titleProps, ref: forwardedRef });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTitle$1, { ...dialogScope, ...titleProps, ref: forwardedRef });
   }
 );
 AlertDialogTitle$1.displayName = TITLE_NAME;
@@ -36842,7 +41074,7 @@ var DESCRIPTION_NAME = "AlertDialogDescription";
 var AlertDialogDescription$1 = reactExports.forwardRef((props, forwardedRef) => {
   const { __scopeAlertDialog, ...descriptionProps } = props;
   const dialogScope = useDialogScope(__scopeAlertDialog);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Description, { ...dialogScope, ...descriptionProps, ref: forwardedRef });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogDescription$1, { ...dialogScope, ...descriptionProps, ref: forwardedRef });
 });
 AlertDialogDescription$1.displayName = DESCRIPTION_NAME;
 var ACTION_NAME = "AlertDialogAction";
@@ -36850,7 +41082,7 @@ var AlertDialogAction$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeAlertDialog, ...actionProps } = props;
     const dialogScope = useDialogScope(__scopeAlertDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Close, { ...dialogScope, ...actionProps, ref: forwardedRef });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogClose, { ...dialogScope, ...actionProps, ref: forwardedRef });
   }
 );
 AlertDialogAction$1.displayName = ACTION_NAME;
@@ -36861,31 +41093,14 @@ var AlertDialogCancel$1 = reactExports.forwardRef(
     const { cancelRef } = useAlertDialogContentContext(CANCEL_NAME, __scopeAlertDialog);
     const dialogScope = useDialogScope(__scopeAlertDialog);
     const ref = useComposedRefs(forwardedRef, cancelRef);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Close, { ...dialogScope, ...cancelProps, ref });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogClose, { ...dialogScope, ...cancelProps, ref });
   }
 );
 AlertDialogCancel$1.displayName = CANCEL_NAME;
-var DescriptionWarning = ({ contentRef }) => {
-  const MESSAGE = `\`${CONTENT_NAME$5}\` requires a description for the component to be accessible for screen reader users.
-
-You can add a description to the \`${CONTENT_NAME$5}\` by passing a \`${DESCRIPTION_NAME}\` component as a child, which also benefits sighted users by adding visible context to the dialog.
-
-Alternatively, you can use your own component as a description by assigning it an \`id\` and passing the same value to the \`aria-describedby\` prop in \`${CONTENT_NAME$5}\`. If the description is confusing or duplicative for sighted users, you can use the \`@radix-ui/react-visually-hidden\` primitive as a wrapper around your description component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/alert-dialog`;
-  reactExports.useEffect(() => {
-    var _a2;
-    const hasDescription = document.getElementById(
-      (_a2 = contentRef.current) == null ? void 0 : _a2.getAttribute("aria-describedby")
-    );
-    if (!hasDescription) console.warn(MESSAGE);
-  }, [MESSAGE, contentRef]);
-  return null;
-};
-var Root2$3 = AlertDialog$1;
+var Root2$2 = AlertDialog$1;
 var Portal2$1 = AlertDialogPortal$1;
 var Overlay2 = AlertDialogOverlay$1;
-var Content2$4 = AlertDialogContent$1;
+var Content2$3 = AlertDialogContent$1;
 var Action = AlertDialogAction$1;
 var Cancel = AlertDialogCancel$1;
 var Title2 = AlertDialogTitle$1;
@@ -36893,7 +41108,7 @@ var Description2 = AlertDialogDescription$1;
 function AlertDialog({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$3, { "data-slot": "alert-dialog", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { "data-slot": "alert-dialog", ...props });
 }
 function AlertDialogPortal({
   ...props
@@ -36923,7 +41138,7 @@ function AlertDialogContent({
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDialogPortal, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogOverlay, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Content2$4,
+      Content2$3,
       {
         "data-slot": "alert-dialog-content",
         className: cn(
@@ -37091,7 +41306,7 @@ function useSize(element) {
   return size2;
 }
 var CHECKBOX_NAME = "Checkbox";
-var [createCheckboxContext] = createContextScope$1(CHECKBOX_NAME);
+var [createCheckboxContext] = createContextScope(CHECKBOX_NAME);
 var [CheckboxProviderImpl, useCheckboxContext] = createCheckboxContext(CHECKBOX_NAME);
 function CheckboxProvider(props) {
   const {
@@ -37142,7 +41357,7 @@ function CheckboxProvider(props) {
     {
       scope: __scopeCheckbox,
       ...context,
-      children: isFunction(internal_do_not_use_render) ? internal_do_not_use_render(context) : children
+      children: isFunction$1(internal_do_not_use_render) ? internal_do_not_use_render(context) : children
     }
   );
 }
@@ -37338,7 +41553,7 @@ var CheckboxBubbleInput = reactExports.forwardRef(
   }
 );
 CheckboxBubbleInput.displayName = BUBBLE_INPUT_NAME$1;
-function isFunction(value) {
+function isFunction$1(value) {
   return typeof value === "function";
 }
 function isIndeterminate$1(checked) {
@@ -37374,24 +41589,24 @@ function Checkbox({
 function Dialog({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$6, { "data-slot": "dialog", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Dialog$1, { "data-slot": "dialog", ...props });
 }
 function DialogTrigger({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger$3, { "data-slot": "dialog-trigger", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTrigger$1, { "data-slot": "dialog-trigger", ...props });
 }
 function DialogPortal({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$3, { "data-slot": "dialog-portal", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(DialogPortal$1, { "data-slot": "dialog-portal", ...props });
 }
 function DialogOverlay({
   className,
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Overlay,
+    DialogOverlay$1,
     {
       "data-slot": "dialog-overlay",
       className: cn(
@@ -37411,7 +41626,7 @@ function DialogContent({
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogPortal, { "data-slot": "dialog-portal", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlay, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      Content$1,
+      DialogContent$1,
       {
         "data-slot": "dialog-content",
         className: cn(
@@ -37422,7 +41637,7 @@ function DialogContent({
         children: [
           children,
           showCloseButton && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Close,
+            DialogClose,
             {
               "data-slot": "dialog-close",
               className: "ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
@@ -37465,7 +41680,7 @@ function DialogTitle({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Title,
+    DialogTitle$1,
     {
       "data-slot": "dialog-title",
       className: cn("text-lg leading-none font-semibold", className),
@@ -37478,73 +41693,13 @@ function DialogDescription({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Description,
+    DialogDescription$1,
     {
       "data-slot": "dialog-description",
       className: cn("text-muted-foreground text-sm", className),
       ...props
     }
   );
-}
-function createContextScope(scopeName, createContextScopeDeps = []) {
-  let defaultContexts = [];
-  function createContext3(rootComponentName, defaultContext) {
-    const BaseContext = reactExports.createContext(defaultContext);
-    BaseContext.displayName = rootComponentName + "Context";
-    const index2 = defaultContexts.length;
-    defaultContexts = [...defaultContexts, defaultContext];
-    const Provider2 = (props) => {
-      var _a2;
-      const { scope, children, ...context } = props;
-      const Context = ((_a2 = scope == null ? void 0 : scope[scopeName]) == null ? void 0 : _a2[index2]) || BaseContext;
-      const value = reactExports.useMemo(() => context, Object.values(context));
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(Context.Provider, { value, children });
-    };
-    Provider2.displayName = rootComponentName + "Provider";
-    function useContext2(consumerName, scope) {
-      var _a2;
-      const Context = ((_a2 = scope == null ? void 0 : scope[scopeName]) == null ? void 0 : _a2[index2]) || BaseContext;
-      const context = reactExports.useContext(Context);
-      if (context) return context;
-      if (defaultContext !== void 0) return defaultContext;
-      throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
-    }
-    return [Provider2, useContext2];
-  }
-  const createScope = () => {
-    const scopeContexts = defaultContexts.map((defaultContext) => {
-      return reactExports.createContext(defaultContext);
-    });
-    return function useScope(scope) {
-      const contexts = (scope == null ? void 0 : scope[scopeName]) || scopeContexts;
-      return reactExports.useMemo(
-        () => ({ [`__scope${scopeName}`]: { ...scope, [scopeName]: contexts } }),
-        [scope, contexts]
-      );
-    };
-  };
-  createScope.scopeName = scopeName;
-  return [createContext3, composeContextScopes(createScope, ...createContextScopeDeps)];
-}
-function composeContextScopes(...scopes) {
-  const baseScope = scopes[0];
-  if (scopes.length === 1) return baseScope;
-  const createScope = () => {
-    const scopeHooks = scopes.map((createScope2) => ({
-      useScope: createScope2(),
-      scopeName: createScope2.scopeName
-    }));
-    return function useComposedScopes(overrideScopes) {
-      const nextScopes = scopeHooks.reduce((nextScopes2, { useScope, scopeName }) => {
-        const scopeProps = useScope(overrideScopes);
-        const currentScope = scopeProps[`__scope${scopeName}`];
-        return { ...nextScopes2, ...currentScope };
-      }, {});
-      return reactExports.useMemo(() => ({ [`__scope${baseScope.scopeName}`]: nextScopes }), [nextScopes]);
-    };
-  };
-  createScope.scopeName = baseScope.scopeName;
-  return createScope;
 }
 var PROGRESS_NAME = "Progress";
 var DEFAULT_MAX = 100;
@@ -37569,7 +41724,7 @@ var Progress$1 = reactExports.forwardRef(
     const value = isValidValueNumber(valueProp, max2) ? valueProp : null;
     const valueLabel = isNumber(value) ? getValueLabel(value, max2) : void 0;
     return /* @__PURE__ */ jsxRuntimeExports.jsx(ProgressProvider, { scope: __scopeProgress, value, max: max2, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.div,
+      Primitive.div,
       {
         "aria-valuemax": max2,
         "aria-valuemin": 0,
@@ -37592,7 +41747,7 @@ var ProgressIndicator = reactExports.forwardRef(
     const { __scopeProgress, ...indicatorProps } = props;
     const context = useProgressContext(INDICATOR_NAME$1, __scopeProgress);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.div,
+      Primitive.div,
       {
         "data-state": getProgressState(context.value, context.max),
         "data-value": context.value ?? void 0,
@@ -37662,21 +41817,21 @@ function clamp$1(value, [min2, max2]) {
 }
 function createCollection(name) {
   const PROVIDER_NAME2 = name + "CollectionProvider";
-  const [createCollectionContext, createCollectionScope2] = createContextScope$1(PROVIDER_NAME2);
+  const [createCollectionContext, createCollectionScope2] = createContextScope(PROVIDER_NAME2);
   const [CollectionProviderImpl, useCollectionContext] = createCollectionContext(
     PROVIDER_NAME2,
     { collectionRef: { current: null }, itemMap: /* @__PURE__ */ new Map() }
   );
   const CollectionProvider = (props) => {
     const { scope, children } = props;
-    const ref = React$2.useRef(null);
-    const itemMap = React$2.useRef(/* @__PURE__ */ new Map()).current;
+    const ref = reactExports.useRef(null);
+    const itemMap = reactExports.useRef(/* @__PURE__ */ new Map()).current;
     return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionProviderImpl, { scope, itemMap, collectionRef: ref, children });
   };
   CollectionProvider.displayName = PROVIDER_NAME2;
   const COLLECTION_SLOT_NAME = name + "CollectionSlot";
   const CollectionSlotImpl = /* @__PURE__ */ createSlot(COLLECTION_SLOT_NAME);
-  const CollectionSlot = React$2.forwardRef(
+  const CollectionSlot = reactExports.forwardRef(
     (props, forwardedRef) => {
       const { scope, children } = props;
       const context = useCollectionContext(COLLECTION_SLOT_NAME, scope);
@@ -37688,13 +41843,13 @@ function createCollection(name) {
   const ITEM_SLOT_NAME = name + "CollectionItemSlot";
   const ITEM_DATA_ATTR = "data-radix-collection-item";
   const CollectionItemSlotImpl = /* @__PURE__ */ createSlot(ITEM_SLOT_NAME);
-  const CollectionItemSlot = React$2.forwardRef(
+  const CollectionItemSlot = reactExports.forwardRef(
     (props, forwardedRef) => {
       const { scope, children, ...itemData } = props;
-      const ref = React$2.useRef(null);
+      const ref = reactExports.useRef(null);
       const composedRefs = useComposedRefs(forwardedRef, ref);
       const context = useCollectionContext(ITEM_SLOT_NAME, scope);
-      React$2.useEffect(() => {
+      reactExports.useEffect(() => {
         context.itemMap.set(ref, { ref, ...itemData });
         return () => void context.itemMap.delete(ref);
       });
@@ -37704,7 +41859,7 @@ function createCollection(name) {
   CollectionItemSlot.displayName = ITEM_SLOT_NAME;
   function useCollection2(scope) {
     const context = useCollectionContext(name + "CollectionConsumer", scope);
-    const getItems = React$2.useCallback(() => {
+    const getItems = reactExports.useCallback(() => {
       const collectionNode = context.collectionRef.current;
       if (!collectionNode) return [];
       const orderedNodes = Array.from(collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`));
@@ -39661,12 +43816,23 @@ var Arrow$1 = reactExports.forwardRef((props, forwardedRef) => {
 Arrow$1.displayName = NAME$2;
 var Root$4 = Arrow$1;
 var POPPER_NAME = "Popper";
-var [createPopperContext, createPopperScope] = createContextScope$1(POPPER_NAME);
+var [createPopperContext, createPopperScope] = createContextScope(POPPER_NAME);
 var [PopperProvider, usePopperContext] = createPopperContext(POPPER_NAME);
 var Popper = (props) => {
   const { __scopePopper, children } = props;
   const [anchor, setAnchor] = reactExports.useState(null);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PopperProvider, { scope: __scopePopper, anchor, onAnchorChange: setAnchor, children });
+  const [placementState, setPlacementState] = reactExports.useState(void 0);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    PopperProvider,
+    {
+      scope: __scopePopper,
+      anchor,
+      onAnchorChange: setAnchor,
+      placementState,
+      setPlacementState,
+      children
+    }
+  );
 };
 Popper.displayName = POPPER_NAME;
 var ANCHOR_NAME$1 = "PopperAnchor";
@@ -39675,16 +43841,40 @@ var PopperAnchor = reactExports.forwardRef(
     const { __scopePopper, virtualRef, ...anchorProps } = props;
     const context = usePopperContext(ANCHOR_NAME$1, __scopePopper);
     const ref = reactExports.useRef(null);
-    const composedRefs = useComposedRefs(forwardedRef, ref);
+    const onAnchorChange = context.onAnchorChange;
+    const callbackRef = reactExports.useCallback(
+      (node) => {
+        ref.current = node;
+        if (node) {
+          onAnchorChange(node);
+        }
+      },
+      [onAnchorChange]
+    );
+    const composedRefs = useComposedRefs(forwardedRef, callbackRef);
     const anchorRef = reactExports.useRef(null);
     reactExports.useEffect(() => {
+      if (!virtualRef) {
+        return;
+      }
       const previousAnchor = anchorRef.current;
-      anchorRef.current = (virtualRef == null ? void 0 : virtualRef.current) || ref.current;
+      anchorRef.current = virtualRef.current;
       if (previousAnchor !== anchorRef.current) {
-        context.onAnchorChange(anchorRef.current);
+        onAnchorChange(anchorRef.current);
       }
     });
-    return virtualRef ? null : /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.div, { ...anchorProps, ref: composedRefs });
+    const sideAndAlign = context.placementState && getSideAndAlignFromPlacement(context.placementState);
+    const placedSide = sideAndAlign == null ? void 0 : sideAndAlign[0];
+    const placedAlign = sideAndAlign == null ? void 0 : sideAndAlign[1];
+    return virtualRef ? null : /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive.div,
+      {
+        "data-radix-popper-side": placedSide,
+        "data-radix-popper-align": placedAlign,
+        ...anchorProps,
+        ref: composedRefs
+      }
+    );
   }
 );
 PopperAnchor.displayName = ANCHOR_NAME$1;
@@ -39711,7 +43901,7 @@ var PopperContent = reactExports.forwardRef(
     } = props;
     const context = usePopperContext(CONTENT_NAME$4, __scopePopper);
     const [content, setContent] = reactExports.useState(null);
-    const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
+    const composedRefs = useComposedRefs(forwardedRef, setContent);
     const [arrow$12, setArrow] = reactExports.useState(null);
     const arrowSize = useSize(arrow$12);
     const arrowWidth = (arrowSize == null ? void 0 : arrowSize.width) ?? 0;
@@ -39761,9 +43951,27 @@ var PopperContent = reactExports.forwardRef(
         }),
         arrow$12 && arrow({ element: arrow$12, padding: arrowPadding }),
         transformOrigin({ arrowWidth, arrowHeight }),
-        hideWhenDetached && hide({ strategy: "referenceHidden", ...detectOverflowOptions })
+        hideWhenDetached && hide({
+          strategy: "referenceHidden",
+          ...detectOverflowOptions,
+          // `hide` detects whether the anchor (reference) is clipped, so when
+          // no explicit `collisionBoundary` is set we fall back to Floating
+          // UI's default clipping ancestors (e.g. a scrollable menu). This
+          // lets an occluded submenu hide once its anchor scrolls out of view
+          // (#3237). The collision/size middlewares deliberately keep the
+          // viewport-based default to avoid clamping content rendered inside
+          // transformed or overflow-clipping portal containers.
+          boundary: hasExplicitBoundaries ? detectOverflowOptions.boundary : void 0
+        })
       ]
     });
+    const setPlacementState = context.setPlacementState;
+    useLayoutEffect2(() => {
+      setPlacementState(placement);
+      return () => {
+        setPlacementState(void 0);
+      };
+    }, [placement, setPlacementState]);
     const [placedSide, placedAlign] = getSideAndAlignFromPlacement(placement);
     const handlePlaced = useCallbackRef$1(onPlaced);
     useLayoutEffect2(() => {
@@ -39789,7 +43997,7 @@ var PopperContent = reactExports.forwardRef(
           // keep off the page when measuring
           minWidth: "max-content",
           zIndex: contentZIndex,
-          ["--radix-popper-transform-origin"]: [
+          "--radix-popper-transform-origin": [
             (_d2 = middlewareData.transformOrigin) == null ? void 0 : _d2.x,
             (_e2 = middlewareData.transformOrigin) == null ? void 0 : _e2.y
           ].join(" "),
@@ -39807,6 +44015,7 @@ var PopperContent = reactExports.forwardRef(
           {
             scope: __scopePopper,
             placedSide,
+            placedAlign,
             onArrowChange: setArrow,
             arrowX,
             arrowY,
@@ -39927,7 +44136,7 @@ function getSideAndAlignFromPlacement(placement) {
   const [side, align = "center"] = placement.split("-");
   return [side, align];
 }
-var Root2$2 = Popper;
+var Root2$1 = Popper;
 var Anchor = PopperAnchor;
 var Content = PopperContent;
 var Arrow = PopperArrow;
@@ -39963,14 +44172,15 @@ var OPEN_KEYS = [" ", "Enter", "ArrowUp", "ArrowDown"];
 var SELECTION_KEYS$1 = [" ", "Enter"];
 var SELECT_NAME = "Select";
 var [Collection$2, useCollection$2, createCollectionScope$2] = createCollection(SELECT_NAME);
-var [createSelectContext] = createContextScope$1(SELECT_NAME, [
+var [createSelectContext] = createContextScope(SELECT_NAME, [
   createCollectionScope$2,
   createPopperScope
 ]);
 var usePopperScope$2 = createPopperScope();
-var [SelectProvider, useSelectContext] = createSelectContext(SELECT_NAME);
+var [SelectProviderImpl, useSelectContext] = createSelectContext(SELECT_NAME);
 var [SelectNativeOptionsProvider, useSelectNativeOptionsContext] = createSelectContext(SELECT_NAME);
-var Select$1 = (props) => {
+var PROVIDER_NAME$1 = "SelectProvider";
+function SelectProvider(props) {
   const {
     __scopeSelect,
     children,
@@ -39985,7 +44195,9 @@ var Select$1 = (props) => {
     autoComplete,
     disabled,
     required,
-    form
+    form,
+    // @ts-expect-error internal render prop used by `Select` to compose its default parts
+    internal_do_not_use_render
   } = props;
   const popperScope = usePopperScope$2(__scopeSelect);
   const [trigger, setTrigger] = reactExports.useState(null);
@@ -40005,68 +44217,81 @@ var Select$1 = (props) => {
     caller: SELECT_NAME
   });
   const triggerPointerDownPosRef = reactExports.useRef(null);
-  const isFormControl = trigger ? form || !!trigger.closest("form") : true;
+  const initialValueRef = reactExports.useRef(value);
+  reactExports.useEffect(() => {
+    const associatedForm = form ? trigger == null ? void 0 : trigger.ownerDocument.getElementById(form) : trigger == null ? void 0 : trigger.form;
+    if (associatedForm instanceof HTMLFormElement) {
+      const reset = () => setValue(initialValueRef.current);
+      associatedForm.addEventListener("reset", reset);
+      return () => associatedForm.removeEventListener("reset", reset);
+    }
+  }, [form, trigger, setValue]);
+  const isFormControl = trigger ? !!form || !!trigger.closest("form") : true;
   const [nativeOptionsSet, setNativeOptionsSet] = reactExports.useState(/* @__PURE__ */ new Set());
+  const contentId = useId();
   const nativeSelectKey = Array.from(nativeOptionsSet).map((option) => option.props.value).join(";");
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+  const handleNativeOptionAdd = reactExports.useCallback((option) => {
+    setNativeOptionsSet((prev) => new Set(prev).add(option));
+  }, []);
+  const handleNativeOptionRemove = reactExports.useCallback((option) => {
+    setNativeOptionsSet((prev) => {
+      const optionsSet = new Set(prev);
+      optionsSet.delete(option);
+      return optionsSet;
+    });
+  }, []);
+  const context = {
+    required,
+    trigger,
+    onTriggerChange: setTrigger,
+    valueNode,
+    onValueNodeChange: setValueNode,
+    valueNodeHasChildren,
+    onValueNodeHasChildrenChange: setValueNodeHasChildren,
+    contentId,
+    value,
+    onValueChange: setValue,
+    open,
+    onOpenChange: setOpen,
+    dir: direction,
+    triggerPointerDownPosRef,
+    disabled,
+    name,
+    autoComplete,
+    form,
+    nativeOptions: nativeOptionsSet,
+    nativeSelectKey,
+    isFormControl
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$1, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(SelectProviderImpl, { scope: __scopeSelect, ...context, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$2.Provider, { scope: __scopeSelect, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    SelectNativeOptionsProvider,
+    {
+      scope: __scopeSelect,
+      onNativeOptionAdd: handleNativeOptionAdd,
+      onNativeOptionRemove: handleNativeOptionRemove,
+      children: isFunction(internal_do_not_use_render) ? internal_do_not_use_render(context) : children
+    }
+  ) }) }) });
+}
+SelectProvider.displayName = PROVIDER_NAME$1;
+var Select$1 = (props) => {
+  const { __scopeSelect, children, ...providerProps } = props;
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
     SelectProvider,
     {
-      required,
-      scope: __scopeSelect,
-      trigger,
-      onTriggerChange: setTrigger,
-      valueNode,
-      onValueNodeChange: setValueNode,
-      valueNodeHasChildren,
-      onValueNodeHasChildrenChange: setValueNodeHasChildren,
-      contentId: useId(),
-      value,
-      onValueChange: setValue,
-      open,
-      onOpenChange: setOpen,
-      dir: direction,
-      triggerPointerDownPosRef,
-      disabled,
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$2.Provider, { scope: __scopeSelect, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          SelectNativeOptionsProvider,
-          {
-            scope: props.__scopeSelect,
-            onNativeOptionAdd: reactExports.useCallback((option) => {
-              setNativeOptionsSet((prev) => new Set(prev).add(option));
-            }, []),
-            onNativeOptionRemove: reactExports.useCallback((option) => {
-              setNativeOptionsSet((prev) => {
-                const optionsSet = new Set(prev);
-                optionsSet.delete(option);
-                return optionsSet;
-              });
-            }, []),
-            children
-          }
-        ) }),
-        isFormControl ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      __scopeSelect,
+      ...providerProps,
+      internal_do_not_use_render: ({ isFormControl }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        children,
+        isFormControl ? /* @__PURE__ */ jsxRuntimeExports.jsx(
           SelectBubbleInput,
           {
-            "aria-hidden": true,
-            required,
-            tabIndex: -1,
-            name,
-            autoComplete,
-            value,
-            onChange: (event) => setValue(event.target.value),
-            disabled,
-            form,
-            children: [
-              value === void 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "" }) : null,
-              Array.from(nativeOptionsSet)
-            ]
-          },
-          nativeSelectKey
+            __scopeSelect
+          }
         ) : null
-      ]
+      ] })
     }
-  ) });
+  );
 };
 Select$1.displayName = SELECT_NAME;
 var TRIGGER_NAME$2 = "SelectTrigger";
@@ -40104,7 +44329,7 @@ var SelectTrigger$1 = reactExports.forwardRef(
       {
         type: "button",
         role: "combobox",
-        "aria-controls": context.contentId,
+        "aria-controls": context.open ? context.contentId : void 0,
         "aria-expanded": context.open,
         "aria-required": context.required,
         "aria-autocomplete": "none",
@@ -40158,13 +44383,15 @@ var SelectValue$1 = reactExports.forwardRef(
     useLayoutEffect2(() => {
       onValueNodeHasChildrenChange(hasChildren);
     }, [onValueNodeHasChildrenChange, hasChildren]);
+    const showPlaceholder = shouldShowPlaceholder(context.value);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       Primitive.span,
       {
         ...valueProps,
+        asChild: showPlaceholder ? false : valueProps.asChild,
         ref: composedRefs,
         style: { pointerEvents: "none" },
-        children: shouldShowPlaceholder(context.value) ? /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: placeholder }) : children
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Fragment, { children: showPlaceholder ? placeholder : children }, showPlaceholder ? "placeholder" : "value")
       }
     );
   }
@@ -40179,37 +44406,45 @@ var SelectIcon = reactExports.forwardRef(
 );
 SelectIcon.displayName = ICON_NAME;
 var PORTAL_NAME$3 = "SelectPortal";
+var [PortalProvider$2, usePortalContext$2] = createSelectContext(PORTAL_NAME$3, {
+  forceMount: void 0
+});
 var SelectPortal = (props) => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, ...props });
+  const { __scopeSelect, forceMount, ...portalProps } = props;
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$2, { scope: props.__scopeSelect, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { asChild: true, ...portalProps }) });
 };
 SelectPortal.displayName = PORTAL_NAME$3;
 var CONTENT_NAME$3 = "SelectContent";
 var SelectContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
+    const portalContext = usePortalContext$2(CONTENT_NAME$3, props.__scopeSelect);
+    const { forceMount = portalContext.forceMount, ...contentProps } = props;
     const context = useSelectContext(CONTENT_NAME$3, props.__scopeSelect);
     const [fragment, setFragment] = reactExports.useState();
     useLayoutEffect2(() => {
       setFragment(new DocumentFragment());
     }, []);
-    if (!context.open) {
-      const frag = fragment;
-      return frag ? reactDomExports.createPortal(
-        /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContentProvider, { scope: props.__scopeSelect, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$2.Slot, { scope: props.__scopeSelect, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: props.children }) }) }),
-        frag
-      ) : null;
-    }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContentImpl, { ...props, ref: forwardedRef });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: ({ present }) => present ? /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContentImpl, { ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContentFragment, { ...contentProps, fragment }) });
   }
 );
 SelectContent$1.displayName = CONTENT_NAME$3;
+var SelectContentFragment = reactExports.forwardRef((props, forwardedRef) => {
+  const { __scopeSelect, children, fragment } = props;
+  if (!fragment) return null;
+  return reactDomExports.createPortal(
+    /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContentProvider, { scope: __scopeSelect, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$2.Slot, { scope: __scopeSelect, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref: forwardedRef, children }) }) }),
+    fragment
+  );
+});
+SelectContentFragment.displayName = "SelectContentFragment";
 var CONTENT_MARGIN = 10;
 var [SelectContentProvider, useSelectContentContext] = createSelectContext(CONTENT_NAME$3);
 var CONTENT_IMPL_NAME = "SelectContentImpl";
 var Slot$1 = /* @__PURE__ */ createSlot("SelectContent.RemoveScroll");
 var SelectContentImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
+    const { __scopeSelect } = props;
     const {
-      __scopeSelect,
       position = "item-aligned",
       onCloseAutoFocus,
       onEscapeKeyDown,
@@ -40232,7 +44467,7 @@ var SelectContentImpl = reactExports.forwardRef(
     const context = useSelectContext(CONTENT_NAME$3, __scopeSelect);
     const [content, setContent] = reactExports.useState(null);
     const [viewport, setViewport] = reactExports.useState(null);
-    const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
+    const composedRefs = useComposedRefs(forwardedRef, setContent);
     const [selectedItem, setSelectedItem] = reactExports.useState(null);
     const [selectedItemText, setSelectedItemText] = reactExports.useState(
       null
@@ -40284,7 +44519,7 @@ var SelectContentImpl = reactExports.forwardRef(
           if (pointerMoveDelta.x <= 10 && pointerMoveDelta.y <= 10) {
             event.preventDefault();
           } else {
-            if (!content.contains(event.target)) {
+            if (!event.composedPath().includes(content)) {
               onOpenChange(false);
             }
           }
@@ -40315,7 +44550,10 @@ var SelectContentImpl = reactExports.forwardRef(
       const currentItem = enabledItems.find((item) => item.ref.current === document.activeElement);
       const nextItem = findNextItem(enabledItems, search, currentItem);
       if (nextItem) {
-        setTimeout(() => nextItem.ref.current.focus());
+        setTimeout(() => {
+          var _a2;
+          return (_a2 = nextItem.ref.current) == null ? void 0 : _a2.focus();
+        });
       }
     });
     const itemRefCallback = reactExports.useCallback(
@@ -40448,7 +44686,7 @@ var SelectItemAlignedPosition = reactExports.forwardRef((props, forwardedRef) =>
   const contentContext = useSelectContentContext(CONTENT_NAME$3, __scopeSelect);
   const [contentWrapper, setContentWrapper] = reactExports.useState(null);
   const [content, setContent] = reactExports.useState(null);
-  const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
+  const composedRefs = useComposedRefs(forwardedRef, setContent);
   const getItems = useCollection$2(__scopeSelect);
   const shouldExpandOnScrollRef = reactExports.useRef(false);
   const shouldRepositionRef = reactExports.useRef(true);
@@ -40743,13 +44981,13 @@ var SelectItem$1 = reactExports.forwardRef(
     const isSelected = context.value === value;
     const [textValue, setTextValue] = reactExports.useState(textValueProp ?? "");
     const [isFocused, setIsFocused] = reactExports.useState(false);
-    const composedRefs = useComposedRefs(
-      forwardedRef,
+    const handleItemRefCallback = useCallbackRef$1(
       (node) => {
         var _a2;
         return (_a2 = contentContext.itemRefCallback) == null ? void 0 : _a2.call(contentContext, node, value, disabled);
       }
     );
+    const composedRefs = useComposedRefs(forwardedRef, handleItemRefCallback);
     const textId = useId();
     const pointerTypeRef = reactExports.useRef("touch");
     const handleSelect = () => {
@@ -40758,11 +44996,6 @@ var SelectItem$1 = reactExports.forwardRef(
         context.onOpenChange(false);
       }
     };
-    if (value === "") {
-      throw new Error(
-        "A <Select.Item /> must have a value prop that is not an empty string. This is because the Select value can be set to an empty string to clear the selection and show the placeholder."
-      );
-    }
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       SelectItemContextProvider,
       {
@@ -40822,10 +45055,19 @@ var SelectItem$1 = reactExports.forwardRef(
                 }),
                 onKeyDown: composeEventHandlers(itemProps.onKeyDown, (event) => {
                   var _a2;
+                  if (disabled || event.target !== event.currentTarget) {
+                    return;
+                  }
                   const isTypingAhead = ((_a2 = contentContext.searchRef) == null ? void 0 : _a2.current) !== "";
-                  if (isTypingAhead && event.key === " ") return;
-                  if (SELECTION_KEYS$1.includes(event.key)) handleSelect();
-                  if (event.key === " ") event.preventDefault();
+                  if (isTypingAhead && event.key === " ") {
+                    return;
+                  }
+                  if (SELECTION_KEYS$1.includes(event.key)) {
+                    handleSelect();
+                  }
+                  if (event.key === " ") {
+                    event.preventDefault();
+                  }
                 })
               }
             )
@@ -40845,14 +45087,17 @@ var SelectItemText = reactExports.forwardRef(
     const itemContext = useSelectItemContext(ITEM_TEXT_NAME, __scopeSelect);
     const nativeOptionsContext = useSelectNativeOptionsContext(ITEM_TEXT_NAME, __scopeSelect);
     const [itemTextNode, setItemTextNode] = reactExports.useState(null);
-    const composedRefs = useComposedRefs(
-      forwardedRef,
-      (node) => setItemTextNode(node),
-      itemContext.onItemTextChange,
+    const handleItemTextRefCallback = useCallbackRef$1(
       (node) => {
         var _a2;
         return (_a2 = contentContext.itemTextRefCallback) == null ? void 0 : _a2.call(contentContext, node, itemContext.value, itemContext.disabled);
       }
+    );
+    const composedRefs = useComposedRefs(
+      forwardedRef,
+      setItemTextNode,
+      itemContext.onItemTextChange,
+      handleItemTextRefCallback
     );
     const textContent = itemTextNode == null ? void 0 : itemTextNode.textContent;
     const nativeOption = reactExports.useMemo(
@@ -40866,7 +45111,7 @@ var SelectItemText = reactExports.forwardRef(
     }, [onNativeOptionAdd, onNativeOptionRemove, nativeOption]);
     return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.span, { id: itemContext.textId, ...itemTextProps, ref: composedRefs }),
-      itemContext.isSelected && context.valueNode && !context.valueNodeHasChildren ? reactDomExports.createPortal(itemTextProps.children, context.valueNode) : null
+      itemContext.isSelected && context.valueNode && !context.valueNodeHasChildren && !shouldShowPlaceholder(context.value) ? reactDomExports.createPortal(itemTextProps.children, context.valueNode) : null
     ] });
   }
 );
@@ -41004,18 +45249,24 @@ var SelectArrow = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeSelect, ...arrowProps } = props;
     const popperScope = usePopperScope$2(__scopeSelect);
-    const context = useSelectContext(ARROW_NAME$3, __scopeSelect);
     const contentContext = useSelectContentContext(ARROW_NAME$3, __scopeSelect);
-    return context.open && contentContext.position === "popper" ? /* @__PURE__ */ jsxRuntimeExports.jsx(Arrow, { ...popperScope, ...arrowProps, ref: forwardedRef }) : null;
+    return contentContext.position === "popper" ? /* @__PURE__ */ jsxRuntimeExports.jsx(Arrow, { ...popperScope, ...arrowProps, ref: forwardedRef }) : null;
   }
 );
 SelectArrow.displayName = ARROW_NAME$3;
 var BUBBLE_INPUT_NAME = "SelectBubbleInput";
 var SelectBubbleInput = reactExports.forwardRef(
-  ({ __scopeSelect, value, ...props }, forwardedRef) => {
+  ({ __scopeSelect, ...props }, forwardedRef) => {
+    const context = useSelectContext(BUBBLE_INPUT_NAME, __scopeSelect);
+    const { value, onValueChange, required, disabled, name, autoComplete, form } = context;
+    const { nativeOptions, nativeSelectKey } = context;
     const ref = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, ref);
-    const prevValue = usePrevious(value);
+    const selectValue = value ?? "";
+    const prevValue = usePrevious(selectValue);
+    const hasEmptyValueOption = Array.from(nativeOptions).some(
+      (option) => (option.props.value ?? "") === ""
+    );
     reactExports.useEffect(() => {
       const select = ref.current;
       if (!select) return;
@@ -41025,24 +45276,40 @@ var SelectBubbleInput = reactExports.forwardRef(
         "value"
       );
       const setValue = descriptor.set;
-      if (prevValue !== value && setValue) {
+      if (prevValue !== selectValue && setValue) {
         const event = new Event("change", { bubbles: true });
-        setValue.call(select, value);
+        setValue.call(select, selectValue);
         select.dispatchEvent(event);
       }
-    }, [prevValue, value]);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    }, [prevValue, selectValue]);
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(
       Primitive.select,
       {
+        "aria-hidden": true,
+        required,
+        tabIndex: -1,
+        name,
+        autoComplete,
+        disabled,
+        form,
+        onChange: (event) => onValueChange(event.target.value),
         ...props,
         style: { ...VISUALLY_HIDDEN_STYLES, ...props.style },
         ref: composedRefs,
-        defaultValue: value
-      }
+        defaultValue: selectValue,
+        children: [
+          shouldShowPlaceholder(value) && !hasEmptyValueOption ? /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "" }) : null,
+          Array.from(nativeOptions)
+        ]
+      },
+      nativeSelectKey
     );
   }
 );
 SelectBubbleInput.displayName = BUBBLE_INPUT_NAME;
+function isFunction(value) {
+  return typeof value === "function";
+}
 function shouldShowPlaceholder(value) {
   return value === "" || value === void 0;
 }
@@ -41086,27 +45353,15 @@ function findNextItem(items, search, currentItem) {
 function wrapArray$2(array, startIndex) {
   return array.map((_2, index2) => array[(startIndex + index2) % array.length]);
 }
-var Root2$1 = Select$1;
-var Trigger$2 = SelectTrigger$1;
-var Value = SelectValue$1;
-var Icon = SelectIcon;
-var Portal$2 = SelectPortal;
-var Content2$3 = SelectContent$1;
-var Viewport$1 = SelectViewport;
-var Item$1 = SelectItem$1;
-var ItemText = SelectItemText;
-var ItemIndicator$1 = SelectItemIndicator;
-var ScrollUpButton = SelectScrollUpButton$1;
-var ScrollDownButton = SelectScrollDownButton$1;
 function Select({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$1, { "data-slot": "select", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Select$1, { "data-slot": "select", ...props });
 }
 function SelectValue({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Value, { "data-slot": "select-value", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(SelectValue$1, { "data-slot": "select-value", ...props });
 }
 function SelectTrigger({
   className,
@@ -41115,7 +45370,7 @@ function SelectTrigger({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    Trigger$2,
+    SelectTrigger$1,
     {
       "data-slot": "select-trigger",
       "data-size": size2,
@@ -41126,7 +45381,7 @@ function SelectTrigger({
       ...props,
       children: [
         children,
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { className: "size-4 opacity-50" }) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SelectIcon, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { className: "size-4 opacity-50" }) })
       ]
     }
   );
@@ -41137,8 +45392,8 @@ function SelectContent({
   position = "popper",
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    Content2$3,
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(SelectPortal, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    SelectContent$1,
     {
       "data-slot": "select-content",
       className: cn(
@@ -41151,7 +45406,7 @@ function SelectContent({
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(SelectScrollUpButton, {}),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Viewport$1,
+          SelectViewport,
           {
             className: cn(
               "p-1",
@@ -41171,7 +45426,7 @@ function SelectItem({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    Item$1,
+    SelectItem$1,
     {
       "data-slot": "select-item",
       className: cn(
@@ -41180,8 +45435,8 @@ function SelectItem({
       ),
       ...props,
       children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute right-2 flex size-3.5 items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ItemIndicator$1, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "size-4" }) }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ItemText, { children })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute right-2 flex size-3.5 items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItemIndicator, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "size-4" }) }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItemText, { children })
       ]
     }
   );
@@ -41191,7 +45446,7 @@ function SelectScrollUpButton({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ScrollUpButton,
+    SelectScrollUpButton$1,
     {
       "data-slot": "select-scroll-up-button",
       className: cn(
@@ -41208,7 +45463,7 @@ function SelectScrollDownButton({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ScrollDownButton,
+    SelectScrollDownButton$1,
     {
       "data-slot": "select-scroll-down-button",
       className: cn(
@@ -41220,7 +45475,7 @@ function SelectScrollDownButton({
     }
   );
 }
-var [createTooltipContext] = createContextScope$1("Tooltip", [
+var [createTooltipContext] = createContextScope("Tooltip", [
   createPopperScope
 ]);
 var usePopperScope$1 = createPopperScope();
@@ -41250,10 +45505,12 @@ var TooltipProvider$1 = (props) => {
       isOpenDelayedRef,
       delayDuration,
       onOpen: reactExports.useCallback(() => {
+        if (skipDelayDuration <= 0) return;
         window.clearTimeout(skipDelayTimerRef.current);
         isOpenDelayedRef.current = false;
-      }, []),
+      }, [skipDelayDuration]),
       onClose: reactExports.useCallback(() => {
+        if (skipDelayDuration <= 0) return;
         window.clearTimeout(skipDelayTimerRef.current);
         skipDelayTimerRef.current = window.setTimeout(
           () => isOpenDelayedRef.current = true,
@@ -41334,7 +45591,7 @@ var Tooltip$1 = (props) => {
       }
     };
   }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$1, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     TooltipContextProvider,
     {
       scope: __scopeTooltip,
@@ -41420,7 +45677,7 @@ var [PortalProvider$1, usePortalContext$1] = createTooltipContext(PORTAL_NAME$2,
 var TooltipPortal = (props) => {
   const { __scopeTooltip, forceMount, children, container } = props;
   const context = useTooltipContext(PORTAL_NAME$2, __scopeTooltip);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$1, { scope: __scopeTooltip, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children }) }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$1, { scope: __scopeTooltip, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { asChild: true, container, children }) }) });
 };
 TooltipPortal.displayName = PORTAL_NAME$2;
 var CONTENT_NAME$2 = "TooltipContent";
@@ -41515,8 +45772,9 @@ var TooltipContentImpl = reactExports.forwardRef(
     reactExports.useEffect(() => {
       if (context.trigger) {
         const handleScroll2 = (event) => {
-          const target = event.target;
-          if (target == null ? void 0 : target.contains(context.trigger)) onClose();
+          if (event.target instanceof Node && event.target.contains(context.trigger)) {
+            onClose();
+          }
         };
         window.addEventListener("scroll", handleScroll2, { capture: true });
         return () => window.removeEventListener("scroll", handleScroll2, { capture: true });
@@ -42397,7 +46655,7 @@ function getFileExtension(filename) {
   return filename.slice(lastDotIndex + 1).toLowerCase();
 }
 function getMimeType(extension) {
-  const mimeTypes = {
+  const mimeTypes2 = {
     // Images
     jpg: "image/jpeg",
     jpeg: "image/jpeg",
@@ -42449,7 +46707,7 @@ function getMimeType(extension) {
     md: "text/markdown",
     csv: "text/csv"
   };
-  return mimeTypes[extension.toLowerCase()] || "";
+  return mimeTypes2[extension.toLowerCase()] || "";
 }
 function detectTypeFromBytes(bytes) {
   const b2 = bytes;
@@ -42803,7 +47061,7 @@ async function uploadFolderRecursively(folderFiles, rootParentId, callbacks) {
       uint8Array = new Uint8Array(await callbacks.encryptFile(uint8Array));
     }
     const fileId = generateSecure32ByteId();
-    const blob = ExternalBlob2.fromBytes(uint8Array).withUploadProgress(
+    const blob = ExternalBlob$1.fromBytes(uint8Array).withUploadProgress(
       (_percentage) => {
         if (callbacks.onProgress) {
           callbacks.onProgress(i + 1, nonEmptyFiles.length, fileName);
@@ -42917,11 +47175,35 @@ function sortFileSystemItems(items, field, direction) {
   });
   return sorted;
 }
+var _isHydrated = false;
+function useIsHydrated() {
+  const [isHydrated, setIsHydrated] = reactExports.useState(_isHydrated);
+  reactExports.useEffect(() => {
+    if (!_isHydrated) {
+      _isHydrated = true;
+      setIsHydrated(true);
+    }
+  }, []);
+  return isHydrated;
+}
+var useReactSyncExternalStore = React2[" useSyncExternalStore ".trim().toString()];
+function subscribe() {
+  return () => {
+  };
+}
+function useIsHydratedModern() {
+  return useReactSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false
+  );
+}
+var useIsHydrated2 = typeof useReactSyncExternalStore === "function" ? useIsHydratedModern : useIsHydrated;
 var ENTRY_FOCUS = "rovingFocusGroup.onEntryFocus";
 var EVENT_OPTIONS = { bubbles: false, cancelable: true };
 var GROUP_NAME$2 = "RovingFocusGroup";
 var [Collection$1, useCollection$1, createCollectionScope$1] = createCollection(GROUP_NAME$2);
-var [createRovingFocusGroupContext, createRovingFocusGroupScope] = createContextScope$1(
+var [createRovingFocusGroupContext, createRovingFocusGroupScope] = createContextScope(
   GROUP_NAME$2,
   [createCollectionScope$1]
 );
@@ -43039,12 +47321,21 @@ var RovingFocusGroupItem = reactExports.forwardRef(
     const isCurrentTabStop = context.currentTabStopId === id;
     const getItems = useCollection$1(__scopeRovingFocusGroup);
     const { onFocusableItemAdd, onFocusableItemRemove, currentTabStopId } = context;
-    reactExports.useEffect(() => {
-      if (focusable) {
-        onFocusableItemAdd();
-        return () => onFocusableItemRemove();
+    const isHydrated = useIsHydrated2();
+    useLayoutEffect2(() => {
+      if (!isHydrated || !focusable) {
+        return;
       }
-    }, [focusable, onFocusableItemAdd, onFocusableItemRemove]);
+      onFocusableItemAdd();
+      return () => onFocusableItemRemove();
+    }, [isHydrated, focusable, onFocusableItemAdd, onFocusableItemRemove]);
+    reactExports.useEffect(() => {
+      if (isHydrated || !focusable) {
+        return;
+      }
+      onFocusableItemAdd();
+      return () => onFocusableItemRemove();
+    }, [isHydrated, focusable, onFocusableItemAdd, onFocusableItemRemove]);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       Collection$1.ItemSlot,
       {
@@ -43140,7 +47431,7 @@ var SUB_CLOSE_KEYS = {
 };
 var MENU_NAME = "Menu";
 var [Collection, useCollection, createCollectionScope] = createCollection(MENU_NAME);
-var [createMenuContext, createMenuScope] = createContextScope$1(MENU_NAME, [
+var [createMenuContext, createMenuScope] = createContextScope(MENU_NAME, [
   createCollectionScope,
   createPopperScope,
   createRovingFocusGroupScope
@@ -43170,7 +47461,15 @@ var Menu = (props) => {
       document.removeEventListener("pointermove", handlePointer, { capture: true });
     };
   }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  reactExports.useEffect(() => {
+    if (!open) {
+      return;
+    }
+    const handleBlur = () => handleOpenChange(false);
+    window.addEventListener("blur", handleBlur);
+    return () => window.removeEventListener("blur", handleBlur);
+  }, [open, handleOpenChange]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$1, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     MenuProvider,
     {
       scope: __scopeMenu,
@@ -43209,7 +47508,7 @@ var [PortalProvider, usePortalContext] = createMenuContext(PORTAL_NAME$1, {
 var MenuPortal = (props) => {
   const { __scopeMenu, forceMount, children, container } = props;
   const context = useMenuContext(PORTAL_NAME$1, __scopeMenu);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider, { scope: __scopeMenu, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children }) }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider, { scope: __scopeMenu, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { asChild: true, container, children }) }) });
 };
 MenuPortal.displayName = PORTAL_NAME$1;
 var CONTENT_NAME$1 = "MenuContent";
@@ -43508,8 +47807,13 @@ var MenuItem = reactExports.forwardRef(
           if (!isPointerDownRef.current) (_a2 = event.currentTarget) == null ? void 0 : _a2.click();
         }),
         onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
+          if (disabled || event.target !== event.currentTarget) {
+            return;
+          }
           const isTypingAhead = contentContext.searchRef.current !== "";
-          if (disabled || isTypingAhead && event.key === " ") return;
+          if (isTypingAhead && event.key === " ") {
+            return;
+          }
           if (SELECTION_KEYS.includes(event.key)) {
             event.currentTarget.click();
             event.preventDefault();
@@ -43714,16 +48018,17 @@ var MenuSubTrigger = reactExports.forwardRef(
         onPointerGraceIntentChange(null);
       };
     }, [pointerGraceTimerRef, onPointerGraceIntentChange]);
+    const composedRefs = useComposedRefs(forwardedRef, subContext.onTriggerChange);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(MenuAnchor, { asChild: true, ...scope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       MenuItemImpl,
       {
         id: subContext.triggerId,
         "aria-haspopup": "menu",
         "aria-expanded": context.open,
-        "aria-controls": subContext.contentId,
+        "aria-controls": context.open ? subContext.contentId : void 0,
         "data-state": getOpenState(context.open),
         ...props,
-        ref: composeRefs(forwardedRef, subContext.onTriggerChange),
+        ref: composedRefs,
         onClick: (event) => {
           var _a2;
           (_a2 = props.onClick) == null ? void 0 : _a2.call(props, event);
@@ -43783,8 +48088,13 @@ var MenuSubTrigger = reactExports.forwardRef(
         ),
         onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
           var _a2;
+          if (props.disabled || event.target !== event.currentTarget) {
+            return;
+          }
           const isTypingAhead = contentContext.searchRef.current !== "";
-          if (props.disabled || isTypingAhead && event.key === " ") return;
+          if (isTypingAhead && event.key === " ") {
+            return;
+          }
           if (SUB_OPEN_KEYS[rootContext.dir].includes(event.key)) {
             context.onOpenChange(true);
             (_a2 = context.content) == null ? void 0 : _a2.focus();
@@ -43800,7 +48110,7 @@ var SUB_CONTENT_NAME$1 = "MenuSubContent";
 var MenuSubContent = reactExports.forwardRef(
   (props, forwardedRef) => {
     const portalContext = usePortalContext(CONTENT_NAME$1, props.__scopeMenu);
-    const { forceMount = portalContext.forceMount, ...subContentProps } = props;
+    const { forceMount = portalContext.forceMount, align = "start", ...subContentProps } = props;
     const context = useMenuContext(CONTENT_NAME$1, props.__scopeMenu);
     const rootContext = useMenuRootContext(CONTENT_NAME$1, props.__scopeMenu);
     const subContext = useMenuSubContext(SUB_CONTENT_NAME$1, props.__scopeMenu);
@@ -43813,7 +48123,7 @@ var MenuSubContent = reactExports.forwardRef(
         "aria-labelledby": subContext.triggerId,
         ...subContentProps,
         ref: composedRefs,
-        align: "start",
+        align,
         side: rootContext.dir === "rtl" ? "left" : "right",
         disableOutsidePointerEvents: false,
         disableOutsideScroll: false,
@@ -43917,7 +48227,7 @@ var Arrow2 = MenuArrow;
 var SubTrigger = MenuSubTrigger;
 var SubContent = MenuSubContent;
 var DROPDOWN_MENU_NAME = "DropdownMenu";
-var [createDropdownMenuContext] = createContextScope$1(
+var [createDropdownMenuContext] = createContextScope(
   DROPDOWN_MENU_NAME,
   [createMenuScope]
 );
@@ -43963,6 +48273,7 @@ var DropdownMenuTrigger$1 = reactExports.forwardRef(
     const { __scopeDropdownMenu, disabled = false, ...triggerProps } = props;
     const context = useDropdownMenuContext(TRIGGER_NAME, __scopeDropdownMenu);
     const menuScope = useMenuScope(__scopeDropdownMenu);
+    const composedRefs = useComposedRefs(forwardedRef, context.triggerRef);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Anchor2, { asChild: true, ...menuScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       Primitive.button,
       {
@@ -43975,7 +48286,7 @@ var DropdownMenuTrigger$1 = reactExports.forwardRef(
         "data-disabled": disabled ? "" : void 0,
         disabled,
         ...triggerProps,
-        ref: composeRefs(forwardedRef, context.triggerRef),
+        ref: composedRefs,
         onPointerDown: composeEventHandlers(props.onPointerDown, (event) => {
           if (!disabled && event.button === 0 && event.ctrlKey === false) {
             context.onOpenToggle();
@@ -44474,7 +48785,7 @@ function useStateMachine(initialState, machine) {
   }, initialState);
 }
 var SCROLL_AREA_NAME = "ScrollArea";
-var [createScrollAreaContext] = createContextScope$1(SCROLL_AREA_NAME);
+var [createScrollAreaContext] = createContextScope(SCROLL_AREA_NAME);
 var [ScrollAreaProvider, useScrollAreaContext] = createScrollAreaContext(SCROLL_AREA_NAME);
 var ScrollArea$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -44494,7 +48805,7 @@ var ScrollArea$1 = reactExports.forwardRef(
     const [cornerHeight, setCornerHeight] = reactExports.useState(0);
     const [scrollbarXEnabled, setScrollbarXEnabled] = reactExports.useState(false);
     const [scrollbarYEnabled, setScrollbarYEnabled] = reactExports.useState(false);
-    const composedRefs = useComposedRefs(forwardedRef, (node) => setScrollArea(node));
+    const composedRefs = useComposedRefs(forwardedRef, setScrollArea);
     const direction = useDirection(dir);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       ScrollAreaProvider,
@@ -44527,8 +48838,8 @@ var ScrollArea$1 = reactExports.forwardRef(
             style: {
               position: "relative",
               // Pass corner sizes as CSS vars to reduce re-renders of context consumers
-              ["--radix-scroll-area-corner-width"]: cornerWidth + "px",
-              ["--radix-scroll-area-corner-height"]: cornerHeight + "px",
+              "--radix-scroll-area-corner-width": cornerWidth + "px",
+              "--radix-scroll-area-corner-height": cornerHeight + "px",
               ...props.style
             }
           }
@@ -44546,15 +48857,7 @@ var ScrollAreaViewport = reactExports.forwardRef(
     const ref = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, ref, context.onViewportChange);
     return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "style",
-        {
-          dangerouslySetInnerHTML: {
-            __html: `[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}`
-          },
-          nonce
-        }
-      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaViewportStyle, { nonce }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         Primitive.div,
         {
@@ -44584,6 +48887,20 @@ var ScrollAreaViewport = reactExports.forwardRef(
   }
 );
 ScrollAreaViewport.displayName = VIEWPORT_NAME;
+var ScrollAreaViewportStyle = reactExports.memo(
+  ({ nonce }) => {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "style",
+      {
+        dangerouslySetInnerHTML: {
+          __html: `[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}`
+        },
+        nonce
+      }
+    );
+  },
+  (prevProps, nextProps) => prevProps.nonce === nextProps.nonce
+);
 var SCROLLBAR_NAME = "ScrollAreaScrollbar";
 var ScrollAreaScrollbar = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -44597,7 +48914,7 @@ var ScrollAreaScrollbar = reactExports.forwardRef(
         isHorizontal ? onScrollbarXEnabledChange(false) : onScrollbarYEnabledChange(false);
       };
     }, [isHorizontal, onScrollbarXEnabledChange, onScrollbarYEnabledChange]);
-    return context.type === "hover" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarHover, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "scroll" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarScroll, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "auto" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarAuto, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "always" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarVisible, { ...scrollbarProps, ref: forwardedRef }) : null;
+    return context.type === "hover" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarHover, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "scroll" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarScroll, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "auto" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarAuto, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "always" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarVisible, { ...scrollbarProps, ref: forwardedRef, "data-state": "visible" }) : null;
   }
 );
 ScrollAreaScrollbar.displayName = SCROLLBAR_NAME;
@@ -44806,7 +49123,7 @@ var ScrollAreaScrollbarX = reactExports.forwardRef((props, forwardedRef) => {
         bottom: 0,
         left: context.dir === "rtl" ? "var(--radix-scroll-area-corner-width)" : 0,
         right: context.dir === "ltr" ? "var(--radix-scroll-area-corner-width)" : 0,
-        ["--radix-scroll-area-thumb-width"]: getThumbSize(sizes) + "px",
+        "--radix-scroll-area-thumb-width": getThumbSize(sizes) + "px",
         ...props.style
       },
       onThumbPointerDown: (pointerPos) => props.onThumbPointerDown(pointerPos.x),
@@ -44857,7 +49174,7 @@ var ScrollAreaScrollbarY = reactExports.forwardRef((props, forwardedRef) => {
         right: context.dir === "ltr" ? 0 : void 0,
         left: context.dir === "rtl" ? 0 : void 0,
         bottom: "var(--radix-scroll-area-corner-height)",
-        ["--radix-scroll-area-thumb-height"]: getThumbSize(sizes) + "px",
+        "--radix-scroll-area-thumb-height": getThumbSize(sizes) + "px",
         ...props.style
       },
       onThumbPointerDown: (pointerPos) => props.onThumbPointerDown(pointerPos.y),
@@ -44904,7 +49221,7 @@ var ScrollAreaScrollbarImpl = reactExports.forwardRef((props, forwardedRef) => {
   } = props;
   const context = useScrollAreaContext(SCROLLBAR_NAME, __scopeScrollArea);
   const [scrollbar, setScrollbar] = reactExports.useState(null);
-  const composeRefs2 = useComposedRefs(forwardedRef, (node) => setScrollbar(node));
+  const composeRefs2 = useComposedRefs(forwardedRef, setScrollbar);
   const rectRef = reactExports.useRef(null);
   const prevWebkitUserSelectRef = reactExports.useRef("");
   const viewport = context.viewport;
@@ -44988,10 +49305,7 @@ var ScrollAreaThumbImpl = reactExports.forwardRef(
     const scrollAreaContext = useScrollAreaContext(THUMB_NAME, __scopeScrollArea);
     const scrollbarContext = useScrollbarContext(THUMB_NAME, __scopeScrollArea);
     const { onThumbPositionChange } = scrollbarContext;
-    const composedRef = useComposedRefs(
-      forwardedRef,
-      (node) => scrollbarContext.onThumbChange(node)
-    );
+    const composedRef = useComposedRefs(forwardedRef, scrollbarContext.onThumbChange);
     const removeUnlinkedScrollListenerRef = reactExports.useRef(void 0);
     const debounceScrollEnd = useDebounceCallback(() => {
       if (removeUnlinkedScrollListenerRef.current) {
@@ -45055,6 +49369,7 @@ var ScrollAreaCornerImpl = reactExports.forwardRef((props, forwardedRef) => {
   const [width, setWidth] = reactExports.useState(0);
   const [height, setHeight] = reactExports.useState(0);
   const hasSize = Boolean(width && height);
+  const { onCornerWidthChange, onCornerHeightChange } = context;
   useResizeObserver(context.scrollbarX, () => {
     var _a2;
     const height2 = ((_a2 = context.scrollbarX) == null ? void 0 : _a2.offsetHeight) || 0;
@@ -45067,6 +49382,12 @@ var ScrollAreaCornerImpl = reactExports.forwardRef((props, forwardedRef) => {
     context.onCornerWidthChange(width2);
     setWidth(width2);
   });
+  reactExports.useEffect(() => {
+    return () => {
+      onCornerWidthChange(0);
+      onCornerHeightChange(0);
+    };
+  }, [onCornerWidthChange, onCornerHeightChange]);
   return hasSize ? /* @__PURE__ */ jsxRuntimeExports.jsx(
     Primitive.div,
     {
@@ -46236,7 +50557,7 @@ function FileList({ currentFolderId, onFolderNavigate }) {
         const uint8Array = new Uint8Array(arrayBuffer);
         const fileId = generateSecure32ByteId();
         const uploadBytes = encryptUploads && encryptPassword.length > 0 ? await encryptBytes(uint8Array, encryptPassword) : uint8Array;
-        const blob = ExternalBlob2.fromBytes(uploadBytes).withUploadProgress(
+        const blob = ExternalBlob$1.fromBytes(uploadBytes).withUploadProgress(
           (percentage) => {
             setFileUploadProgress((prev) => {
               const updated = new Map(prev);
@@ -47340,7 +51661,7 @@ var Separator$1 = reactExports.forwardRef((props, forwardedRef) => {
   const ariaOrientation = orientation === "vertical" ? orientation : void 0;
   const semanticProps = decorative ? { role: "none" } : { "aria-orientation": ariaOrientation, role: "separator" };
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Primitive$1.div,
+    Primitive.div,
     {
       "data-orientation": orientation,
       ...semanticProps,
@@ -47522,8 +51843,8 @@ function ManagePanel() {
     }
   };
   const formatInviteDate = (nanoTimestamp) => {
-    const ms = Number(nanoTimestamp) / 1e6;
-    return new Date(ms).toLocaleString("pl-PL", {
+    const ms2 = Number(nanoTimestamp) / 1e6;
+    return new Date(ms2).toLocaleString("pl-PL", {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",

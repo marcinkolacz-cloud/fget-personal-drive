@@ -228,7 +228,9 @@ actor self {
       // URL format: /file/<fileId>
       // NOTE: This endpoint is intentionally public (no auth check) because it's accessed via
       // raw.icp0.io URLs that are meant to be shareable download links.
-      // The security model relies on file IDs being unguessable (generated with timestamp + counter).
+      // The security model relies on file IDs being cryptographically unpredictable:
+      // each ID is derived from 16 random bytes (32 hex chars) sourced from the IC
+      // management canister's raw_rand via mo:core/Random, prefixed with "api_".
       let url = req.url;
       let prefix = "/file/";
       if (url.startsWith(#text prefix)) {
@@ -370,8 +372,21 @@ actor self {
     // Store file with !cli!<fileId> sentinel so frontend can build a stable public URL
     // IMPORTANT: raw bytes go in cliFileBytes map; blob field stores only the sentinel string
     let fileSize = req.body.size();
-    let fileId = "api_" # Int.abs(Time.now()).toText() # "_" # tokenCounter.toText();
-    tokenCounter += 1;
+    // Generate a cryptographically-secure fileId from 16 random bytes (32 hex chars)
+    // sourced from the IC management canister's raw_rand via mo:core/Random.
+    // The "api_" prefix is preserved so the frontend "!cli!<fileId>" sentinel
+    // logic continues to recognise CLI-uploaded files.
+    let entropy = Blob.toArray(await Random.blob());
+    let hex = "0123456789abcdef";
+    let hexChars = hex.chars().toArray();
+    var fileId = "api_";
+    var i = 0;
+    while (i < 32) {
+      let byte = entropy[i / 2].toNat();
+      let idx = if (i % 2 == 0) { byte / 16 } else { byte % 16 };
+      fileId #= hexChars[idx].toText();
+      i += 1;
+    };
 
     // Store raw bytes separately keyed by fileId
     cliFileBytes.add(fileId, req.body);
