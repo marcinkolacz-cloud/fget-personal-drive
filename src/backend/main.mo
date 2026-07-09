@@ -12,14 +12,17 @@ import Runtime "mo:core/Runtime";
 import Text "mo:core/Text";
 import Time "mo:core/Time";
 import Blob "mo:core/Blob";
+import Char "mo:core/Char";
+import Nat8 "mo:core/Nat8";
+import Random "mo:core/Random";
 
 import MixinViews "mo:caffeineai-data-viewer/MixinViews";
 import InviteLinksMixin "mixins/invite-links-api";
 import InviteLinksTypes "types/invite-links";
 import InviteLinksLib "lib/invite-links";
-import Migration "migration";
 
-(with migration = Migration.run)
+
+
 actor self {
   include MixinObjectStorage();
   include MixinViews();
@@ -118,19 +121,25 @@ actor self {
     isFolder : Bool;
   };
 
-  // Simple pseudo-random token generator using time + counter
+  // Counter reused for folder IDs and CLI file IDs elsewhere in this actor.
+  // NOTE: generateToken no longer consumes tokenCounter — it draws entropy
+  // from mo:core/Random (IC management canister raw_rand) instead of the old
+  // Time.now()+tokenCounter LCG. The variable stays for its other uses.
   var tokenCounter : Nat = 0;
-  func generateToken() : Text {
-    tokenCounter += 1;
-    let seed = Int.abs(Time.now()) + tokenCounter * 1_000_003;
+  func generateToken() : async Text {
+    // Fetch 16 cryptographically-secure random bytes from the IC management
+    // canister (raw_rand). 16 bytes -> 32 hex characters, so a single round
+    // trip supplies all the entropy needed for the token.
+    let entropy = Blob.toArray(await Random.blob());
     let hex = "0123456789abcdef";
+    let hexChars = hex.chars().toArray();
     var result = "fget_";
-    var n = seed;
     var i = 0;
     while (i < 32) {
-      let idx = n % 16;
-      result #= Text.fromChar(hex.chars().toArray()[idx]);
-      n := n / 16 + idx * 7_919 + tokenCounter * 31;
+      // Each hex char comes from 4 secure bits of a random byte.
+      let byte = entropy[i / 2].toNat();
+      let idx = if (i % 2 == 0) { byte / 16 } else { byte % 16 };
+      result #= hexChars[idx].toText();
       i += 1;
     };
     result;
@@ -625,7 +634,7 @@ actor self {
     let keyId = "key_" # nextApiKeyId.toText();
     nextApiKeyId += 1;
 
-    let token = generateToken();
+    let token = await generateToken();
     let now = Time.now();
 
     let key : ApiKey = {

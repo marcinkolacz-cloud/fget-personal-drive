@@ -20,7 +20,7 @@ mixin (
     if (not InviteLinksLib.callerIsAdmin(adminPrincipal.value, caller)) {
       Runtime.trap("Unauthorized: Only admins can generate invite codes");
     };
-    InviteLinksLib.generateInviteCode(inviteCodes, caller, expiresAt, maxUses);
+    await InviteLinksLib.generateInviteCode(inviteCodes, caller, expiresAt, maxUses);
   };
 
   public query func validateInviteCode(code : Text) : async Bool {

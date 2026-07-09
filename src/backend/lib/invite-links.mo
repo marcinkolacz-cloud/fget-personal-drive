@@ -7,6 +7,8 @@ import Types "../types/invite-links";
 import Int "mo:core/Int";
 import Text "mo:core/Text";
 import Array "mo:core/Array";
+import Char "mo:core/Char";
+import Random "mo:core/Random";
 
 module {
   public type InviteCode = Types.InviteCode;
@@ -18,18 +20,16 @@ module {
     caller : Principal,
     expiresAt : ?Time.Time,
     maxUses : ?Nat,
-  ) : Text {
+  ) : async Text {
     let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let charsArray = chars.chars().toArray();
     let charsLen = charsArray.size();
 
     var code = "";
-    var seed = Int.abs(Time.now());
     var i = 0;
     while (i < 8) {
-      seed := (seed * 1103515245 + 12345) % 2147483648;
-      let idx = seed % charsLen;
-      code #= Text.fromChar(charsArray[idx]);
+      let idx = await Random.natRange(0, charsLen);
+      code #= charsArray[idx].toText();
       i += 1;
     };
 
