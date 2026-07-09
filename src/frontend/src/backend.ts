@@ -56,6 +56,7 @@ export { ExternalBlob } from "@caffeineai/object-storage";
 export type Time = bigint;
 export interface FileMetadata {
     id: string;
+    ownerId: Principal;
     blob: ExternalBlob;
     name: string;
     createdAt: Time;
@@ -83,6 +84,7 @@ export type FileSystemItem = {
 };
 export interface FolderMetadata {
     id: string;
+    ownerId: Principal;
     name: string;
     createdAt: Time;
     updatedAt: Time;
@@ -1374,12 +1376,14 @@ function from_candid_opt_n9(_uploadFile: (file: ExternalBlob) => Promise<Uint8Ar
 }
 function from_candid_record_n13(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
     id: string;
+    ownerId: Principal;
     name: string;
     createdAt: _Time;
     updatedAt: _Time;
     parentId: [] | [string];
 }): {
     id: string;
+    ownerId: Principal;
     name: string;
     createdAt: Time;
     updatedAt: Time;
@@ -1387,6 +1391,7 @@ function from_candid_record_n13(_uploadFile: (file: ExternalBlob) => Promise<Uin
 } {
     return {
         id: value.id,
+        ownerId: value.ownerId,
         name: value.name,
         createdAt: value.createdAt,
         updatedAt: value.updatedAt,
@@ -1482,6 +1487,7 @@ function from_candid_record_n53(_uploadFile: (file: ExternalBlob) => Promise<Uin
 }
 async function from_candid_record_n6(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
     id: string;
+    ownerId: Principal;
     blob: _ExternalBlob;
     name: string;
     createdAt: _Time;
@@ -1490,6 +1496,7 @@ async function from_candid_record_n6(_uploadFile: (file: ExternalBlob) => Promis
     parentId: [] | [string];
 }): Promise<{
     id: string;
+    ownerId: Principal;
     blob: ExternalBlob;
     name: string;
     createdAt: Time;
@@ -1499,6 +1506,7 @@ async function from_candid_record_n6(_uploadFile: (file: ExternalBlob) => Promis
 }> {
     return {
         id: value.id,
+        ownerId: value.ownerId,
         blob: await from_candid_ExternalBlob_n7(_uploadFile, _downloadFile, value.blob),
         name: value.name,
         createdAt: value.createdAt,

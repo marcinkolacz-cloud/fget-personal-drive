@@ -47,6 +47,7 @@ export type Error = { 'FrontendOriginsNotConfigured' : null } |
 export type ExternalBlob = Uint8Array;
 export interface FileMetadata {
   'id' : string,
+  'ownerId' : Principal,
   'blob' : ExternalBlob,
   'name' : string,
   'createdAt' : Time,
@@ -63,6 +64,7 @@ export type FileSystemItem = { 'file' : FileMetadata } |
   { 'folder' : FolderMetadata };
 export interface FolderMetadata {
   'id' : string,
+  'ownerId' : Principal,
   'name' : string,
   'createdAt' : Time,
   'updatedAt' : Time,

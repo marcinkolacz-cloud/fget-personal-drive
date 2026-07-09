@@ -19,6 +19,7 @@ export const ApiKey = IDL.Record({
 export const ExternalBlob = IDL.Vec(IDL.Nat8);
 export const FileMetadata = IDL.Record({
   'id' : IDL.Text,
+  'ownerId' : IDL.Principal,
   'blob' : ExternalBlob,
   'name' : IDL.Text,
   'createdAt' : Time,
@@ -28,6 +29,7 @@ export const FileMetadata = IDL.Record({
 });
 export const FolderMetadata = IDL.Record({
   'id' : IDL.Text,
+  'ownerId' : IDL.Principal,
   'name' : IDL.Text,
   'createdAt' : Time,
   'updatedAt' : Time,
@@ -320,6 +322,7 @@ export const idlFactory = ({ IDL }) => {
   const ExternalBlob = IDL.Vec(IDL.Nat8);
   const FileMetadata = IDL.Record({
     'id' : IDL.Text,
+    'ownerId' : IDL.Principal,
     'blob' : ExternalBlob,
     'name' : IDL.Text,
     'createdAt' : Time,
@@ -329,6 +332,7 @@ export const idlFactory = ({ IDL }) => {
   });
   const FolderMetadata = IDL.Record({
     'id' : IDL.Text,
+    'ownerId' : IDL.Principal,
     'name' : IDL.Text,
     'createdAt' : Time,
     'updatedAt' : Time,

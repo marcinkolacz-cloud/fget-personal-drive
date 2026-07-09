@@ -65,6 +65,7 @@ type FolderMetadata =
    createdAt: Time;
    id: text;
    name: text;
+   ownerId: principal;
    parentId: opt text;
    updatedAt: Time;
  };
@@ -85,6 +86,7 @@ type FileMetadata =
    createdAt: Time;
    id: text;
    name: text;
+   ownerId: principal;
    parentId: opt text;
    size: nat;
    updatedAt: Time;

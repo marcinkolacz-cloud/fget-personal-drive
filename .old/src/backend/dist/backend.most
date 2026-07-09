@@ -1,4 +1,9 @@
-// Version: 1.0.0
+// Version: 3.0.0
+type AccessControlState__836714403 =
+  {
+    var adminAssigned : Bool;
+    userRoles : Map__246123559<Principal, UserRole__686137147>
+  };
 type ApiKey__892471706 =
   {
     createdAt : Time__837879871;
@@ -9,13 +14,14 @@ type ApiKey__892471706 =
   };
 type ApprovalStatus__944573617 = {#approved; #pending; #rejected};
 type Data__552063367<K, V> = {var count : Nat__93962160; kvs : [var ?(K, V)]};
-type ExternalBlob__365673026 = Blob;
+type ExternalBlob__675229786 = Blob;
 type FileMetadata__287815137 =
   {
-    blob : ExternalBlob__365673026;
+    blob : ExternalBlob__675229786;
     createdAt : Time__837879871;
     id : Text;
     name : Text;
+    ownerId : Principal;
     parentId : ?Text;
     size : Nat;
     updatedAt : Time__837879871
@@ -25,6 +31,7 @@ type FolderMetadata__822938309 =
     createdAt : Time__837879871;
     id : Text;
     name : Text;
+    ownerId : Principal;
     parentId : ?Text;
     updatedAt : Time__837879871
   };
@@ -52,11 +59,69 @@ type Nat__920180692 = Nat;
 type Nat__93962160 = Nat__920180692;
 type Node__279997185<K, V> =
   {#internal : Internal__455405067<K, V>; #leaf : Leaf__114713147<K, V>};
+type OldApiKey__260799143 =
+  {
+    createdAt : Time__837879871;
+    description : Text;
+    id : Text;
+    ownerId : Principal;
+    token : Text
+  };
+type OldFileMetadata__1048324045 =
+  {
+    blob : ExternalBlob__675229786;
+    createdAt : Time__837879871;
+    id : Text;
+    name : Text;
+    parentId : ?Text;
+    size : Nat;
+    updatedAt : Time__837879871
+  };
+type OldFolderMetadata__241835856 =
+  {
+    createdAt : Time__837879871;
+    id : Text;
+    name : Text;
+    parentId : ?Text;
+    updatedAt : Time__837879871
+  };
+type OldInviteCode__747085522 =
+  {
+    code : Text;
+    createdAt : Time__837879871;
+    createdBy : Principal;
+    expiresAt : ?Time__837879871;
+    isActive : Bool;
+    maxUses : ?Nat;
+    usedBy : [Principal];
+    usedCount : Nat
+  };
+type OldUserProfile__416069324 = {name : Text};
 type Time__72294698 = Int__849411254;
 type Time__837879871 = Time__72294698;
+type UserApprovalState__666071610 =
+  {var approvalStatus : Map__246123559<Principal, ApprovalStatus__944573617>};
 type UserProfile__491224006 = {name : Text};
 type UserRole__686137147 = {#admin; #guest; #user};
-actor {
+actor ({
+  in accessControlState : AccessControlState__836714403;
+  in adminPrincipal : {var value : ?Principal};
+  in apiKeys : Map__246123559<Text, OldApiKey__260799143>;
+  in var appVersion : Text;
+  in approvalState : UserApprovalState__666071610;
+  in var backendCanisterId : Text;
+  in cliFileBytes : Map__246123559<Text, Blob>;
+  in encryptedFiles : Map__246123559<Text, Bool>;
+  in files : Map__246123559<Text, OldFileMetadata__1048324045>;
+  in var firstAdmin : ?Principal;
+  in folders : Map__246123559<Text, OldFolderMetadata__241835856>;
+  in var frontendCanisterId : Text;
+  in inviteCodes : Map__246123559<Text, OldInviteCode__747085522>;
+  in var nextApiKeyId : Nat;
+  in var nextFolderId : Nat;
+  in var tokenCounter : Nat;
+  in userProfiles : Map__246123559<Principal, OldUserProfile__416069324>
+}, {
   stable accessControlState :
     {
       var adminAssigned : Bool;
@@ -104,4 +169,4 @@ actor {
       var root : Node__279997185<Principal, UserProfile__491224006>;
       var size : Nat__93962160
     }
-};
+});

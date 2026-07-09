@@ -17,9 +17,9 @@ import MixinViews "mo:caffeineai-data-viewer/MixinViews";
 import InviteLinksMixin "mixins/invite-links-api";
 import InviteLinksTypes "types/invite-links";
 import InviteLinksLib "lib/invite-links";
+import Migration "migration";
 
-
-
+(with migration = Migration.run)
 actor self {
   include MixinObjectStorage();
   include MixinViews();
@@ -57,6 +57,7 @@ actor self {
     size : Nat;
     blob : Storage.ExternalBlob;
     parentId : ?Text;
+    ownerId : Principal;
     createdAt : Time.Time;
     updatedAt : Time.Time;
   };
@@ -65,6 +66,7 @@ actor self {
     id : Text;
     name : Text;
     parentId : ?Text;
+    ownerId : Principal;
     createdAt : Time.Time;
     updatedAt : Time.Time;
   };
@@ -144,8 +146,15 @@ actor self {
     null;
   };
 
-  // Resolve or create nested folder path like "aaa/bbb/ccc" and return the leaf folder ID
-  func resolveOrCreateFolderPath(path : Text) : Text {
+  // Two-tier admin check: AccessControl #admin role OR the invite-links admin.
+  // Admins bypass per-user ownership isolation (full visibility / delete / move).
+  func callerIsAdmin(caller : Principal) : Bool {
+    AccessControl.hasPermission(accessControlState, caller, #admin) or InviteLinksLib.callerIsAdmin(adminPrincipal.value, caller);
+  };
+
+  // Resolve or create nested folder path like "aaa/bbb/ccc" and return the leaf folder ID.
+  // Newly created folders are owned by `owner` (the CLI upload caller).
+  func resolveOrCreateFolderPath(path : Text, owner : Principal) : Text {
     // Split path on "/"
     let segments = path.split(#char '/');
     var currentParentId : ?Text = null;
@@ -156,7 +165,7 @@ actor self {
         // Look for existing folder with this name under currentParentId
         var found : ?Text = null;
         for ((_, folder) in folders.entries()) {
-          if (folder.name == trimmed and folder.parentId == currentParentId) {
+          if (folder.name == trimmed and folder.parentId == currentParentId and folder.ownerId == owner) {
             found := ?folder.id;
           };
         };
@@ -171,6 +180,7 @@ actor self {
               id = newId;
               name = trimmed;
               parentId = currentParentId;
+              ownerId = owner;
               createdAt = now;
               updatedAt = now;
             };
@@ -343,7 +353,7 @@ actor self {
         if (trimmedPath == "") {
           null;
         } else {
-          ?resolveOrCreateFolderPath(trimmedPath);
+          ?resolveOrCreateFolderPath(trimmedPath, callerPrincipal);
         };
       };
     };
@@ -366,6 +376,7 @@ actor self {
       // DO NOT change this to store raw bytes — it breaks the frontend downloadFile logic
       blob = ("!cli!" # fileId).encodeUtf8();
       parentId = parentFolderId;
+      ownerId = callerPrincipal;
       createdAt = now;
       updatedAt = now;
     };
@@ -674,6 +685,7 @@ actor self {
       size;
       blob;
       parentId;
+      ownerId = caller;
       createdAt = now;
       updatedAt = now;
     };
@@ -685,14 +697,23 @@ actor self {
     if (not AccessControl.hasPermission(accessControlState, caller, #user)) {
       Runtime.trap("Unauthorized: Only existing users can view files");
     };
-    files.values().toArray();
+    if (callerIsAdmin(caller)) {
+      files.values().toArray();
+    } else {
+      files.values().toArray().filter(func(file) { file.ownerId == caller });
+    };
   };
 
   public query ({ caller }) func getFile(id : Text) : async ?FileMetadata {
     if (not AccessControl.hasPermission(accessControlState, caller, #user)) {
       Runtime.trap("Unauthorized: Only existing users can view files");
     };
-    files.get(id);
+    switch (files.get(id)) {
+      case (null) { null };
+      case (?file) {
+        if (file.ownerId == caller or callerIsAdmin(caller)) { ?file } else { null };
+      };
+    };
   };
 
   public shared ({ caller }) func deleteFile(id : Text) : async Bool {
@@ -702,7 +723,10 @@ actor self {
 
     switch (files.get(id)) {
       case (null) { false };
-      case (?_) {
+      case (?file) {
+        if (file.ownerId != caller and not callerIsAdmin(caller)) {
+          Runtime.trap("Unauthorized");
+        };
         files.remove(id);
         encryptedFiles.remove(id);
         true;
@@ -715,21 +739,22 @@ actor self {
     currentFolderId : ?Text,
     folderResults : List.List<FolderMetadata>,
     fileResults : List.List<FileMetadata>,
+    owner : Principal,
   ) : () {
     let lowercaseTerm = textFoldASCII(searchTerm);
     for ((_, file) in files.entries()) {
-      if (file.parentId == currentFolderId and containsFoldedTerm(file.name, lowercaseTerm)) {
+      if (file.ownerId == owner and file.parentId == currentFolderId and containsFoldedTerm(file.name, lowercaseTerm)) {
         fileResults.add(file);
       };
     };
     for ((_, folder) in folders.entries()) {
-      if (folder.parentId == currentFolderId and containsFoldedTerm(folder.name, lowercaseTerm)) {
+      if (folder.ownerId == owner and folder.parentId == currentFolderId and containsFoldedTerm(folder.name, lowercaseTerm)) {
         folderResults.add(folder);
       };
     };
     for ((_, subfolder) in folders.entries()) {
-      if (subfolder.parentId == currentFolderId) {
-        recursiveFolderSearch(searchTerm, ?subfolder.id, folderResults, fileResults);
+      if (subfolder.ownerId == owner and subfolder.parentId == currentFolderId) {
+        recursiveFolderSearch(searchTerm, ?subfolder.id, folderResults, fileResults, owner);
       };
     };
   };
@@ -797,10 +822,40 @@ actor self {
 
     let folderResults = List.empty<FolderMetadata>();
     let fileResults = List.empty<FileMetadata>();
-    recursiveFolderSearch(searchTerm, startFolderId, folderResults, fileResults);
+    if (callerIsAdmin(caller)) {
+      // Admin: search across all owners — branch to skip the owner filter
+      recursiveFolderSearchAll(searchTerm, startFolderId, folderResults, fileResults);
+    } else {
+      recursiveFolderSearch(searchTerm, startFolderId, folderResults, fileResults, caller);
+    };
     {
       folders = folderResults.toArray();
       files = fileResults.toArray();
+    };
+  };
+
+  // Admin variant of recursiveFolderSearch — collects results across all owners.
+  func recursiveFolderSearchAll(
+    searchTerm : Text,
+    currentFolderId : ?Text,
+    folderResults : List.List<FolderMetadata>,
+    fileResults : List.List<FileMetadata>,
+  ) : () {
+    let lowercaseTerm = textFoldASCII(searchTerm);
+    for ((_, file) in files.entries()) {
+      if (file.parentId == currentFolderId and containsFoldedTerm(file.name, lowercaseTerm)) {
+        fileResults.add(file);
+      };
+    };
+    for ((_, folder) in folders.entries()) {
+      if (folder.parentId == currentFolderId and containsFoldedTerm(folder.name, lowercaseTerm)) {
+        folderResults.add(folder);
+      };
+    };
+    for ((_, subfolder) in folders.entries()) {
+      if (subfolder.parentId == currentFolderId) {
+        recursiveFolderSearchAll(searchTerm, ?subfolder.id, folderResults, fileResults);
+      };
     };
   };
 
@@ -810,11 +865,16 @@ actor self {
     };
 
     let lowercaseTerm = searchTerm.toLower();
-    files.values().toArray().filter(
+    let allMatches = files.values().toArray().filter(
       func(file) {
         file.name.toLower().contains(#text lowercaseTerm);
       }
     );
+    if (callerIsAdmin(caller)) {
+      allMatches;
+    } else {
+      allMatches.filter(func(file) { file.ownerId == caller });
+    };
   };
 
   public query ({ caller }) func searchSubtree(searchTerm : Text, startFolderId : ?Text) : async [FileSystemItem] {
@@ -824,38 +884,43 @@ actor self {
 
     let lowercaseTerm = searchTerm.toLower();
     let matches = List.empty<FileSystemItem>();
+    let admin = callerIsAdmin(caller);
 
     func searchFolder(folderId : ?Text) {
       for ((_, folder) in folders.entries()) {
-        switch (folder.parentId) {
-          case (?parent) {
-            if (?parent == folderId) {
-              if (folder.name.toLower().contains(#text lowercaseTerm)) {
-                matches.add(#folder(folder));
+        if (admin or folder.ownerId == caller) {
+          switch (folder.parentId) {
+            case (?parent) {
+              if (?parent == folderId) {
+                if (folder.name.toLower().contains(#text lowercaseTerm)) {
+                  matches.add(#folder(folder));
+                };
+                // Always search subfolders recursively if parent matches
+                searchFolder(?folder.id);
               };
-              // Always search subfolders recursively if parent matches
-              searchFolder(?folder.id);
             };
-          };
-          case (null) {
-            if (folderId == null and folder.name.toLower().contains(#text lowercaseTerm)) {
-              matches.add(#folder(folder));
-              searchFolder(?folder.id);
+            case (null) {
+              if (folderId == null and folder.name.toLower().contains(#text lowercaseTerm)) {
+                matches.add(#folder(folder));
+                searchFolder(?folder.id);
+              };
             };
           };
         };
       };
 
       for ((_, file) in files.entries()) {
-        switch (file.parentId) {
-          case (?parent) {
-            if (?parent == folderId and file.name.toLower().contains(#text lowercaseTerm)) {
-              matches.add(#file(file));
+        if (admin or file.ownerId == caller) {
+          switch (file.parentId) {
+            case (?parent) {
+              if (?parent == folderId and file.name.toLower().contains(#text lowercaseTerm)) {
+                matches.add(#file(file));
+              };
             };
-          };
-          case (null) {
-            if (folderId == null and file.name.toLower().contains(#text lowercaseTerm)) {
-              matches.add(#file(file));
+            case (null) {
+              if (folderId == null and file.name.toLower().contains(#text lowercaseTerm)) {
+                matches.add(#file(file));
+              };
             };
           };
         };
@@ -879,6 +944,7 @@ actor self {
       id = folderId;
       name;
       parentId;
+      ownerId = caller;
       createdAt = now;
       updatedAt = now;
     };
@@ -892,20 +958,29 @@ actor self {
       Runtime.trap("Unauthorized: Only existing users can delete folders");
     };
 
-    recursiveDelete(id);
+    // Fetch the folder first to determine its owner for the authorization check
+    // and to pass the owner into recursiveDelete so only that owner's subtree is deleted.
+    let folder = switch (folders.get(id)) {
+      case (null) { return false };
+      case (?f) { f };
+    };
+    if (folder.ownerId != caller and not callerIsAdmin(caller)) {
+      Runtime.trap("Unauthorized");
+    };
+    recursiveDelete(id, folder.ownerId);
     true;
   };
 
-  func recursiveDelete(folderId : Text) {
+  func recursiveDelete(folderId : Text, owner : Principal) {
     // Snapshot child folder IDs before modifying to avoid mutation-during-iteration
     let childFolderIds = List.empty<Text>();
     for ((_, folder) in folders.entries()) {
-      if (folder.parentId == ?folderId) {
+      if (folder.parentId == ?folderId and folder.ownerId == owner) {
         childFolderIds.add(folder.id);
       };
     };
     for (childId in childFolderIds.toArray().vals()) {
-      recursiveDelete(childId);
+      recursiveDelete(childId, owner);
     };
 
     // Snapshot file IDs to remove before deleting
@@ -913,7 +988,7 @@ actor self {
     for ((fileId, file) in files.entries()) {
       switch (file.parentId) {
         case (?parentId) {
-          if (parentId == folderId) {
+          if (parentId == folderId and file.ownerId == owner) {
             fileIdsToRemove.add(fileId);
           };
         };
@@ -933,15 +1008,16 @@ actor self {
     };
 
     let items = List.empty<FileSystemItem>();
+    let admin = callerIsAdmin(caller);
 
     for ((_, folder) in folders.entries()) {
-      if (folder.parentId == folderId) {
+      if (folder.parentId == folderId and (admin or folder.ownerId == caller)) {
         items.add(#folder(folder));
       };
     };
 
     for ((_, file) in files.entries()) {
-      if (file.parentId == folderId) {
+      if (file.parentId == folderId and (admin or file.ownerId == caller)) {
         items.add(#file(file));
       };
     };
@@ -959,6 +1035,9 @@ actor self {
       switch (folders.get(itemId)) {
         case (null) { Runtime.trap("Folder not found") };
         case (?folder) {
+          if (folder.ownerId != caller and not callerIsAdmin(caller)) {
+            Runtime.trap("Unauthorized");
+          };
           let updatedFolder : FolderMetadata = {
             folder with parentId = newParentId;
             updatedAt = now;
@@ -971,6 +1050,9 @@ actor self {
       switch (files.get(itemId)) {
         case (null) { Runtime.trap("File not found") };
         case (?file) {
+          if (file.ownerId != caller and not callerIsAdmin(caller)) {
+            Runtime.trap("Unauthorized");
+          };
           let updatedFile : FileMetadata = {
             file with parentId = newParentId;
             updatedAt = now;
@@ -993,6 +1075,9 @@ actor self {
         switch (folders.get(move.id)) {
           case (null) { Runtime.trap("Folder not found") };
           case (?folder) {
+            if (folder.ownerId != caller and not callerIsAdmin(caller)) {
+              Runtime.trap("Unauthorized");
+            };
             let updatedFolder : FolderMetadata = {
               folder with parentId = move.newParentId;
               updatedAt = now;
@@ -1005,6 +1090,9 @@ actor self {
         switch (files.get(move.id)) {
           case (null) { Runtime.trap("File not found") };
           case (?file) {
+            if (file.ownerId != caller and not callerIsAdmin(caller)) {
+              Runtime.trap("Unauthorized");
+            };
             updateParentTimestamps(move.newParentId, now, false);
             let updatedFile : FileMetadata = {
               file with parentId = move.newParentId;
@@ -1041,14 +1129,23 @@ actor self {
     if (not AccessControl.hasPermission(accessControlState, caller, #user)) {
       Runtime.trap("Unauthorized: Only existing users can view folders");
     };
-    folders.get(id);
+    switch (folders.get(id)) {
+      case (null) { null };
+      case (?folder) {
+        if (folder.ownerId == caller or callerIsAdmin(caller)) { ?folder } else { null };
+      };
+    };
   };
 
   public query ({ caller }) func getAllFolders() : async [FolderMetadata] {
     if (not AccessControl.hasPermission(accessControlState, caller, #user)) {
       Runtime.trap("Unauthorized: Only existing users can view folders");
     };
-    folders.values().toArray();
+    if (callerIsAdmin(caller)) {
+      folders.values().toArray();
+    } else {
+      folders.values().toArray().filter(func(folder) { folder.ownerId == caller });
+    };
   };
 
   func getEffectiveRole(principal : Principal) : AccessControl.UserRole {

@@ -32711,6 +32711,7 @@ const ApiKey = Record({
 const ExternalBlob$1 = Vec(Nat8);
 const FileMetadata = Record({
   "id": Text,
+  "ownerId": Principal2,
   "blob": ExternalBlob$1,
   "name": Text,
   "createdAt": Time,
@@ -32720,6 +32721,7 @@ const FileMetadata = Record({
 });
 const FolderMetadata = Record({
   "id": Text,
+  "ownerId": Principal2,
   "name": Text,
   "createdAt": Time,
   "updatedAt": Time,
@@ -33008,6 +33010,7 @@ const idlFactory = ({ IDL: IDL2 }) => {
   const ExternalBlob3 = IDL2.Vec(IDL2.Nat8);
   const FileMetadata2 = IDL2.Record({
     "id": IDL2.Text,
+    "ownerId": IDL2.Principal,
     "blob": ExternalBlob3,
     "name": IDL2.Text,
     "createdAt": Time2,
@@ -33017,6 +33020,7 @@ const idlFactory = ({ IDL: IDL2 }) => {
   });
   const FolderMetadata2 = IDL2.Record({
     "id": IDL2.Text,
+    "ownerId": IDL2.Principal,
     "name": IDL2.Text,
     "createdAt": Time2,
     "updatedAt": Time2,
@@ -34433,6 +34437,7 @@ function from_candid_opt_n9(_uploadFile, _downloadFile, value) {
 function from_candid_record_n13(_uploadFile, _downloadFile, value) {
   return {
     id: value.id,
+    ownerId: value.ownerId,
     name: value.name,
     createdAt: value.createdAt,
     updatedAt: value.updatedAt,
@@ -34481,6 +34486,7 @@ function from_candid_record_n53(_uploadFile, _downloadFile, value) {
 async function from_candid_record_n6(_uploadFile, _downloadFile, value) {
   return {
     id: value.id,
+    ownerId: value.ownerId,
     blob: await from_candid_ExternalBlob_n7(_uploadFile, _downloadFile, value.blob),
     name: value.name,
     createdAt: value.createdAt,

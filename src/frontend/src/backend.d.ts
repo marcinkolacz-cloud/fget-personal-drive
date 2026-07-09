@@ -12,6 +12,7 @@ export type { ExternalBlob } from "@caffeineai/object-storage";
 export type Time = bigint;
 export interface FileMetadata {
     id: string;
+    ownerId: Principal;
     blob: ExternalBlob;
     name: string;
     createdAt: Time;
@@ -32,6 +33,7 @@ export type FileSystemItem = {
 };
 export interface FolderMetadata {
     id: string;
+    ownerId: Principal;
     name: string;
     createdAt: Time;
     updatedAt: Time;
